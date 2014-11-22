@@ -1,0 +1,21 @@
+<div id="pagebanner">
+  <ul class="nav nav-tabs nav-justified">
+  {% for pid in site.menu %}
+    {% for p in site.pages %}
+      {% if p.pid == pid %}
+        {% assign p = site.pages %}
+        <li{% if page.pid == p.pid or (p.pid == "weblog" and page.id != nil) %} class="active"{% endif %}>
+        <a href="{{ site.url }}{{ p.url }}">
+          <strong> 
+            <i class="fa {{ p.icon }} fa-fw"></i>
+            <!-- <span class="title"> -->
+            {{ p.title | capitalize }}
+            <!-- </span> -->
+          </strong>
+        </a>
+        </li>
+      {% endif %}
+    {% endfor %}
+  {% endfor %}
+</ul>
+</div>

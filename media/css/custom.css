@@ -1,0 +1,95 @@
+@import url("http://fonts.googleapis.com/css?family=Droid+Serif:400,700");
+
+body {
+  font-family: 'Droid Serif', serif;
+  font-weight: normal;
+  font-size: 140%;
+  text-align: justify;
+}
+
+ul.nav {
+  font-size: 1.3em;
+}
+
+h1 {
+  font-size: 1.7em;
+}
+
+h2 {
+  font-size: 1.4em;
+}
+
+div#pagewrap {
+  width: 612px;
+  // width: 682px;
+  margin: 10px auto;
+}
+
+hr {
+  border: none;
+  width: 80%;
+  height: 1px;
+  // background-color: pink;
+  background-color: gray;
+}
+
+div#pagebanner {
+  width: 612px;
+  // width: 682px;
+  background: white;
+}
+
+footer {
+  margin-bottom: 20px;
+}
+
+img.img-thumbnail {
+  width: 100%;
+  margin: 5px;
+}
+
+img.me {
+  width: 204px;
+  margin-left: 0px;
+  margin-right: 10px;
+  float: left;
+}
+
+div.home {
+  text-align: center;
+}
+
+div.haiku {
+  display: table;
+  margin: 0 auto;
+  // border: 2px solid green;
+  background-image: url("../images/sakura.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.haiku:nth-child(1) {
+  background-image: url("../images/sakura.png");
+  margin-left: 0;
+}
+
+div.haiku:nth-child(2) {
+  background-image: url("../images/sakura2.png");
+  margin-right: 0;
+}
+
+div.haiku:nth-child(3) {
+  background-image: url("../images/sakura3.png");
+  margin-left: 0;
+}
+
+div.haiku > p:nth-child(1n) { text-align: left; }
+div.haiku > p:nth-child(2n) { text-align: center; }
+div.haiku > p:nth-child(3n) { text-align: right; }
+
+div.haiku-leaf {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+}

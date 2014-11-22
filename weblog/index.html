@@ -1,0 +1,16 @@
+---
+pid: weblog2
+title: Weblog
+icon: fa-book
+---
+
+<ul class="list-group">
+{% for post in site.posts %}
+  <li class="list-group-item">
+    <small><strong>{{ post.date | date: "%d %b %Y" }}</strong></small>
+    <i class="fa {{ post.icon }} fa-fw"></i>
+    <a href="{{ site.url}}{{ post.url }}"> {{ post.title }} </a>
+    <small>~ {{ post.description }}</small>
+  </li>
+{% endfor %}
+</ul>

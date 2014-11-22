@@ -1,0 +1,38 @@
+name: Andrea Baise.ro
+description: As above
+github: https://github.com/bigblindbais/baise.ro
+
+# url: "http://localhost:4000"
+url: "https://dl.dropboxusercontent.com/u/11247564/baise.ro"
+
+# paginate: 10
+
+markdown: kramdown
+permalink: /weblog/:title/index.html
+# permalink: pretty
+highlighter: pygments
+
+# menu: [ home, research, weblog, code, haiku, about ]
+menu: [ home, research, weblog, haiku, about ]
+exclude: [ 'fabfile', '*.pyc' ]
+
+defaults:
+  -
+    scope:
+      path: ""
+    values:
+      author: "Andrea Baisero"
+  -
+    scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: page
+      icon: fa-bookmark
+  -
+    scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: post
+      icon: fa-pencil
