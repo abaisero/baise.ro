@@ -4,7 +4,7 @@ title: Research
 icon: fa-flask
 ---
 
-# # Research
+# Research
 
 My research interests are planning, semantical scene understanding, symbol
 learning, and reinforcement learning.
@@ -16,3 +16,7 @@ which abstract the performed actions.  Most likely, I will soon start working
 on learning a symbolic language through which to represent the environment
 during planning tasks whose goal is to reproduce similar manipulations as the
 ones being showcased.
+
+List of [Publications][publications].
+
+[publications]: ./publications/index.html "Publications"

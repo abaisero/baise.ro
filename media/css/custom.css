@@ -19,10 +19,16 @@ h2 {
   font-size: 1.4em;
 }
 
+h3 {
+  font-size: 1em;
+  font-weight: bold;
+}
+
 div#pagewrap {
   width: 612px;
   // width: 682px;
   margin: 10px auto;
+  border: 2px;
 }
 
 hr {
@@ -37,6 +43,12 @@ div#pagebanner {
   width: 612px;
   // width: 682px;
   background: white;
+}
+
+div#pagecontent h1:before,
+div#pagecontent h2:before,
+div#pagecontent h3:before {
+  content: "# "
 }
 
 footer {
@@ -63,14 +75,14 @@ div.haiku {
   display: table;
   margin: 0 auto;
   // border: 2px solid green;
-  background-image: url("../images/sakura.png");
+  background-image: url("../images/sakura1.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
 div.haiku:nth-child(1) {
-  background-image: url("../images/sakura.png");
+  background-image: url("../images/sakura1.png");
   margin-left: 0;
 }
 
@@ -92,4 +104,26 @@ div.haiku-leaf {
   position: fixed;
   bottom: 10px;
   right: 10px;
+}
+
+ol.bibliography {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#go {
+  position: relative;
+}
+
+#go > * {
+  position: absolute;
+}
+
+.go-black {
+  left: 0;
+}
+
+.go-white {
+  right: 0;
 }

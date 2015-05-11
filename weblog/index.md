@@ -4,7 +4,7 @@ title: Weblog
 icon: fa-book
 ---
 
-# # Weblog
+# Weblog
 
 {:.list-group}{% for post in site.posts %}
  * {:.list-group-item}

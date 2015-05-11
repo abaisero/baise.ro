@@ -26,7 +26,7 @@ def post(title='New Post'):
     # date = datetime.now().strftime('%Y-%m-%d')
     date = datetime.now().strftime('%F')
     fname = '_posts/' + date + '-' + slugify(title) + '.md'
-    front_matter = '"+normal i---kjotitle: ' + string.capwords(title) + 'kjolayout: defaultkjodescription:kjo---" ' if not os.path.isfile(fname) else ''
+    front_matter = '"+normal i---kjotitle: ' + string.capwords(title) + 'kjodescription:kjo---" ' if not os.path.isfile(fname) else ''
     command = 'vim ' + front_matter + fname
     local('vim ' + front_matter + fname)
 

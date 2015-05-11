@@ -4,6 +4,8 @@ title: Math
 icon: fa-calculator
 ---
 
+# Math
+
 Li Europan lingues es membres del sam familie. Lor separat existentie es un
 myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li
 lingues differe solmen in li grammatica, li pronunciation e li plu commun
@@ -22,9 +24,15 @@ al desirabilite de un nov lingua franca: On refusa continuar payar custosi
 traductores. At solmen va esser necessi far uniform grammatica, pronunciation e
 plu sommun paroles.
 
-$ \alpha = \sum_i i $
+This is an inline {% m %} x=5 {% em %} math stuff
 
-$$
+While the following is not
+{% math %}
+\alpha = \sum_i i
+{% endmath %}
+
+Also,
+{% math %}
 \begin{align*}
   & \phi(x,y) = \phi \left(\sum_{i=1}^n x_ie_i, \sum_{j=1}^n y_je_j \right)
   = \sum_{i=1}^n \sum_{j=1}^n x_i y_j \phi(e_i, e_j) = \\
@@ -39,7 +47,7 @@ $$
       y_n
     \end{array} \right)
 \end{align*}
-$$
+{% endmath %}
 
 Li Europan lingues es membres del sam familie. Lor separat existentie es un
 myth. Por scientie, musica, sport etc, litot Europa usa li sam vocabular. Li

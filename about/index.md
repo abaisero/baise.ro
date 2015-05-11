@@ -4,7 +4,7 @@ title: About
 icon: fa-info-circle
 ---
 
-# # Me
+# Me
 
 I pursued my Bachelor studies in Computer Engineering at the Polytechnic
 University of Turin (PoliTo), in Italy.
@@ -20,7 +20,7 @@ at the University of Stuttgart, in Germany.
 *[KTH]: Royal Institute of Technology
 *[MLR]: Machine Learning and Robotics
 
-# # My Website
+# My Website
 
 This website was developed using [Jekyll][jekyll], a static site generator
 which uses the [Liquid][liquid] templating language to build page structure and
@@ -31,7 +31,8 @@ yet with these tools I managed to create this handy website with ease and
 peace.  Layout and style are inspired by [Steve Losh][slosh] and [Data
 Genetics][datagen].
 
-You can find the complete source for this site its [<i class="fa fa-github-alt fa-lg"></i> github][github] page.
+You can find the complete source for this site its [<i class="fa fa-github-alt
+fa-lg"></i> github][github] page.
 
 [jekyll]: http:jekyllrb.com "Jekyll"
 [bootstrap]: http://getbootstrap.com "Bootstrap"

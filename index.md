@@ -4,6 +4,6 @@ title: Baise.ro
 icon: fa-home
 ---
 
-# # Hi!
+# Hi!
 
-I'm Andrea Baisero.  Welcome to my website.  Click around, have a blast.
+I'm Andrea Baisero, welcome to my website.  Click around, have a blast!

@@ -2,19 +2,27 @@ name: Andrea Baise.ro
 description: As above
 github: https://github.com/bigblindbais/baise.ro
 
-# url: "http://localhost:4000"
-url: "https://dl.dropboxusercontent.com/u/11247564/baise.ro"
-
-# paginate: 10
+url: http://localhost:4000
+# url: "http://baise.ro"
 
 markdown: kramdown
 permalink: /weblog/:title/index.html
 # permalink: pretty
 highlighter: pygments
 
+folders:
+  scripts: _scripts/
+  ipynb: ipynb/
+
 # menu: [ home, research, weblog, code, haiku, about ]
 menu: [ home, research, weblog, haiku, about ]
 exclude: [ 'fabfile', '*.pyc' ]
+gems: [ 'jekyll/scholar' ]
+
+scholar:
+  # style: chicago-fullnote-bibliography
+  # bibliography_template: <abbr>[{{key}}]</abbr>{{reference}}
+  bibliography_template: bib
 
 defaults:
   -

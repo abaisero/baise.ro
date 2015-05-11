@@ -4,7 +4,7 @@ title: Haiku
 icon: fa-leaf
 ---
 
-# # Haiku
+# Haiku
 
 {::options parse_block_html="true" /}
 <div>
@@ -34,6 +34,24 @@ You've planned the journey,
 You want the prize. So what now?
 
 Where is your first step?
+</div>
+
+{% comment %}
+<div class="haiku">
+Days, weeks, months or years.
+
+Which discount factor is best,
+
+for a fulfilled life?
+</div>
+{% endcomment %}
+
+<div class="haiku">
+Days, weeks, months or years.
+
+Which discount factor best leads
+
+to real fulfillment?
 </div>
 
 </div>
