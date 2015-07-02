@@ -2,8 +2,8 @@ name: Andrea Baise.ro
 description: As above
 github: https://github.com/bigblindbais/baise.ro
 
-url: http://localhost:4000
-# url: "http://baise.ro"
+# url: http://localhost:4000
+url: "http://baise.ro"
 
 markdown: kramdown
 permalink: /weblog/:title/index.html
