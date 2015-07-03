@@ -1,6 +1,5 @@
 ---
-pid: home
-title: Baise.ro
+title: baise.ro
 icon: fa-home
 ---
 

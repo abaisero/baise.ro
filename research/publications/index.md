@@ -1,6 +1,5 @@
 ---
 pid: publications
-title: Publications
 icon: fa-flask
 ---
 

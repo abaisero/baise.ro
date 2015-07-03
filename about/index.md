@@ -1,6 +1,5 @@
 ---
-pid: about
-title: About
+title: about
 icon: fa-info-circle
 ---
 
@@ -31,8 +30,8 @@ yet with these tools I managed to create this handy website with ease and
 peace.  Layout and style are inspired by [Steve Losh][slosh] and [Data
 Genetics][datagen].
 
-You can find the complete source for this site its [<i class="fa fa-github-alt
-fa-lg"></i> github][github] page.
+You can find the complete source for this site on its [<i class="fa
+fa-github-alt fa-lg"></i> github][github] page.
 
 [jekyll]: http:jekyllrb.com "Jekyll"
 [bootstrap]: http://getbootstrap.com "Bootstrap"

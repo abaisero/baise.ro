@@ -1,6 +1,5 @@
 ---
-pid: research
-title: Research
+title: research
 icon: fa-flask
 ---
 
@@ -19,4 +18,5 @@ ones being showcased.
 
 List of [Publications][publications].
 
-[publications]: ./publications/index.html "Publications"
+[publications]: publications/ "Publications"
+

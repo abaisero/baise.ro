@@ -1,6 +1,5 @@
 ---
-pid: haiku2
-title: Haiku
+title: haiku
 icon: fa-leaf
 ---
 
@@ -11,13 +10,13 @@ icon: fa-leaf
 
 
 {% comment %}
-/* <div class="haiku"> */
-/* Haikus can be fun, */
+<div class="haiku">
+Haikus can be fun,
 
-/* but sometimes they don't make sense. */
+but sometimes they don't make sense.
 
-/* Refrigerator. */
-/* </div> */
+Refrigerator.
+</div>
 {% endcomment %}
 
 <div class="haiku">
@@ -28,6 +27,7 @@ and future bright and obvious.
 Get up and endure.
 </div>
 
+{% comment %}
 <div class="haiku">
 You've planned the journey,
 
@@ -35,6 +35,7 @@ You want the prize. So what now?
 
 Where is your first step?
 </div>
+{% endcomment %}
 
 {% comment %}
 <div class="haiku">

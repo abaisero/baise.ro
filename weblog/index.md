@@ -1,6 +1,5 @@
 ---
-pid: weblog
-title: Weblog
+title: weblog
 icon: fa-book
 ---
 
@@ -11,7 +10,7 @@ icon: fa-book
     {:.remove}
     <small>**{{ post.date | date: "%d %b %Y" }}**</small>
     <i class="fa {{ post.icon }} fa-fw"></i>
-    [{{ post.title }}]({{ site.url}}{{ post.url }})
+    [{{ post.title }}]({{ site.url}}{{post.url }})
     <small>~ {{ post.description }}</small>
 {% endfor %}
 

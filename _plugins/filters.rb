@@ -1,4 +1,10 @@
 module Jekyll
+  module IndexStripperFilter
+    def strip(input)
+      input.sub(/(index.html)\z/, '')
+    end
+  end
+
   module AuthorizeFilter
     def surname(author, selection, mod)
       output = author[selection]
@@ -22,4 +28,5 @@ module Jekyll
   end
 end
 
+Liquid::Template.register_filter(Jekyll::IndexStripperFilter)
 Liquid::Template.register_filter(Jekyll::AuthorizeFilter)

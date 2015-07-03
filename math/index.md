@@ -1,6 +1,5 @@
 ---
-pid: math
-title: Math
+title: math
 icon: fa-calculator
 ---
 

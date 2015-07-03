@@ -1,10 +1,10 @@
 <div id="pagebanner">
 <ul class="nav nav-tabs nav-justified">
-  {% for pid in site.menu %}
+  {% for nav in site.navigation %}
     {% for p in site.pages %}
-      {% if p.pid == pid %}
+      {% if p.title == nav %}
         {% assign p = site.pages %}
-        <li{% if page.pid == p.pid or (p.pid == "weblog" and page.id != nil) %} class="active"{% endif %}>
+        <li{% if page.title == p.title or (p.title == "weblog" and page.id != nil) %} class="active"{% endif %}>
         <a href="{{ site.url }}{{ p.url }}">
           <strong> 
             <i class="fa {{ p.icon }} fa-fw"></i>
