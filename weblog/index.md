@@ -5,6 +5,8 @@ icon: fa-book
 
 # Weblog
 
+This page is under development. The current posts are all tests.
+
 {:.list-group}{% for post in site.posts %}
  * {:.list-group-item}
     {:.remove}
