@@ -1,9 +1,0 @@
-#!/usr/bin/zsh
-
-script=$(tempfile)
-echo 'open ftp.baise.ro
-mirror -R _site .' > $script
-lftp -f $script
-rm $script
-
-exit 0

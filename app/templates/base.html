@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Baise.ro - {{ page.meta.title }}</title>
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
+  <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/pygments.css') }}">
+</head>
+<body>
+  <div id="pagewrap">
+    <div id="pagebanner">
+      <ul class="nav nav-tabs nav-justified">
+      {% for p in site.menu %}
+        <li {% if page.meta.title.lower() == p.meta.title.lower() %} class="active" {%endif%}>
+        <a href="{{ url_for('page', path=p.path) }}"><strong>
+            <i class="fa {{ p.meta.icon }} fa-fw"></i>
+            {{ p.meta.title.capitalize() }}
+        </strong></a>
+        </li>
+      {% endfor %}
+      </ul>
+    </div>
+    <div id="pagecontent">
+    {% block content %} {% endblock %}
+    </div>
+  </div>
+</body>
+</html>
