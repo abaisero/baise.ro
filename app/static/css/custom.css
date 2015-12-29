@@ -16,7 +16,7 @@ h1 {
 }
 
 h2 {
-  font-size: 1.4em;
+  font-size: 1.35em;
 }
 
 h3 {
@@ -75,30 +75,35 @@ div.haiku {
   display: table;
   margin: 0 auto;
   // border: 2px solid green;
-  background-image: url("../images/sakura1.png");
+  background-image: url("/static/img/sakura1.png");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
 }
 
-div.haiku:nth-child(1) {
-  background-image: url("../images/sakura1.png");
-  margin-left: 0;
-}
-
-div.haiku:nth-child(2) {
-  background-image: url("../images/sakura2.png");
+div.haiku:nth-of-type(odd) {
   margin-right: 0;
 }
 
-div.haiku:nth-child(3) {
-  background-image: url("../images/sakura3.png");
+div.haiku:nth-of-type(even) {
   margin-left: 0;
 }
 
-div.haiku > p:nth-child(1n) { text-align: left; }
-div.haiku > p:nth-child(2n) { text-align: center; }
-div.haiku > p:nth-child(3n) { text-align: right; }
+div.haiku:nth-of-type(3n-2) {
+  background-image: url("/static/img/sakura1.png");
+}
+
+div.haiku:nth-of-type(3n-1) {
+  background-image: url("/static/img/sakura2.png");
+}
+
+div.haiku:nth-of-type(3n) {
+  background-image: url("/static/img/sakura3.png");
+}
+
+div.haiku > p:nth-of-type(3n-2) { text-align: left; }
+div.haiku > p:nth-of-type(3n-1) { text-align: center; }
+div.haiku > p:nth-of-type(3n) { text-align: right; }
 
 div.haiku-leaf {
   position: fixed;

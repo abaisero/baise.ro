@@ -1,4 +1,4 @@
-title: research
+name: research
 icon: fa-flask
 
 # Research

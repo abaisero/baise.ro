@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baise.ro - {{ page.meta.title }}</title>
+  <title>Baise.ro {% if pname is not none %} - {{ pname.capitalize() }} {% endif %}</title>
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
   <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
@@ -14,10 +14,10 @@
     <div id="pagebanner">
       <ul class="nav nav-tabs nav-justified">
       {% for p in site.menu %}
-        <li {% if page.meta.title.lower() == p.meta.title.lower() %} class="active" {%endif%}>
+        <li {% if pname is not none and pname.lower() == p.meta.name.lower() %} class="active" {%endif%}>
         <a href="{{ url_for('page', path=p.path) }}"><strong>
             <i class="fa {{ p.meta.icon }} fa-fw"></i>
-            {{ p.meta.title.capitalize() }}
+            {{ p.meta.name.capitalize() }}
         </strong></a>
         </li>
       {% endfor %}
@@ -26,6 +26,9 @@
     <div id="pagecontent">
     {% block content %} {% endblock %}
     </div>
+  </div>
+  <div class="haiku-leaf">
+    <a href="/haiku"><i class="fa fa-leaf fa-lg"></i></a>
   </div>
 </body>
 </html>

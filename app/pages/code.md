@@ -1,4 +1,4 @@
-title: code
+name: code
 icon: fa-terminal
 
 # PyFGraph

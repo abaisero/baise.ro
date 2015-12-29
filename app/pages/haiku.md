@@ -1,56 +1,29 @@
-title: haiku
+name: haiku
 icon: fa-leaf
 
 # Haiku
 
-{::options parse_block_html="true" /}
-<div>
+; .haiku
+; Haikus can be fun,
+; but sometimes they don't make sense.
+; Refrigerator.
 
-
-{% comment %}
-<div class="haiku">
-Haikus can be fun,
-
-but sometimes they don't make sense.
-
-Refrigerator.
-</div>
-{% endcomment %}
-
-<div class="haiku">
+.haiku
 Sure, you once were sure;
-
 and future bright and obvious.
-
 Get up and endure.
-</div>
 
-{% comment %}
-<div class="haiku">
+.haiku
 You've planned the journey,
-
 You want the prize. So what now?
-
 Where is your first step?
-</div>
-{% endcomment %}
 
-{% comment %}
-<div class="haiku">
+; .haiku
+; Days, weeks, months or years.
+; Which discount factor is best,
+; for a fulfilled life?
+
+.haiku
 Days, weeks, months or years.
-
-Which discount factor is best,
-
-for a fulfilled life?
-</div>
-{% endcomment %}
-
-<div class="haiku">
-Days, weeks, months or years.
-
 Which discount factor best leads
-
 to real fulfillment?
-</div>
-
-</div>

@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+{{ page }}
+<ul class="list-group">
+  {% for post in site.posts %}
+  <li class="list-group-item">
+  <small><strong>{{ post.meta.date | fmt_date }}</strong></small>
+    <i class="fa {{ post.meta.icon }} fa-fw"></i>
+    <a href="{{ url_for('post', path=post.path) }}">{{ post.meta.title }}</a>
+    <small>~ {{ post.meta.description }}</small>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

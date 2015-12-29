@@ -1,4 +1,4 @@
-title: home
+name: home
 icon: fa-home
 
 # Hi!
