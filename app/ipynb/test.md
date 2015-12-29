@@ -5,5 +5,4 @@ icon: fa-home
 
 # header test
 
-ok this is a test
-{: test='ok' }
+.ipynb test.ipynb

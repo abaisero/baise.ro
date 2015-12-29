@@ -1,4 +1,5 @@
-from app import pages, posts
+from app import pages, posts, ipynbs
+import itertools as itt
 import datetime
 
 
@@ -18,7 +19,7 @@ class Site(object):
     @property
     def posts(self):
         return sorted(
-            posts,
+            itt.chain(list(posts), list(ipynbs)),
             key=lambda post: datetime.datetime.strptime(post.meta['date'], '%d.%m.%Y'),
             reverse=True
         )

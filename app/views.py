@@ -1,5 +1,5 @@
 from flask import render_template
-from app import app, pages, posts
+from app import app, pages, posts, ipynbs
 from site import site
 import pathlib
 import datetime
@@ -14,7 +14,20 @@ def fmt_date(value):
 def post(path):
     print 'serving WEBLOG {}'.format(path)
     post = posts.get_or_404(path)
-    return render_template('post.html', site=site, pname='weblog', post=post)
+    return render_template('post.html', site=site, pname='Weblog', post=post)
+
+
+@app.route('/ipynb/<path:path>/')
+def ipynb(path):
+    print 'serving IPYNB {}'.format(path)
+    post = ipynbs.get_or_404(path)
+    print 'POST'
+    print post
+    print 'POST.BODY'
+    print post.body
+    print 'POST.HTML'
+    print post.html
+    return render_template('post.html', site=site, pname='IPynb', post=post)
 
 
 @app.route('/<path:path>/')
@@ -23,13 +36,13 @@ def page(path):
     print 'serving PAGE {}'.format(path)
 
     # default is page
-    html = 'page.html'
+    template = 'page.html'
     book = pages
 
     # but weblog has different settings
     p = pathlib.Path(path)
     if len(p.parts) == 1 and p.parts[0] == 'weblog':
-        html = 'weblog.html'
+        template = 'weblog.html'
 
     page = book.get_or_404(path)
-    return render_template(html, site=site, pname=page.meta['name'], page=page)
+    return render_template(template, site=site, pname=page.meta['name'], page=page)
