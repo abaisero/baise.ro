@@ -26,7 +26,7 @@ h3 {
 
 div#pagewrap {
   width: 612px;
-  // width: 682px;
+  /* width: 682px; */
   margin: 10px auto;
   border: 2px;
 }
@@ -35,14 +35,19 @@ hr {
   border: none;
   width: 80%;
   height: 1px;
-  // background-color: pink;
+  /* background-color: pink; */
   background-color: gray;
 }
 
 div#pagebanner {
   width: 612px;
-  // width: 682px;
+  /* width: 682px; */
   background: white;
+}
+
+div#pagecontent {
+  /* this is for the muhammad-mountain positioning system */
+  position: relative;
 }
 
 div#pagecontent h1:before,
@@ -74,7 +79,7 @@ div.home {
 div.haiku {
   display: table;
   margin: 0 auto;
-  // border: 2px solid green;
+  /* border: 2px solid green; */
   background-image: url("/static/img/sakura1.png");
   background-size: contain;
   background-position: center;
@@ -111,24 +116,23 @@ div.haiku-leaf {
   right: 10px;
 }
 
+div.ipyprompt {
+  position: absolute;
+  font-family: monospace;
+  /* background-color: green; */
+  left: -63px;
+}
+
+div.ipycode {
+  color: blue;
+}
+
+div.ipyoutput {
+  color: red;
+}
+
 ol.bibliography {
   list-style-type: none;
   padding: 0;
   margin: 0;
-}
-
-#go {
-  position: relative;
-}
-
-#go > * {
-  position: absolute;
-}
-
-.go-black {
-  left: 0;
-}
-
-.go-white {
-  right: 0;
 }

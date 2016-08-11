@@ -23,9 +23,7 @@ class IPynbPreprocessor(Preprocessor):
         Each reference is set as a new AbbrPattern in the markdown instance.
 
         '''
-        print 'LINES'
         print lines
-        print 'END_LINES'
         new_lines = []
         for line in lines:
             match = self.regex.match(line)
@@ -33,24 +31,32 @@ class IPynbPreprocessor(Preprocessor):
                 fname = match.group('fname')
                 line = self.ipynb_line(fname)
             new_lines.extend(line.split('\n'))
-        print 'NEW_LINES'
-        print new_lines
-        print 'END_NEW_LINED'
         return new_lines
 
     def ipynb_line(self, fname):
         lines = str()
-        fname = 'app/static/ipynb/{}'.format(fname)
+        fname = './app/static/ipynb/{}'.format(fname)
         with open(fname) as f:
             notebook = json.load(f)
 
         cells = notebook['worksheets'][0]['cells']
+        muhammad_id = 0
 
         for cell in cells:
             if cell['cell_type'] == 'markdown':
                 lines += ''.join(cell['source'])
                 lines += '\n'
             elif cell['cell_type'] == 'code':
+                prompt_number = cell['prompt_number'] if 'prompt_number' in cell else ' '
+
+                muhammad = 'mhd_{}'.format(muhammad_id)
+                muhammad_id += 1
+
+                lines += '\n\n'
+                lines += '<div class="mountain ipyprompt ipycode" mhd="{}">In [{}]:</div>'.format(muhammad, prompt_number)
+                lines += '\n\n'
+                lines += '<span class="muhammad" id="{}"></span>'.format(muhammad)
+                lines += '\n\n'
                 lines += '~~~.python\n'
                 lines += ''.join(cell['input'])
                 lines += '\n'
@@ -63,9 +69,16 @@ class IPynbPreprocessor(Preprocessor):
 
                 for output in cell['outputs']:
                     if output['output_type'] in ('pyout', 'stream'):
+                        muhammad = 'mhd_{}'.format(muhammad_id)
+                        muhammad_id += 1
+
+                        lines += '\n\n'
+                        lines += '<div class="mountain ipyprompt ipyoutput" mhd="{}">Out[{}]:</div>'.format(muhammad, prompt_number)
+                        lines += '\n\n'
+                        lines += '<span class="muhammad" id="{}"></span>'.format(muhammad)
+                        lines += '\n\n'
                         lines += '~~~.python\n'
                         lines += ''.join(output['text'])
-                        # lines += '\n'
                         lines += '~~~\n'
                     elif output['output_type'] == 'pyerr':
                         lines += '\n'.join(strip_colors(o) for o in output['traceback'])

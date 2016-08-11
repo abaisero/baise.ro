@@ -33,22 +33,13 @@ FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'abbr', 'attr_list', 'def_list', 
 FLATPAGES_WEBLOG_AUTO_RELOAD = True
 FLATPAGES_WEBLOG_ROOT = os.path.join(APP_DIR, 'posts')
 FLATPAGES_WEBLOG_EXTENSION = '.md'
-FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment']
-
-
-# def ipynb_renderer(text, flatpages=None):
-#     print 'TEXT'
-#     print text
-#     print 'END TEXT'
-#     return '<h1>this is the test now</h1>'
-
-
-# FLATPAGES_HTML_RENDERER = ipynb_renderer
+FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment']
 
 
 FLATPAGES_IPYNB_AUTO_RELOAD = True
-FLATPAGES_IPYNB_ROOT = os.path.join(APP_DIR, 'ipynb')
-FLATPAGES_IPYNB_EXTENSION = '.md'
-# FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite']
-FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'app.mdx_ipynb']
+FLATPAGES_IPYNB_ROOT = os.path.join(APP_DIR, 'posts')
+FLATPAGES_IPYNB_EXTENSION = '.ipy'
+FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code']
+# FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'app.mdx_ipynb']
 # FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'app.mdx_comment']
+FLATPAGES_IPYNB_HTML_RENDERER = 'app.post:ipynb_renderer'

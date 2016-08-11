@@ -13,7 +13,9 @@ def fmt_date(value):
 @app.route('/weblog/<path:path>/')
 def post(path):
     print 'serving WEBLOG {}'.format(path)
-    post = posts.get_or_404(path)
+    post = posts.get(path)
+    if post is None:
+        post = ipynbs.get_or_404(path)
     return render_template('post.html', site=site, pname='Weblog', post=post)
 
 
@@ -21,13 +23,7 @@ def post(path):
 def ipynb(path):
     print 'serving IPYNB {}'.format(path)
     post = ipynbs.get_or_404(path)
-    print 'POST'
-    print post
-    print 'POST.BODY'
-    print post.body
-    print 'POST.HTML'
-    print post.html
-    return render_template('post.html', site=site, pname='IPynb', post=post)
+    return render_template('ipynb.html', site=site, pname='IPynb', post=post)
 
 
 @app.route('/<path:path>/')
