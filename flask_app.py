@@ -11,4 +11,3 @@ ipynbs = FlatPages(app, 'ipynb')
 
 if __name__ == '__main__':
     app.run(debug=True)
->>>>>>> cca7916baee0a51c790990f7a1ea9aec5d1cbe31
