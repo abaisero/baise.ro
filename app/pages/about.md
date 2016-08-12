@@ -3,10 +3,10 @@ icon: fa-info-circle
 
 # Me
 
-I pursued my Bachelor studies in Computer Engineering at PoliTo, in Italy.  For
-my Master studies in Computer Engineering and Science, I took part in a
-double-degree program which allowed me to divide my studies between PoliTo and
-KTH, in Sweden.  I am currently pursuing a PhD at the MLR group at the
+I pursued my Bachelor studies in Computer Engineering at PoliTo, in Italy.  I
+continued my Master studies in Computer Engineering and Science taking part in
+a double-degree program which allowed me to split my studies between PoliTo
+and KTH, in Sweden.  I am currently pursuing a PhD at the MLR group at the
 University of Stuttgart, in Germany.
 
 *[PoliTo]: Polytechnic University of Turin

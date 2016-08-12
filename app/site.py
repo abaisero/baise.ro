@@ -1,4 +1,4 @@
-from app import pages, posts, ipynbs
+from . import pages, posts, ipynbs
 import itertools as itt
 import datetime
 

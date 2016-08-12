@@ -42,4 +42,4 @@ FLATPAGES_IPYNB_EXTENSION = '.ipy'
 FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code']
 # FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'app.mdx_ipynb']
 # FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'app.mdx_comment']
-FLATPAGES_IPYNB_HTML_RENDERER = 'app.post:ipynb_renderer'
+# FLATPAGES_IPYNB_HTML_RENDERER = 'post:ipynb_renderer'
