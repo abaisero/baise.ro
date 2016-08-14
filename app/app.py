@@ -16,7 +16,7 @@ from flask import url_for
 def utility_processor():
     def ipynb2html(fname):
         url = url_for('ipynb2html', fname=fname)
-        html = '(download @) <div class=\'ipynb\'><object class=\'ipynb\' type=\'text/html\' data=\'{}\'></object></div>'.format(url)
+        html = '<div class=\'ipynb\'><object class=\'ipynb\' type=\'text/html\' data=\'{}\'></object></div>'.format(url)
         return Markup(html)
     return dict(ipynb2html=ipynb2html)
 

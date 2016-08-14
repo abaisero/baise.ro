@@ -7,6 +7,7 @@ DEBUG = True
 # Assumes the app is located in the same directory
 # where this file resides
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
+STATIC_DIR = os.path.join(APP_DIR, "static")
 
 
 def parent_dir(path):
