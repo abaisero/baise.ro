@@ -1,5 +1,4 @@
 # -*- coding: utf-8 -*-
-
 import os
 
 REPO_NAME = "flask-ghpages-example"  # Used for FREEZER_BASE_URL
@@ -13,6 +12,7 @@ APP_DIR = os.path.dirname(os.path.abspath(__file__))
 def parent_dir(path):
     '''Return the parent of a directory.'''
     return os.path.abspath(os.path.join(path, os.pardir))
+
 
 
 PROJECT_ROOT = parent_dir(APP_DIR)
@@ -33,8 +33,8 @@ FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'abbr', 'attr_list', 'def_list', 
 FLATPAGES_WEBLOG_AUTO_RELOAD = True
 FLATPAGES_WEBLOG_ROOT = os.path.join(APP_DIR, 'posts')
 FLATPAGES_WEBLOG_EXTENSION = '.md'
+# FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment', 'app.mdx_ipynb']
 FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment']
-
 
 FLATPAGES_IPYNB_AUTO_RELOAD = True
 FLATPAGES_IPYNB_ROOT = os.path.join(APP_DIR, 'posts')

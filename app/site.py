@@ -9,7 +9,8 @@ class Site(object):
         menu = [
             'home',
             'research',
-            'code',
+            'teaching',
+            # 'code',
             'weblog',
             'about',
         ]

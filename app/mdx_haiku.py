@@ -4,7 +4,6 @@ from markdown.blockprocessors import BlockProcessor
 
 
 class HaikuProcessor(BlockProcessor):
-
     def test(self, parent, block):
         lines = block.split('\n')
         return len(lines) == 4 and lines[0].strip() == '.haiku'
@@ -21,7 +20,6 @@ class HaikuProcessor(BlockProcessor):
 
 
 class HaikuExtension(Extension):
-
     def extendMarkdown(self, md, md_globals):
         # print md.parser.blockprocessors
         md.parser.blockprocessors.add(

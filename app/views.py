@@ -1,8 +1,18 @@
-from flask import render_template
+from flask import render_template, request, abort
 from app import app, pages, posts, ipynbs
 from site import site
 import pathlib
 import datetime
+
+import nbformat
+import nbconvert
+import pygments
+from traitlets.config import Config
+
+
+def my_highlight(source, language='ipython'):
+    formatter = pygments.formatters.HtmlFormatter(cssclass='highlight-ipynb')
+    return nbconvert.filters.highlight._pygments_highlight(source, formatter, language)
 
 
 @app.template_filter()
@@ -19,11 +29,19 @@ def post(path):
     return render_template('post.html', site=site, pname='Weblog', post=post)
 
 
-@app.route('/ipynb/<path:path>/')
-def ipynb(path):
-    print 'serving IPYNB {}'.format(path)
-    post = ipynbs.get_or_404(path)
-    return render_template('ipynb.html', site=site, pname='IPynb', post=post)
+@app.route('/ipynb2html/<fname>')
+def ipynb2html(fname):
+    try:
+        notebook = nbformat.read('app/static/ipynb/{}'.format(fname), 4)
+    except IOError:
+        abort(404)
+
+    # c = Config({'CSSHtmlHeaderTransformer':
+    #                 {'enabled':True, 'highlight_class':'highlight-ipynb'}})
+    # exportHtml = nbconvert.HTMLExporter(config=c, filters={'highlight': my_highlight})
+    exportHtml = nbconvert.HTMLExporter()
+    body, resources = exportHtml.from_notebook_node(notebook)
+    return body
 
 
 @app.route('/<path:path>/')

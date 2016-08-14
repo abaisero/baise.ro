@@ -1,6 +1,7 @@
-{% extends "base.html" %}
+{% extends "page.html" %}
+
 {% block content %}
-{{ page }}
+{{ super() }}
 <ul class="list-group">
   {% for post in site.posts %}
   <li class="list-group-item">

@@ -17,7 +17,8 @@
     <div id="pagebanner">
       <ul class="nav nav-tabs nav-justified">
       {% for p in site.menu %}
-        <li {% if pname is not none and pname.lower() == p.meta.name.lower() %} class="active" {%endif%}>
+        <!-- <li {% if pname is not none and pname.lower() == p.meta.name.lower() %} class="active" {%endif%}> -->
+        <li {% if p.meta.name.lower() == active_pname %} class="active" {% endif %}>
         <a href="{{ url_for('page', path=p.path) }}"><strong>
             <i class="fa {{ p.meta.icon }} fa-fw"></i>
             {{ p.meta.name.capitalize() }}
