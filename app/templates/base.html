@@ -9,8 +9,8 @@
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/pygments.css') }}">
 
-  <!-- <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script> -->
-  <!-- <script type="text/javascript" src="{{ url_for('static', filename='js/ab.js') }}"></script> -->
+  <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+  <script type="text/javascript" src="{{ url_for('static', filename='js/ab.js') }}"></script>
 </head>
 <body>
   <div id="pagewrap">
@@ -29,6 +29,10 @@
     </div>
     <div id="pagecontent">
     {% block content %} {% endblock %}
+    <footer>
+      <hr>
+      Contact me at <code><a class="email" href="andrea[PUNTO]baisero[CHIOCCIOLA]ipvs[PUNTO]uni[TRATTINO]stuttgart[PUNTO]de">email</a></code>.
+    </footer>
     </div>
   </div>
   <div class="haiku-leaf">

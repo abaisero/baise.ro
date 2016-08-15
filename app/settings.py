@@ -7,7 +7,9 @@ DEBUG = True
 # Assumes the app is located in the same directory
 # where this file resides
 APP_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_DIR = os.path.join(APP_DIR, "static")
+STATIC_DIR = os.path.join(APP_DIR, "static/")
+UPLOAD_DIR = os.path.join(APP_DIR, "upload/")
+ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
 
 
 def parent_dir(path):

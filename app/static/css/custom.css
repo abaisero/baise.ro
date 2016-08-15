@@ -163,3 +163,10 @@ object.ipynb {
   width: 122%;
   float: right;
 }
+
+/* .email:before { */
+/*   href: attr(data-website) "\0040" attr(data-user); */
+/*   unicode-bidi: bidi-override; */
+/*   direction: rtl; */
+/* } */
+
