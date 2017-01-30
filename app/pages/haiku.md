@@ -15,13 +15,13 @@ Get up and endure.
 
 .haiku
 A most honest wish.
-I hope you do not desire
+I hope, may you not desire
 what you can't achieve.
 
-.haiku
-You've planned the journey,
-You want the prize. So what now?
-Where is your first step?
+; .haiku
+; You've planned the journey,
+; You want the prize. So what now?
+; Where is your first step?
 
 .haiku
 Days, weeks, months or years.
