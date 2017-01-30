@@ -1,0 +1,13 @@
+ * check that file is actually an image
+ * write program which loads files in local directory and visualizes them (maybe some frames are already programmable that way)
+ * decide whether to keep the files in server or to remove them and only store them locally
+
+
+ * choose a json representation for user and pix
+ * do authentication stuff
+   * create fake service to verify this
+ * password recovery
+
+
+ BEFORE ANYTHING ELSE
+  * define your resources and access rights better!!!!!!!!!

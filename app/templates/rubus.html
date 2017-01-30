@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+{% macro render_field(field) %}
+<dt>{{ field.label }}
+<dd>{{ field(**kwargs) | safe }}</dd>
+{% endmacro %}
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Baise.ro - Rubus</title>
+  </head>
+  <body>
+    <div>
+      <form action="" method="post" enctype="multipart/form-data">
+        <dl>
+          {{ form.user.label }}
+          {{ form.user }} <br>
+          {{ form.file.label }}
+          {{ form.file }} <br>
+          {{ form.submit.label }}
+          {{ form.submit }} <br>
+          {#
+        <!-- {{ render_field(form.user) }} -->
+        <!-- {{ render_field(form.file) }} -->
+        <!-- {{ render_field(form.submit) }} -->
+          #}
+        {{ form.csrf_token }}
+        </dl>
+      </form>
+    </div>
+
+    <div>
+      {%- for user, pix in users.iteritems() %}
+      {%- for pic in pix %}
+      <a href="{{ url_for('user_pic', user=user, pic=pic) }}">{{ url_for('user_pic', user=user, pic=pic) }}</a><br>
+      {%- endfor %}
+      {%- endfor %}
+    </div>
+  </body>
+</html>
