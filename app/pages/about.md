@@ -3,31 +3,50 @@ icon: fa-info-circle
 
 # Me
 
-I pursued my Bachelor studies in Computer Engineering at PoliTo, in Italy.  I
-continued my Master studies in Computer Engineering and Science taking part in
-a double-degree program which allowed me to split my studies between PoliTo
-and KTH, in Sweden.  I am currently pursuing a PhD at the MLR group at the
-University of Stuttgart, in Germany.
+My research interests focus on stochastic models for pattern recognition,
+representation learning, symbol learning and logic-geometric information
+sharing with applications in general-purpose robotics, context-aware autonomous
+systems, and human-robot interaction.
 
-*[PoliTo]: Polytechnic University of Turin
-*[KTH]: Royal Institute of Technology
-*[MLR]: Machine Learning and Robotics
+Find a more complete report on my professional experience on my [CV][cv].
+
+[cv]: /static/docs/cv_baisero.pdf
+
+### Awards
+
+ * (2013) **AI Master Thesis Award**, <small>Swedish AI Society</small> <br>
+ <small>Yearly national award for the best Master thesis in the area of
+ artificial intelligence</small>
+
+### Education
+
+ * (*ongoing*) PhD in Machine Learning <br>
+ <small>University of Stuttgart, Germany.</small>
+ * (2014) **Machine Learning Summer School** <br>
+ <small>Rejkavik University, Iceland.</small>
+ * (2012) **MSc in Engineering** <br>
+ <small>Royal Institute of Technology, Sweden.</small> <br>
+ <small>(Double-degree student from the Polytechnic University of Turin)</small> <br>
+ * (2012) **MSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br>
+ <small>Polytechnic University of Turin, Italy.</small>
+ * (2009) **BSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br>
+ <small>Polytechnic University of Turin, Italy.</small>
 
 # My Website
 
-This website is written using [Flask][flask], an extremely simple python
-framework for static and dynamic websites and webapp development which uses the
+This website is written using [Flask][flask], a minimalistic python framework
+for static and dynamic websites and webapp development which uses the
 [Jinja][jinja] templating language to build page structure and
 [Markdown][markdown] to fill in content.
 
 The style is powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework) and
-[Font Awesome][fontawesome] (an icon toolkit).  I am by no means a web
-developer, and yet with these tools I managed to create this simple website
-with little trouble.  Layout and style are inspired by [Steve Losh][slosh] and
-[Data Genetics][datagen].
+[Font Awesome][fontawesome] (an icon toolkit).  Despite not being a web
+developer, I was able to create this website with ease using these tools.
+Layout and style are inspired by [Steve Losh][slosh] and [Data
+Genetics][datagen].
 
-The complete source code for this site can be found on its [<i class="fa
-fa-github-alt fa-lg"></i> github][github] page.
+Find the complete source code on its [<i class="fa fa-github-alt fa-lg"></i>
+github][github] page.
 
 [flask]: http://flask.pocoo.org "Flask"
 [jekyll]: http://jekyllrb.com "Jekyll"

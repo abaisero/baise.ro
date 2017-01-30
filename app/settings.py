@@ -1,24 +1,33 @@
 # -*- coding: utf-8 -*-
 import os
+from pathlib import Path
 
 REPO_NAME = "flask-ghpages-example"  # Used for FREEZER_BASE_URL
 DEBUG = True
 
 # Assumes the app is located in the same directory
 # where this file resides
-APP_DIR = os.path.dirname(os.path.abspath(__file__))
-STATIC_DIR = os.path.join(APP_DIR, "static/")
-UPLOAD_DIR = os.path.join(APP_DIR, "upload/")
+APP_PATH = Path(__file__).parents[0]
+PAGES_PATH = APP_PATH / 'pages'
+POSTS_PATH = APP_PATH / 'posts'
+STATIC_PATH = APP_PATH / 'static'
+RUBUS_PATH = APP_PATH / 'rubus'
+USERS_PATH = RUBUS_PATH / 'users'
+DB_PATH = APP_PATH / 'rubus.db'
+
+APP_DIR = str(APP_PATH)
+PAGES_DIR = str(PAGES_PATH)
+POSTS_DIR = str(POSTS_PATH)
+STATIC_DIR = str(STATIC_PATH)
+RUBUS_DIR = str(RUBUS_PATH)
+USERS_DIR = str(USERS_PATH)
+
+# TODO is this why some files are sent empty?!
 ALLOWED_EXTENSIONS = set(['txt', 'pdf', 'png', 'jpg', 'jpeg', 'gif'])
+MAX_CONTENT_LENGTH = 10 * 1024 * 1024
 
 
-def parent_dir(path):
-    '''Return the parent of a directory.'''
-    return os.path.abspath(os.path.join(path, os.pardir))
-
-
-
-PROJECT_ROOT = parent_dir(APP_DIR)
+PROJECT_ROOT = str(APP_PATH.parents[0])
 # In order to deploy to Github pages, you must build the static files to
 # the project root
 FREEZER_DESTINATION = PROJECT_ROOT
@@ -29,20 +38,24 @@ FREEZER_REMOVE_EXTRA_FILES = False  # IMPORTANT: If this is True, all app files
 # will be deleted when you run the freezer
 
 FLATPAGES_AUTO_RELOAD = True
-FLATPAGES_ROOT = os.path.join(APP_DIR, 'pages')
+FLATPAGES_ROOT = PAGES_DIR
 FLATPAGES_EXTENSION = '.md'
 FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment']
 
 FLATPAGES_WEBLOG_AUTO_RELOAD = True
-FLATPAGES_WEBLOG_ROOT = os.path.join(APP_DIR, 'posts')
+FLATPAGES_WEBLOG_ROOT = POSTS_DIR
 FLATPAGES_WEBLOG_EXTENSION = '.md'
 # FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment', 'app.mdx_ipynb']
 FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment']
 
 FLATPAGES_IPYNB_AUTO_RELOAD = True
-FLATPAGES_IPYNB_ROOT = os.path.join(APP_DIR, 'posts')
+FLATPAGES_IPYNB_ROOT = POSTS_DIR  # TODO I'm not using this anymore, right?
 FLATPAGES_IPYNB_EXTENSION = '.ipy'
 FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code']
 # FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'app.mdx_ipynb']
 # FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'app.mdx_comment']
 # FLATPAGES_IPYNB_HTML_RENDERER = 'post:ipynb_renderer'
+
+# TODO what was this for??
+WTF_CSRF_ENABLED = True
+SECRET_KEY = 'you-will-never-guess'
