@@ -2,6 +2,7 @@ title: Markdown post
 ; description: Just testing stuff
 date: 27.12.2015
 icon:
+nodisplay: 1
 
 I am testing a normal weblog post.
 

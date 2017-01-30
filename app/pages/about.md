@@ -3,14 +3,16 @@ icon: fa-info-circle
 
 # Me
 
-My research interests focus on stochastic models for pattern recognition,
-representation learning, symbol learning and logic-geometric information
-sharing with applications in general-purpose robotics, context-aware autonomous
-systems, and human-robot interaction.
+I am an aspiring researcher in the field of machine learning.  My research
+interests focus on stochastic models for pattern recognition, representation
+learning, symbol learning and logic-geometric information sharing with
+applications in general-purpose robotics, context-aware autonomous systems, and
+human-robot interaction.
 
-Find a more complete report on my professional experience on my [CV][cv].
+Find more about my academic and professional experience on my [CV][cv].
 
 [cv]: /static/docs/cv_baisero.pdf
+
 
 ### Awards
 
@@ -32,7 +34,9 @@ Find a more complete report on my professional experience on my [CV][cv].
  * (2009) **BSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br>
  <small>Polytechnic University of Turin, Italy.</small>
 
-# My Website
+---
+
+# Baise.ro
 
 This website was developed with [Flask][flask], a minimalistic python framework
 for webapp development which uses the [Jinja][jinja] templating language to
@@ -40,7 +44,7 @@ build page structure and [Markdown][markdown] to fill in content.
 The style is powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework),
 [Font Awesome][fontawesome] (an icon toolkit), and [Font-Mfizz][fontmfizz]
 (another complementary icon toolkit).  Despite not being a web
-developer, I was able to create this website with ease using these tools.
+developer, these tools allowed me to create this website with fun and ease.
 ; Layout and style are inspired by [Steve Losh][slosh] and [Data
 ; Genetics][datagen].
 
