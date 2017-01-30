@@ -34,27 +34,27 @@ Find a more complete report on my professional experience on my [CV][cv].
 
 # My Website
 
-This website is written using [Flask][flask], a minimalistic python framework
-for static and dynamic websites and webapp development which uses the
-[Jinja][jinja] templating language to build page structure and
-[Markdown][markdown] to fill in content.
-
-The style is powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework) and
-[Font Awesome][fontawesome] (an icon toolkit).  Despite not being a web
+This website was developed with [Flask][flask], a minimalistic python framework
+for webapp development which uses the [Jinja][jinja] templating language to
+build page structure and [Markdown][markdown] to fill in content.
+The style is powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework),
+[Font Awesome][fontawesome] (an icon toolkit), and [Font-Mfizz][fontmfizz]
+(another complementary icon toolkit).  Despite not being a web
 developer, I was able to create this website with ease using these tools.
-Layout and style are inspired by [Steve Losh][slosh] and [Data
-Genetics][datagen].
+; Layout and style are inspired by [Steve Losh][slosh] and [Data
+; Genetics][datagen].
 
-Find the complete source code on its [<i class="fa fa-github-alt fa-lg"></i>
+The source code is available on its [<i class="fa fa-github-alt fa-lg"></i>
 github][github] page.
 
 [flask]: http://flask.pocoo.org "Flask"
 [jekyll]: http://jekyllrb.com "Jekyll"
 [bootstrap]: http://getbootstrap.com "Bootstrap"
 [fontawesome]: http://fortawesome.github.io/Font-Awesome/ "Font Awesome"
+[fontmfizz]: http://fizzed.com/oss/font-mfizz
 [markdown]: http://daringfireball.net/projects/markdown/syntax "Markdown"
 [liquid]: http://liquidmarkup.org "Liquid"
 [jinja]: http://jinja.pocoo.org "Jinja"
 [slosh]: https://stevelosh.com "Steve Losh"
 [datagen]: http://datagenetics.com/blog "Data Genetics"
-[github]: https://github.com/bigblindbais/baise.ro "Baise.ro repository"
+[github]: https://github.com/abaisero/baise.ro "Baise.ro repository"

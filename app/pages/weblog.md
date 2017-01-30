@@ -3,6 +3,5 @@ icon: fa-book
 
 # Weblog
 
-Maybe it doesn't even make sense to have this as an md file...
-
-This page is under development.  Current posts are all tests.
+A collection of posts and notebooks regarding puzzles, algebra, and probability
+theory.

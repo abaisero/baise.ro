@@ -48,7 +48,6 @@ def post(path):
 @app.route('/ipynb2html/<fname>')
 def ipynb2html(fname):
     fpath = '{}/ipynb/{}'.format(app.config['STATIC_DIR'], fname)
-    print fpath
     try:
         notebook = nbformat.read(fpath, 4)
     except IOError:
