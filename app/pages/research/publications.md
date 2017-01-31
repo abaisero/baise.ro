@@ -1,4 +1,4 @@
-title: publications
+name: publications
 icon: fa-flask
 
 # Publications

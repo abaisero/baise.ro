@@ -4,4 +4,4 @@ date: 26.12.2015
 icon: icon-python
 nodisplay: 1
 
-{{ ipynb2html('test.ipynb') }}
+{{ notebook2html('test.ipynb') }}

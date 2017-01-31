@@ -3,7 +3,7 @@ import pathlib
 import datetime
 
 from flask import render_template, request, abort
-from app import app, pages, posts, ipynbs
+from app import app, pages, posts, notebooks
 from site import site
 
 # import views_rubus
@@ -41,13 +41,13 @@ def post(path):
     print 'serving WEBLOG {}'.format(path)
     post = posts.get(path)
     if post is None:
-        post = ipynbs.get_or_404(path)
+        post = notebooks.get_or_404(path)
     return render_template('post.html', site=site, pname='Weblog', post=post)
 
 
-@app.route('/ipynb2html/<fname>')
-def ipynb2html(fname):
-    fpath = '{}/ipynb/{}'.format(app.config['STATIC_DIR'], fname)
+@app.route('/notebook2html/<fname>')
+def notebook2html(fname):
+    fpath = '{}/notebooks/{}'.format(app.config['STATIC_DIR'], fname)
     try:
         notebook = nbformat.read(fpath, 4)
     except IOError:
@@ -56,26 +56,25 @@ def ipynb2html(fname):
     # c = Config({'CSSHtmlHeaderTransformer':
     #                 {'enabled':True, 'highlight_class':'highlight-ipynb'}})
     # exportHtml = nbconvert.HTMLExporter(config=c, filters={'highlight': my_highlight})
-    exportHtml = nbconvert.HTMLExporter()
+
+    config = Config({'HTMLExporter': {'default_template': 'basic'}})
+    exportHtml = nbconvert.HTMLExporter(config=config)
     body, resources = exportHtml.from_notebook_node(notebook)
     return body
 
 
-# @app.route('/<path:path>/')
-@app.route('/<path>/')
+@app.route('/<path:path>/')
 @app.route('/', defaults={'path': 'home'})
 def page(path):
     print 'serving PAGE {}'.format(path)
 
     # default is page
     template = 'page.html'
-    book = pages
 
     # but weblog has different settings
     p = pathlib.Path(path)
     if len(p.parts) == 1 and p.parts[0] == 'weblog':
         template = 'weblog.html'
 
-    page = book.get_or_404(path)
+    page = pages.get_or_404(path)
     return render_template(template, site=site, pname=page.meta['name'], page=page)
-

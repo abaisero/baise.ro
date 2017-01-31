@@ -1,8 +1,8 @@
 # baise.ro
 
-This repository contains my static website, developed using Jekyll.
+This repository contains my website, developed in the Flask webapp framework.
 
-Click [here][url] to visit my home page. Learn more about it [here][about].
+Click [here][url] to visit my home page.  Learn more about it [here][about].
 
-[url]: http://baise.ro
-[about]: http://baise.ro/about
+[url]: http://a.baise.ro
+[about]: http://a.baise.ro/about

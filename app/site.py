@@ -1,4 +1,4 @@
-from . import pages, posts, ipynbs
+from . import pages, posts, notebooks
 import itertools as itt
 import datetime
 
@@ -20,7 +20,8 @@ class Site(object):
     @property
     def posts(self):
         return sorted(
-            itt.chain(list(posts), list(ipynbs)),
+            itt.chain(list(posts), list(notebooks)),
+            # TODO key seems wrong?!
             key=lambda post: datetime.datetime.strptime(post.meta['date'], '%d.%m.%Y'),
             reverse=True
         )

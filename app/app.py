@@ -14,13 +14,13 @@ app.config['FLATPAGES_WEBLOG_HTML_RENDERER'] = prerender_jinja
 from flask import url_for
 @app.context_processor
 def utility_processor():
-    def ipynb2html(fname):
-        url = url_for('ipynb2html', fname=fname)
-        html = '<div class=\'ipynb\'><object class=\'ipynb\' type=\'text/html\' data=\'{}\'></object></div>'.format(url)
+    def notebook2html(fname):
+        url = url_for('notebook2html', fname=fname)
+        html = '<div class=\'notebook\'><object class=\'notebook\' type=\'text/html\' data=\'{}\' onload="resizeIframe(this)"></object></div>'.format(url)
         return Markup(html)
-    return dict(ipynb2html=ipynb2html)
+    return dict(notebook2html=notebook2html)
 
 pages = FlatPages(app)
 posts = FlatPages(app, 'weblog')
-ipynbs = FlatPages(app, 'ipynb')
+notebooks = FlatPages(app, 'notebook')
 

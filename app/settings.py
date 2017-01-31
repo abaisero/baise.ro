@@ -48,13 +48,13 @@ FLATPAGES_WEBLOG_EXTENSION = '.md'
 # FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment', 'app.mdx_ipynb']
 FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment']
 
-FLATPAGES_IPYNB_AUTO_RELOAD = True
-FLATPAGES_IPYNB_ROOT = POSTS_DIR  # TODO I'm not using this anymore, right?
-FLATPAGES_IPYNB_EXTENSION = '.ipy'
-FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code']
-# FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'app.mdx_ipynb']
-# FLATPAGES_IPYNB_MARKDOWN_EXTENSIONS = ['codehilite', 'app.mdx_comment']
-# FLATPAGES_IPYNB_HTML_RENDERER = 'post:ipynb_renderer'
+FLATPAGES_NOTEBOOK_AUTO_RELOAD = True
+FLATPAGES_NOTEBOOK_ROOT = POSTS_DIR  # TODO I'm not using this anymore, right?
+FLATPAGES_NOTEBOOK_EXTENSION = '.ipy'
+FLATPAGES_NOTEBOOK_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code']
+# FLATPAGES_NOTEBOOK_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'app.mdx_ipynb']
+# FLATPAGES_NOTEBOOK_MARKDOWN_EXTENSIONS = ['codehilite', 'app.mdx_comment']
+# FLATPAGES_NOTEBOOK_HTML_RENDERER = 'post:ipynb_renderer'
 
 # TODO what was this for??
 WTF_CSRF_ENABLED = True

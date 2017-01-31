@@ -13,8 +13,8 @@ def strip_colors(string):
     return ansi_escape.sub('', string)
 
 
-def ipynb_renderer(text, pages, page):
-    fname = './app/static/ipynb/{}.ipynb'.format(page.path)
+def notebook_renderer(text, pages, page):
+    fname = './app/static/notebooks/{}.ipynb'.format(page.path)
     with open(fname) as f:
         notebook = json.load(f)
 
@@ -22,7 +22,7 @@ def ipynb_renderer(text, pages, page):
     muhammad_id = 0
 
     text += '(Download this IPython Notebook <a href="{}">here</a>.)'.format(
-        url_for('static', filename='ipynb/{}.ipynb'.format(page.path))
+        url_for('static', filename='notebooks/{}.ipynb'.format(page.path))
     )
     text += '\n\n'
 

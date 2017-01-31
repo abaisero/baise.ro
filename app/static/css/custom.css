@@ -1,17 +1,10 @@
 @import url("http://fonts.googleapis.com/css?family=Droid+Serif:400,700");
 
-html {
-  /* for ipynb-object auto height */
-  height: 100%;
-}
-
 body {
   font-family: 'Droid Serif', serif;
   font-weight: normal;
   font-size: 140%;
   text-align: justify;
-  /* for ipynb-object auto height */
-  height: 100%;
 }
 
 ul.nav {
@@ -34,7 +27,6 @@ h3 {
 div#pagewrap {
   width: 612px;
   width: 682px;
-  height: 100%; /* for ipynb-object auto height */
   margin: 10px auto;
   border: 2px;
 }
@@ -56,8 +48,6 @@ div#pagebanner {
 div#pagecontent {
   /* this is for the muhammad-mountain positioning system */
   position: relative;
-  /* for ipynb-object auto height */
-  height: 100%;
 }
 
 div#pagecontent h1:before,
@@ -147,21 +137,21 @@ ol.bibliography {
   margin: 0;
 }
 
-article {
+div.notebook {
+}
+
+object.notebook {
+  /* width: 129%; */
+  width: 146%;
+  position: relative;
+  left: -200px;
+}
+
+html, body, div#pagewrap, div#pagecontent, article, div.notebook, object.notebook {
+  /* for notebook object auto height */
   height: 100%;
 }
 
-div.ipynb {
-  /* for ipynb-object auto height */
-  height: 100%;
-}
-
-object.ipynb {
-  /* for ipynb-object auto height */
-  height: 100%;
-  width: 122%;
-  float: right;
-}
 
 /* .email:before { */
 /*   href: attr(data-website) "\0040" attr(data-user); */

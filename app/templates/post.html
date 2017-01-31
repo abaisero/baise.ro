@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% set active_pname = "weblog" %}
+<!-- {% set active_pname = "weblog" %} -->
 
 {% block content %}
 <article>
@@ -9,16 +9,18 @@
       <small>Posted on {{ post.meta.date | fmt_date }}</small>
     </h1>
   </header>
-  {% if post.meta.ipynb %}
+  {% if post.meta.notebook %}
   <small>
     This weblog entry is an IPython/Jupyter Notebook.
-    <a href="/static/ipynb/{{ post.meta.ipynb }}">Download</a> or view on
-    <a href="http://nbviewer.jupyter.org/url/a.baise.ro/static/ipynb/{{ post.meta.ipynb }}">Jupyter nbviewer</a>.
+    <a href="/static/notebooks/{{ post.meta.notebook }}">Download</a> or view on
+    <a href="http://nbviewer.jupyter.org/url/a.baise.ro/static/notebooks/{{ post.meta.notebook }}">Jupyter nbviewer</a>.
   </small>
   {% endif %}
-{{ post }}
-  {% if post.meta.ipynb %}
-  {{ ipynb2html(post.meta.ipynb) }}
+
+  {{ post }}
+
+  {% if post.meta.notebook %}
+  {{ notebook2html(post.meta.notebook) }}
   {% endif %}
 </article>
 {% endblock %}

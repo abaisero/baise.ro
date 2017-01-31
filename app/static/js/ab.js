@@ -1,6 +1,5 @@
 $(function() {
 
-
   // obfuscates email
   $("span.email").each(function(i) {
     var email = $(this).text().replace(/\[CHIOCCIOLA\]/g, "@").replace(/\[PUNTO\]/g, ".").replace(/\[TRATTINO\]/g, "-")
@@ -44,3 +43,8 @@ $(function() {
   //   });
   // });
 });
+
+// Wow this really sucks
+function resizeIframe(obj) {
+  obj.style.height = (obj.contentWindow.document.body.scrollHeight + 150) + 'px';
+}
