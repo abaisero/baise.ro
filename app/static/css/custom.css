@@ -159,3 +159,6 @@ html, body, div#pagewrap, div#pagecontent, article, div.notebook, object.noteboo
 /*   direction: rtl; */
 /* } */
 
+> li.nostyle {
+  list-style-type: none;
+}

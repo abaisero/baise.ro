@@ -42,9 +42,13 @@ $(function() {
   //     // 'background': 'blue'
   //   });
   // });
+
+  $('li.nostyle').parents('ul').css('list-style-type', 'none');
+  $('i.fa-li').parents('li').parents('ul').addClass('fa-ul');
 });
 
 // Wow this really sucks
 function resizeIframe(obj) {
   obj.style.height = (obj.contentWindow.document.body.scrollHeight + 150) + 'px';
 }
+

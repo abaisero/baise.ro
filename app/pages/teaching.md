@@ -5,14 +5,17 @@ icon: fa-graduation-cap
 
 ### University of Stuttgart
 
-* [WS 2016 - Mathematics for Intelligent Systems][maths16]
-* [SS 2016 - Machine Learning][ml16]
-* [WS 2015 - Seminar in Machine Learning][hsml15]
-* [SS 2015 - Optimization][opt15]
-* [WS 2014 - Seminar in Machine Learning][hsml14]
-* [SS 2014 - Machine Learning][ml14]
-* [WS 2013 - Seminar in Machine Learning][hsml13]
-* [SS 2013 - Machine Learning][ml13]
+I've been TA for the following courses:
+
+ * `WS 2016` [Mathematics for Intelligent Systems][maths16]
+ * `SS 2016` [Machine Learning][ml16]
+ * `WS 2015` [Seminar in Machine Learning][hsml15]
+ * `SS 2015` [Optimization][opt15]
+ * `WS 2014` [Seminar in Machine Learning][hsml14]
+ * `SS 2014` [Machine Learning][ml14]
+ * `WS 2013` [Seminar in Machine Learning][hsml13]
+ * `SS 2013` [Machine Learning][ml13]
+ {:.nostyle}
 
 [maths16]: https://ipvs.informatik.uni-stuttgart.de/mlr/teaching/maths/
 [ml16]: https://ipvs.informatik.uni-stuttgart.de/mlr/marc/teaching/16-MachineLearning/

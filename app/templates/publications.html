@@ -1,0 +1,98 @@
+{% extends "page.html" %}
+
+{% block content %}
+{{ super() }}
+<!-- {% for year, yearrefs in references %} -->
+<!-- <h3>{{ year }}</h3> -->
+<!-- <hr/> -->
+<!-- <ul> -->
+<!--     {% for ref in yearrefs %} -->
+<!--     <li class="publicationItem"> -->
+<!--         {% autoescape off %} {{ref.author }} : -->
+<!--         <br/> -->
+<!--         <em>{{ ref.title }}</em>. -->
+<!--         <br/> -->
+<!--         {% if ref.booktitle%} {{ ref.booktitle }} {% endif %} --> 
+<!--         {% if ref.journal%} {{ ref.journal }} {{ ref.volume }} {% if ref.number%} ({{ ref.number }}) {% endif %} {% endif %} --> 
+<!--         {% endautoescape %} --> 
+<!--         {% if ref.keywordlist%} -->
+<!--             {% for kw in ref.keywordlist %} -->
+<!--             <span class="label">{{ kw }}</span> -->
+<!--             {% endfor %} --> 
+<!--         {% endif %} --> 
+<!--         {% if ref.note %} -->
+<!--             <span class="label label-primary">{{ ref.note }}</span> -->
+<!--         {% endif %} -->
+<!--         <br/> -->
+<!--         {% if ref.preprint %} -->
+<!--             <a href="{{ url_for('static', filename=ref.preprint) }}" target="_blank">[preprint]</a> -->
+<!--         {% endif %} --> 
+<!--         {% if ref.preprintonline %} -->
+<!--             <a href="{{ ref.preprintonline }}" target="_blank">[preprint]</a> -->
+<!--         {% endif %} --> 
+<!--         {% if ref.slides %} -->
+<!--             <a href="{{ url_for('static', filename=ref.slides) }}" target="_blank">[talk slides]</a> -->
+<!--         {% endif %} --> 
+<!--         {% if ref.online %} -->
+<!--             <a href="{{ ref.online }}" target="_blank">[view online]</a> -->
+<!--         {% endif %} --> 
+<!--         {% if ref.abstractonline %} -->
+<!--             <a href="{{ ref.abstractonline }}" target="_blank">[view full abstract online]</a> -->
+<!--         {% endif %} --> 
+<!--         {% if ref.abstract %} --> 
+<!--             <a href="javascript:void(0)" onClick="$('\#abstractModal{{ ref.id }}').modal({show: true});">[abstract]</a> --> 
+<!--             <1!-- The abstract modal just contains the abstract text. --1> -->
+<!--         {% endif %} -->
+<!--         <a href="javascript:void(0)" onClick="$('\#bibtexModal{{ ref.id }}').modal({show: true});">[bibtex]</a> -->
+<!--         <1!-- The BibTex modal constructs a valid entry from all 'important' fields above. --1> -->
+<!--     </li> -->
+<!--     {% endfor %} -->
+<!-- </ul> -->
+<!-- {% endfor %} -->
+
+<ul>
+{% for year, yearrefs in references %}
+    {% for ref in yearrefs %}
+    <li class="publicationItem">
+        {% autoescape off %} {{ref.author }} :
+        <br/>
+        <em>{{ ref.title }}</em>.
+        <br/>
+        {% if ref.booktitle%} {{ ref.booktitle }} {% endif %} 
+        {% if ref.journal%} {{ ref.journal }} {{ ref.volume }} {% if ref.number%} ({{ ref.number }}) {% endif %} {% endif %} 
+        {% endautoescape %} 
+        {% if ref.keywordlist%}
+            {% for kw in ref.keywordlist %}
+            <span class="label">{{ kw }}</span>
+            {% endfor %} 
+        {% endif %} 
+        {% if ref.note %}
+            <span class="label label-primary">{{ ref.note }}</span>
+        {% endif %}
+        <br/>
+        {% if ref.preprint %}
+            <a href="{{ url_for('static', filename=ref.preprint) }}" target="_blank">[preprint]</a>
+        {% endif %} 
+        {% if ref.preprintonline %}
+            <a href="{{ ref.preprintonline }}" target="_blank">[preprint]</a>
+        {% endif %} 
+        {% if ref.slides %}
+            <a href="{{ url_for('static', filename=ref.slides) }}" target="_blank">[talk slides]</a>
+        {% endif %} 
+        {% if ref.online %}
+            <a href="{{ ref.online }}" target="_blank">[view online]</a>
+        {% endif %} 
+        {% if ref.abstractonline %}
+            <a href="{{ ref.abstractonline }}" target="_blank">[view full abstract online]</a>
+        {% endif %} 
+        {% if ref.abstract %} 
+            <a href="javascript:void(0)" onClick="$('\#abstractModal{{ ref.id }}').modal({show: true});">[abstract]</a> 
+            <!-- The abstract modal just contains the abstract text. -->
+        {% endif %}
+        <a href="javascript:void(0)" onClick="$('\#bibtexModal{{ ref.id }}').modal({show: true});">[bibtex]</a>
+        <!-- The BibTex modal constructs a valid entry from all 'important' fields above. -->
+    </li>
+    {% endfor %}
+{% endfor %}
+</ul>
+{% endblock %}

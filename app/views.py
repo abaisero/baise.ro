@@ -6,6 +6,9 @@ from flask import render_template, request, abort
 from app import app, pages, posts, notebooks
 from site import site
 
+import bibtexparser
+from collections import defaultdict
+
 # import views_rubus
 
 ### Adding useful filter to jinja2
@@ -78,3 +81,29 @@ def page(path):
 
     page = pages.get_or_404(path)
     return render_template(template, site=site, pname=page.meta['name'], page=page)
+
+@app.route('/research/publications/')
+def publications():
+    print 'serving PUBLICATIONS'
+
+    #Load file
+    bibfname = '{}/docs/refs.bib'.format(app.config['STATIC_DIR'])
+    with open(bibfname, 'r') as bibfile:
+        bp = bibtexparser.load(bibfile)
+    references = sorted(bp.get_entry_list(), key=lambda x: x['year'], reverse=True)        
+    refs = defaultdict(list)
+
+    #Preprocess the references
+    for r in references:
+        if 'labels' in r:
+            r['keywordlist'] = r['labels'].split(',')        
+        if 'booktitle' in r:
+            r['booktitle'] = r['booktitle'].replace('\&', '&amp;')
+        r['title'] = r['title'].replace('\&', '&amp;')
+        refs[r['year']].append(r)
+
+    page = pages.get_or_404('research/publications')
+
+    #Sort years
+    refsbyyear = sorted(refs.items(), key=lambda x: x[0], reverse=True)       
+    return render_template('publications.html', site=site, pname='research', page=page, references = refsbyyear)

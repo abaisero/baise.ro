@@ -1,55 +1,61 @@
 name: about
 icon: fa-info-circle
 
-# Me
+# About
 
-I am an aspiring researcher in the field of machine learning.  My research
-interests focus on stochastic models for pattern recognition, representation
-learning, symbol learning and logic-geometric information sharing with
-applications in general-purpose robotics, context-aware autonomous systems, and
-human-robot interaction.
+### Me
 
-Find more about my academic and professional experience on my [CV][cv].
+Find more about my academic and professional experience on my [<i class="fa
+fa-file-pdf-o fa-lg"></i> CV][cv].
 
 [cv]: /static/docs/cv_baisero.pdf
 
-
 ### Awards
 
- * (2013) **AI Master Thesis Award**, <small>Swedish AI Society</small> <br>
+ * <i class="fa-li fa fa-dot-circle-o fa-fw"></i> 
+ **AI Master Thesis Award**, <small>Swedish AI Society</small> <br>
  <small>Yearly national award for the best Master thesis in the area of
  artificial intelligence</small>
 
 ### Education
 
- * (*ongoing*) PhD in Machine Learning <br>
+ ; * <i class="fa-li fa fa-spinner fa-pulse fa-fw"></i> 
+ * <i class="fa-li fa fa-spinner fa-spin fa-fw"></i> 
+ PhD in Machine Learning, <small>*(ongoing)*</small> <br>
  <small>University of Stuttgart, Germany.</small>
- * (2014) **Machine Learning Summer School** <br>
+ * <i class="fa-li fa fa-dot-circle-o fa-fw"></i> 
+ **Machine Learning Summer School** <br>
  <small>Rejkavik University, Iceland.</small>
- * (2012) **MSc in Engineering** <br>
+ * <i class="fa-li fa fa-dot-circle-o fa-fw"></i> 
+ **MSc in Engineering** <br>
  <small>Royal Institute of Technology, Sweden.</small> <br>
  <small>(Double-degree student from the Polytechnic University of Turin)</small> <br>
- * (2012) **MSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br>
+ * <i class="fa-li fa fa-dot-circle-o fa-fw"></i> 
+ **MSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br>
  <small>Polytechnic University of Turin, Italy.</small>
- * (2009) **BSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br>
+ * <i class="fa-li fa fa-dot-circle-o fa-fw"></i> 
+ **BSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br>
  <small>Polytechnic University of Turin, Italy.</small>
 
 ---
 
-# Baise.ro
+### Baise.ro
 
 This website was developed with [Flask][flask], a minimalistic python framework
 for webapp development which uses the [Jinja][jinja] templating language to
-build page structure and [Markdown][markdown] to fill in content.
-The style is powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework),
-[Font Awesome][fontawesome] (an icon toolkit), and [Font-Mfizz][fontmfizz]
-(another complementary icon toolkit).  Despite not being a web
-developer, these tools allowed me to create this website with fun and ease.
-; Layout and style are inspired by [Steve Losh][slosh] and [Data
-; Genetics][datagen].
+build page structure and [Markdown][markdown] to fill in content.  The style is
+powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework), [Font
+Awesome][fontawesome] (an icon toolkit), and [Font-Mfizz][fontmfizz] (a
+complementary icon toolkit).  Despite not being a web developer, these tools
+allowed me to create this website with fun and ease.
 
-The source code is available on its [<i class="fa fa-github-alt fa-lg"></i>
-github][github] page.
+; Layout and style are inspired by [Steve Losh][slosh] and [Data ; Genetics][datagen].
+
+; KEEP THIS IN MIND
+; http://l-lin.github.io/font-awesome-animation/
+
+The complete source code is available on its [<i class="fa fa-github-alt
+fa-lg"></i> github][github] page.
 
 [flask]: http://flask.pocoo.org "Flask"
 [jekyll]: http://jekyllrb.com "Jekyll"
