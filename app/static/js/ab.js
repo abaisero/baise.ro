@@ -43,8 +43,14 @@ $(function() {
   //   });
   // });
 
-  $('li.nostyle').parents('ul').css('list-style-type', 'none');
-  $('i.fa-li').parents('li').parents('ul').addClass('fa-ul');
+  // Removes style from unordered list
+  $('li.nostyle').parent('ul').css({
+    'list-style-type': 'none',
+    'padding-left': '0pt',
+  });
+
+  // Adds appropriate Font Awesome class to iconized unordered list
+  $('i.fa-li').parent('li').parent('ul').addClass('fa-ul');
 });
 
 // Wow this really sucks

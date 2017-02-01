@@ -23,4 +23,3 @@ def utility_processor():
 pages = FlatPages(app)
 posts = FlatPages(app, 'weblog')
 notebooks = FlatPages(app, 'notebook')
-
