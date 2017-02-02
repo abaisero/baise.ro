@@ -51,10 +51,25 @@ $(function() {
 
   // Adds appropriate Font Awesome class to iconized unordered list
   $('i.fa-li').parent('li').parent('ul').addClass('fa-ul');
+
+  for (var i = 5; i > 0; i--) {
+    // Iterate over each element and replace the tag while maintaining attributes
+    $('div.notebook h'+i).each(function() {
+      // Create a new element and assign it attributes from the current element
+      var NewElement = $('<h'+(i+1)+' />');
+      $.each(this.attributes, function(i, attrib){
+        $(NewElement).attr(attrib.name, attrib.value);
+      });
+      // Replace the current element with the new one and carry over the contents
+      $(this).replaceWith(function () {
+        return $(NewElement).append($(this).contents());
+      });
+    });
+  }
 });
 
 // Wow this really sucks
-function resizeIframe(obj) {
-  obj.style.height = (obj.contentWindow.document.body.scrollHeight + 150) + 'px';
-}
+// function resizeIframe(obj) {
+//   obj.style.height = (obj.contentWindow.document.body.scrollHeight + 150) + 'px';
+// }
 

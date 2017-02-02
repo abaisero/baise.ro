@@ -11,15 +11,17 @@
   {% if post.meta.notebook %}
   <small>
     This weblog entry is an IPython/Jupyter Notebook.
-    <a href="/static/notebooks/{{ post.meta.notebook }}">Download</a> or view on
-    <a href="http://nbviewer.jupyter.org/url/a.baise.ro/static/notebooks/{{ post.meta.notebook }}">Jupyter nbviewer</a>.
+    <a href="{{ post.meta._notebook_url }}">Download</a> or view on
+    <a href="http://nbviewer.jupyter.org/url/a.baise.ro{{ post.meta._notebook_url }}">Jupyter nbviewer</a>.
   </small>
   {% endif %}
 
   {{ post }}
 
   {% if post.meta.notebook %}
-  {{ notebook2html(post.meta.notebook) }}
+  <div class="notebook">
+    {{ notebook(post) | safe }}
+  </div>
   {% endif %}
 </article>
 {% endblock %}

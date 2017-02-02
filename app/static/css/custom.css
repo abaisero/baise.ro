@@ -147,10 +147,10 @@ object.notebook {
   left: -200px;
 }
 
-html, body, div#pagewrap, div#pagecontent, article, div.notebook, object.notebook {
-  /* for notebook object auto height */
-  height: 100%;
-}
+/* html, body, div#pagewrap, div#pagecontent, article, div.notebook, object.notebook { */
+/*   /1* for notebook object auto height *1/ */
+/*   height: 100%; */
+/* } */
 
 
 /* .email:before { */
@@ -158,7 +158,3 @@ html, body, div#pagewrap, div#pagecontent, article, div.notebook, object.noteboo
 /*   unicode-bidi: bidi-override; */
 /*   direction: rtl; */
 /* } */
-
-> li.nostyle {
-  list-style-type: none;
-}
