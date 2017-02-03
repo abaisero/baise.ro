@@ -1,33 +1,33 @@
 {% extends "base.html" %}
 
 {% block content %}
-<article>
 
-  <header>
-    <h1> {{ post.meta.title }} </h1>
-    <small>
-      <strong>
-        Posted on {{ post.meta.date | fmt_date }}
-      </strong>
-    </small>
-
-    {% if post.meta.notebook %}
-    <br/>
-    <small>
-      (This weblog entry is an IPython/Jupyter Notebook;
-      <a href="{{ post.meta._notebook_url }}">Download</a> or view on
-      <a href="http://nbviewer.jupyter.org/url/a.baise.ro{{ post.meta._notebook_url }}">Jupyter nbviewer</a>)
-    </small>
-    {% endif %}
-  </header>
-
-  {{ post }}
+<header>
+  <h1> {{ post.meta.title }} </h1>
+  <small>
+    <strong>
+      Posted on {{ post.meta.date | fmt_date }}
+    </strong>
+  </small>
 
   {% if post.meta.notebook %}
-  <div class="notebook">
-    {{ notebook(post) | safe }}
-  </div>
+  <br/>
+  <small>
+    (This weblog entry is an IPython/Jupyter Notebook;
+    <a href="{{ post.meta._notebook_url }}">Download</a> or view on
+    <a href="http://nbviewer.jupyter.org/url/a.baise.ro{{ post.meta._notebook_url }}">Jupyter nbviewer</a>)
+  </small>
   {% endif %}
+</header>
 
-</article>
+<main>
+{{ post }}
+
+{% if post.meta.notebook %}
+<div class="notebook">
+  {{ notebook(post) | safe }}
+</div>
+{% endif %}
+</main>
+
 {% endblock %}
