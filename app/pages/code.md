@@ -6,8 +6,8 @@ icon: fa-terminal
 While working on my PhD, I found myself in the need for a simple but highly
 flexible graphical model library for python.  I ended up writing my own code
 which has now become a side-project of its own.  The library is called PyFGraph
-and you can find the source code on its [<i class="fa fa-github-alt fa-lg"></i>
-github][github] page.
+and you can find the source code on its [<span class="icon fa fa-github-alt
+fa-lg"></span> github][github] page.
 
 The code is still very primitive and in a fundamentally unorderly state, and
 will hardly be of any use to anyone else but me, at its current stage.

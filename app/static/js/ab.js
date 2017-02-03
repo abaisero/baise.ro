@@ -50,7 +50,8 @@ $(function() {
   });
 
   // Adds appropriate Font Awesome class to iconized unordered list
-  $('i.fa-li').parent('li').parent('ul').addClass('fa-ul');
+  // $('i.fa-li').parent('li').parent('ul').addClass('fa-ul');
+  $('span.icon.fa-li').parent('li').parent('ul').addClass('fa-ul');
 
   for (var i = 5; i > 0; i--) {
     // Iterate over each element and replace the tag while maintaining attributes

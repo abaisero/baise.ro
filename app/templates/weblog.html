@@ -5,10 +5,11 @@
 <ul class="list-group">
   {% for post in weblogs %}
   <li class="list-group-item">
-  <!-- <small><strong>{{ post.meta.date | fmt_date }}</strong></small> -->
-  <small><strong>{{ post.meta.date }}</strong></small>
-    <!-- <i class="fa {{ post.meta.icon if post.meta.icon else "fa-pencil" }} fa-lg"></i> -->
-    <i class="fa {{ post.meta.icon if post.meta.icon else "fa-pencil" }}"></i>
+  <small><strong>
+    {# {{ post.meta.date | fmt_date }} #}
+    {{ post.meta.date }}
+  </strong></small>
+    <span class="icon fa {{ post.meta.icon if post.meta.icon else "fa-pencil" }}"></span>
     <a href="{{ url_for('post', pname=post.path) }}">{{ post.meta.title }}</a>
     <br>
     {% if post.meta.description %}

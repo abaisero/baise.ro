@@ -2,26 +2,18 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
+  <meta name="keywords" content="Andrea, Baisero, Machine Learning">
+  <meta name="description" content="Andrea Baisero's personal webpage">
+  <meta name="author" content="Andrea Baisero">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baise.ro - {{ active | capitalize }}</title>
+
+  <title>Andrea Baisero - {{ active | capitalize }}</title>
+
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
   <link type="text/css" rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
   <link type="text/css" rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.min.css">
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/custom.css') }}">
   <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/pygments.css') }}">
-
-  <!-- <script type="text/x-mathjax-config"> -->
-  <!--   MathJax.Hub.Config({ -->
-  <!--     tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]} -->
-  <!--   }); -->
-  <!-- </script> -->
-  <!-- <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML,{{ url_for('static', filename='mathjax.local.js') }}"></script> -->
-  <!-- <script type="text/x-mathjax-config" src="{{ url_for('static', filename='mathjax/local.js') }}"></script> -->
-  <!-- <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script> -->
-  <!-- <script type="text/javascript" src="{{ url_for('static', filename='MathJax/MathJax.js') }},{{ url_for('static', filename='mathjax/local.js') }}"></script> -->
-  <!-- <script type="text/javascript" src="{{ url_for('static', filename='MathJax/MathJax.js') }}?config=TeX-AMS-MML_HTMLorMML,{{ url_for('static', filename='mathjax') }}/local"></script> -->
-  <!-- <script type="text/javascript" src="{{ url_for('static', filename='MathJax/MathJax.js') }}?config=TeX-AMS-MML_HTMLorMML,local"></script> -->
-  <!-- <script type="text/javascript" src="{{ url_for('static', filename='MathJax/MathJax.js') }}?config=TeX-AMS-MML_HTMLorMML,/static/mathjax/local.js"> -->
 
   <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
     MathJax.Hub.Config({
@@ -35,37 +27,6 @@
     });
   </script>
  
- <!--  <script type="text/javascript" src="{{ url_for('static', filename='MathJax/MathJax.js') }}?config=TeX-AMS-MML_HTMLorMML"> -->
- <!--    MathJax.Hub.Config({ -->
- <!--      extensions: ["tex2jax.js"], -->
- <!--      jax: ["input/TeX", "output/HTML-CSS"], -->
- <!--      tex2jax: { -->
- <!--        inlineMath: [ ['$','$'], ["\\(","\\)"] ], -->
- <!--        displayMath: [ ['$$','$$'], ["\\[","\\]"] ], -->
- <!--      }, -->
- <!--      "HTML-CSS": { availableFonts: ["TeX"] }, -->
- <!--      TeX: { -->
- <!--        Macros: { -->
- <!--          w: ["\\boldsymbol\\omega"], -->
- <!--          x: ["\\boldsymbol x"], -->
- <!--          z: ["\\boldsymbol z"], -->
- <!--          A: ["\\boldsymbol A"], -->
- <!--          b: ["\\boldsymbol b"], -->
- <!--          C: ["\\boldsymbol C"], -->
- <!--          d: ["\\boldsymbol d"], -->
- <!--          PI: ["^+"], -->
- <!--          T: ["^\\top"], -->
- <!--          NN: ["\\mathcal{N}"], -->
- <!--          RRR: ["\\mathbb{R}"], -->
- <!--          pr: ["\\operatorname{pr}"], -->
- <!--          nll: ["\\operatorname{nll}"], -->
- <!--          null: ["\\operatorname{null}"], -->
- <!--          cond: ["~ | ~"], -->
- <!--          eqc: ["\\stackrel{c}{=}"], -->
- <!--        } -->
- <!--      }, -->
- <!--    }); -->
- <!--  </script> -->
   <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script type="text/javascript" src="{{ url_for('static', filename='js/ab.js') }}"></script>
 </head>
@@ -76,7 +37,7 @@
       {% for p in menu %}
         <li {% if p.meta.name | lower == active | lower %} class="active" {% endif %}>
         <a href="{{ url_for('page', ppath=p.path) }}"><strong>
-            <i class="fa {{ p.meta.icon }} fa-fw"></i>
+            <span class="icon fa {{ p.meta.icon }} fa-fw"></span>
             {{ p.meta.name | capitalize }}
         </strong></a>
         </li>
@@ -84,15 +45,15 @@
       </ul>
     </div>
     <div id="pagecontent">
-    {% block content %} {% endblock %}
-    <footer>
-      <hr>
-      Contact me at: <code><span class="email">andrea[PUNTO]baisero[CHIOCCIOLA]ipvs[PUNTO]uni[TRATTINO]stuttgart[PUNTO]de</span></code>
-    </footer>
+      {% block content %} {% endblock %}
+      <footer>
+        <hr>
+        Contact me at: <code><span class="email">andrea[PUNTO]baisero[CHIOCCIOLA]ipvs[PUNTO]uni[TRATTINO]stuttgart[PUNTO]de</span></code>
+      </footer>
     </div>
   </div>
   <div class="haiku-leaf">
-    <a href="/haiku"><i class="fa fa-leaf fa-lg"></i></a>
+    <a href="/haiku"><span class="icon fa fa-leaf fa-lg"></span></a>
   </div>
 </body>
 </html>
