@@ -183,7 +183,10 @@ def publications():
             note=entry.fields.get('note', None),
         ) for key, entry in entries.entries.iteritems()
     ]
-    bib = sorted(bib, key=lambda entry: entry['year'], reverse=True)
+
+    # NOTE inverting manually enforces that the bibtex file order is also
+    # inverted in the case of same year.
+    bib = sorted(bib, key=lambda entry: entry['year'])[::-1]
 
     return render_template('publications.html', active='research', page=page, bib=bib)
 
