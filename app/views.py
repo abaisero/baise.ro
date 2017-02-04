@@ -24,6 +24,11 @@ import nbconvert
 def fmt_date_filter(value):
     return datetime.datetime.strptime(value, '%d.%m.%Y').strftime('%d %b %Y')
 
+import re
+@app.template_filter('boldify')
+def boldify_filter(text, author):
+    return re.sub(author, '<span class="pub-mainauthor">{}</span>'.format(author), text)
+
 
 @app.context_processor
 def utility_processor():
@@ -90,31 +95,97 @@ def post(pname):
     return render_template('post.html', active='weblog', post=post)
 
 
+# @app.route('/research/publications/')
+# def publications():
+#     print 'serving PUBLICATIONS'
+
+#     #Load file
+#     bibfname = '{}/docs/pubs/refs.bib'.format(app.config['STATIC_DIR'])
+#     with open(bibfname, 'r') as bibfile:
+#         bp = bibtexparser.load(bibfile)
+#     references = sorted(bp.get_entry_list(), key=lambda x: x['year'], reverse=True)        
+#     refs = defaultdict(list)
+
+#     #Preprocess the references
+#     for r in references:
+#         if 'labels' in r:
+#             r['keywordlist'] = r['labels'].split(',')        
+#         if 'booktitle' in r:
+#             r['booktitle'] = r['booktitle'].replace('\&', '&amp;')
+#         r['title'] = r['title'].replace('\&', '&amp;')
+#         refs[r['year']].append(r)
+
+#     page = pages.get_or_404('research/publications')
+
+#     #Sort years
+#     refsbyyear = sorted(refs.items(), key=lambda x: x[0], reverse=True)       
+#     return render_template('publications.html', active='research', page=page, references=refsbyyear)
+
+
+try:
+    from StringIO import StringIO
+except ImportError:
+    from io import StringIO
+from pybtex.database import BibliographyData
+from pybtex.database.input import bibtex
+from pybtex.database.output.bibtex import Writer
+
+
+def _get_bibtex_repr(entry):
+    """
+    Return the bibtex representation of the entry.
+
+    """
+    bib_data = BibliographyData(entries={entry.key: entry})
+    bibtex_repr = StringIO()
+    Writer().write_stream(bib_data, bibtex_repr)
+    return bibtex_repr.getvalue()
+
+
+def _get_authors(entry):
+    """
+    Return the list of authors as nicely formated string.
+
+    """
+    # authors = [" ".join([author.first()[0], author.last()[0]])
+    #            for author in entry.persons["author"]]
+    # for author in entry.persons["author"]:
+    #     print(author.first(), author.middle(), author.last())
+    #     print(author)
+    authors = [author.last()[0] for author in entry.persons["author"]]
+    return ", ".join(authors)
+
+
 @app.route('/research/publications/')
 def publications():
-    print 'serving PUBLICATIONS'
+    print 'serving publications'
 
     #Load file
-    bibfname = '{}/docs/refs.bib'.format(app.config['STATIC_DIR'])
-    with open(bibfname, 'r') as bibfile:
-        bp = bibtexparser.load(bibfile)
-    references = sorted(bp.get_entry_list(), key=lambda x: x['year'], reverse=True)        
-    refs = defaultdict(list)
-
-    #Preprocess the references
-    for r in references:
-        if 'labels' in r:
-            r['keywordlist'] = r['labels'].split(',')        
-        if 'booktitle' in r:
-            r['booktitle'] = r['booktitle'].replace('\&', '&amp;')
-        r['title'] = r['title'].replace('\&', '&amp;')
-        refs[r['year']].append(r)
+    bibtex_file = '{}/docs/pubs/refs.bib'.format(app.config['STATIC_DIR'])
+    parser = bibtex.Parser()
+    entries = parser.parse_file(bibtex_file)
 
     page = pages.get_or_404('research/publications')
 
-    #Sort years
-    refsbyyear = sorted(refs.items(), key=lambda x: x[0], reverse=True)       
-    return render_template('publications.html', active='research', page=page, references=refsbyyear)
+    bib = [
+        dict(
+            type_=entry.type,
+            key=key,
+            title=entry.fields['title'],
+            authors=_get_authors(entry),
+            booktitle=entry.fields.get('booktitle', None),
+            journal=entry.fields.get('journal', None),
+            school=entry.fields.get('school', None),
+            year=entry.fields['year'],
+            pdf=entry.fields.get('pdf', None),
+            bibtex=_get_bibtex_repr(entry),
+            talk=entry.fields.get('talk', None),
+            note=entry.fields.get('note', None),
+        ) for key, entry in entries.entries.iteritems()
+    ]
+    bib = sorted(bib, key=lambda entry: entry['year'], reverse=True)
+
+    return render_template('publications.html', active='research', page=page, bib=bib)
 
 @app.before_first_request
 def setup_menu():

@@ -158,3 +158,26 @@ object.notebook {
 /*   unicode-bidi: bidi-override; */
 /*   direction: rtl; */
 /* } */
+
+/* PUBLICATION */
+.pub-title {
+  font-weight: 400;
+}
+.pub-authors {
+  font-size: 1.4rem;
+  font-style: italic;
+}
+.pub-mainauthor {
+  font-weight: bold;
+}
+.pub-conf {
+  font-size: 1.4rem;
+}
+.pub-links {
+  font-size: 1.4rem;
+  text-align: center;
+}
+.pub-preview {
+  width: 95%;
+  border: 1px solid #eee;
+}
