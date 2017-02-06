@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
-from pathlib import Path
+from pathlib2 import Path
 
 REPO_NAME = "flask-ghpages-example"  # Used for FREEZER_BASE_URL
 DEBUG = True
