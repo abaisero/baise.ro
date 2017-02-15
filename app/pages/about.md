@@ -44,10 +44,11 @@ class="icon fa fa-file-pdf-o fa-lg"></span> CV][cv].
 This website was developed with [Flask][flask], a minimalistic python framework
 for webapp development which uses the [Jinja][jinja] templating language to
 build page structure and [Markdown][markdown] to fill in content.  The style is
-powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework), [Font
-Awesome][fontawesome] (an icon toolkit), and [Font-Mfizz][fontmfizz] (a
-complementary icon toolkit).  Despite not being a web developer, these tools
-allowed me to create this website with fun and ease.
+powered by [Skeleton][skeleton] (a CSS boilerplate), [Bootstrap][bootstrap] (an
+HTML/CSS/JS framework), [Font Awesome][fontawesome] (an icon toolkit), and
+[Font-Mfizz][fontmfizz] (a complementary icon toolkit).  Despite not being
+a web developer, these tools allowed me to create this website with fun and
+ease.
 
 ; Layout and style are inspired by [Steve Losh][slosh] and [Data
 ; Genetics][datagen].
@@ -60,6 +61,7 @@ fa-lg"></span> github][github] page.
 
 [flask]: http://flask.pocoo.org "Flask"
 [jekyll]: http://jekyllrb.com "Jekyll"
+[skeleton]: http://getskeleton.com/ "Skeleton"
 [bootstrap]: http://getbootstrap.com "Bootstrap"
 [fontawesome]: http://fortawesome.github.io/Font-Awesome/ "Font Awesome"
 [fontmfizz]: http://fizzed.com/oss/font-mfizz
