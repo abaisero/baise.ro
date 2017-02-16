@@ -1,0 +1,75 @@
+name: baise.ro
+channels:
+- !!python/unicode
+  'defaults'
+dependencies:
+- !!python/unicode
+  'backports=1.0=py27_0'
+- !!python/unicode
+  'configparser=3.5.0=py27_0'
+- !!python/unicode
+  'decorator=4.0.11=py27_0'
+- !!python/unicode
+  'entrypoints=0.2.2=py27_0'
+- !!python/unicode
+  'enum34=1.1.6=py27_0'
+- !!python/unicode
+  'functools32=3.2.3.2=py27_0'
+- !!python/unicode
+  'ipython_genutils=0.1.0=py27_0'
+- !!python/unicode
+  'jinja2=2.9.4=py27_0'
+- !!python/unicode
+  'jsonschema=2.5.1=py27_0'
+- !!python/unicode
+  'jupyter_core=4.2.1=py27_0'
+- !!python/unicode
+  'markupsafe=0.23=py27_2'
+- !!python/unicode
+  'mistune=0.7.3=py27_0'
+- !!python/unicode
+  'nbconvert=4.2.0=py27_0'
+- !!python/unicode
+  'nbformat=4.2.0=py27_0'
+- !!python/unicode
+  'openssl=1.0.2k=0'
+- !!python/unicode
+  'pathlib2=2.2.0=py27_0'
+- !!python/unicode
+  'pip=9.0.1=py27_1'
+- !!python/unicode
+  'pygments=2.1.3=py27_0'
+- !!python/unicode
+  'python=2.7.13=0'
+- !!python/unicode
+  'readline=6.2=2'
+- !!python/unicode
+  'scandir=1.4=py27_0'
+- !!python/unicode
+  'setuptools=27.2.0=py27_0'
+- !!python/unicode
+  'six=1.10.0=py27_0'
+- !!python/unicode
+  'sqlite=3.13.0=0'
+- !!python/unicode
+  'tk=8.5.18=0'
+- !!python/unicode
+  'traitlets=4.3.1=py27_0'
+- !!python/unicode
+  'wheel=0.29.0=py27_0'
+- !!python/unicode
+  'zlib=1.2.8=3'
+- pip:
+  - click==6.7
+  - flask==0.12
+  - flask-flatpages==0.6
+  - ipython-genutils==0.1.0
+  - itsdangerous==0.24
+  - jupyter-core==4.2.1
+  - latexcodec==1.0.4
+  - markdown==2.6.8
+  - pybtex==0.21
+  - pyyaml==3.12
+  - werkzeug==0.11.15
+prefix: !!python/unicode '/home/bais/anaconda2/envs/baise.ro'
+

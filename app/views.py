@@ -1,12 +1,12 @@
 import os
-import pathlib
+import pathlib2
 import datetime
 
 from flask import g, render_template, url_for, request, abort
 # from app import app, pages, posts, notebooks
 from app import app, pages, posts
 
-import bibtexparser
+# import bibtexparser
 from collections import defaultdict
 
 # import views_rubus
