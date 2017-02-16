@@ -9,10 +9,33 @@ icon: fa-flask
 
 ### Decoding relational descriptions
 
-This work focuses on a very common type of interaction which arises in
-cooperative multi-agent tasks, where one agent defines a task via a relational
-description of a goal state, and another one performs it such that the goal
-state is satisfied.
+Multi-agent cooperative tasks very often feature one specific type of
+interaction, in which one agent defines a task via a high-level description of
+the goal state, and the other agent performs it.  
+
+The problem of modeling this type of interaction is addresed by developing
+a discriminative probabilistic model of the environment features conditioned on
+a symbolic relational state $\operatorname{pr}(\phi_E ~|~ \Sigma)$ which we
+call Relational Feature Density Model (RFDM).
+
+The model exploits Bayes' theorem and mild independency assumptions to model
+the posterior $\operatorname{pr}(\phi_E ~|~ \Sigma)$ as a function of simpler
+density models on a) prior features $\operatorname{pr}(\phi_o)$ and b)
+posterior features conditioned on a single ground predicate
+$\operatorname{pr}(\phi_{\bar\sigma} ~|~ \bar\sigma)$.
+
+Having to model only $\operatorname{pr}(\phi_o)$ and
+$\operatorname{pr}(\phi_{\bar\sigma} ~|~ \bar\sigma)$ results in multiple
+advantages:
+
+ * Only positive examples are necessary for training, which avoids the
+   awkwardness of having to provide negative examples.
+ * Each model can be trained independently, because the RFDM model takes care
+   of the information propagation and generalizes well to never-seen-before
+   combinations of ground predicates in the relational state.
+ * Additionally, modeling the required densities as (mixtures of) Gaussians
+   results in a particularly efficient computation of the posterior
+   distribution parameters.
 
 ### Identification of unmodeled objects
 
