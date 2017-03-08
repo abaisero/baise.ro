@@ -15,6 +15,6 @@ I have worked on the following distinct topics:
  * [Identification of Unmodeled Objects via Relational Descriptions][iden]
  * [Temporal Segmentation of Sequential Manipulations][tseg]
 
-[rfdm]: rfdm/
-[iden]: iden/
-[tseg]: tseg/
+[rfdm]: decoding_relational_descriptions/
+[iden]: identification_of_unmodeled_objects/
+[tseg]: temporal_segmentation/
