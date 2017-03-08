@@ -22,4 +22,3 @@ contextual information in that the sig- nificance of each description predicate
 depends on how much other objects in the scenario exhibit that same property.
 This allows the descriptions to be flexibly given, and to focus on combinations
 of properties which make the referent object unique in its environment.
-
