@@ -13,17 +13,26 @@ Sure, you once were sure;
 and future bright and obvious.
 Get up and endure.
 
-.haiku
-A most honest wish.
-I hope, may you not desire
-what you can't achieve.
-
 ; .haiku
-; You've planned the journey,
-; You want the prize. So what now?
-; Where is your first step?
+; A most honest wish.
+; I hope, may you not desire
+; what you can't achieve.
 
 .haiku
 Days, weeks, months or years.
-Which discount factor best leads
-to real fulfillment?
+How much to wait for real joy?
+How to discount life?
+
+## From [r/haiku][haikusub]
+
+.haiku
+Hungry lambs cry out.
+Sometimes the mother attends,
+and sometimes the wolf.
+
+.haiku
+As the seasons pass,
+do not be sad they are gone.
+We used them to grow.
+
+[haikusub]: https://www.reddit.com/r/haiku/ "r/haiku"
