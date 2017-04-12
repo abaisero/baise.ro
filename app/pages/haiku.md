@@ -19,11 +19,16 @@ Get up and endure.
 ; what you can't achieve.
 
 .haiku
-Days, weeks, months or years.
-How much to wait for real joy?
-How to discount life?
+Step by step by step,
+I persevere 'cause I trust
+that small things matter.
 
-## From [r/haiku][haikusub]
+; .haiku
+; Days, weeks, months or years.
+; How much to wait for real joy?
+; How to discount life?
+
+## From [<span class="fa fa-reddit-alien"></span> r/haiku][haikusub]
 
 .haiku
 Hungry lambs cry out.
