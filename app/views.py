@@ -197,6 +197,7 @@ def setup_menu():
         'home',
         'research',
         'teaching',
+        'code',
         'weblog',
         'about',
         ]]

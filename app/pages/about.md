@@ -57,7 +57,7 @@ website with fun and ease.
 ; http://l-lin.github.io/font-awesome-animation/
 
 The complete source code is available on its [<span class="icon fa fa-github-alt
-fa-lg"></span> github][github] page.
+fa-lg"></span> github][baise.ro] page.
 
 [flask]: http://flask.pocoo.org "Flask"
 [jekyll]: http://jekyllrb.com "Jekyll"
@@ -70,4 +70,4 @@ fa-lg"></span> github][github] page.
 [jinja]: http://jinja.pocoo.org "Jinja"
 [slosh]: https://stevelosh.com "Steve Losh"
 [datagen]: http://datagenetics.com/blog "Data Genetics"
-[github]: https://github.com/abaisero/baise.ro "Baise.ro repository"
+[baise.ro]: https://github.com/abaisero/baise.ro "Baise.ro repository"
