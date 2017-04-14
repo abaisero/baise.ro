@@ -25,11 +25,12 @@ class="icon fa fa-file-pdf-o fa-lg"></span> CV][cv].
  <small>University of Stuttgart, Germany.</small>
  * <span class="icon fa-li fa fa-dot-circle-o fa-fw"></span> 
  **Machine Learning Summer School** <br>
- <small>Rejkavik University, Iceland.</small>
+ <small>Rejkjavik University, Iceland.</small>
  * <span class="icon fa-li fa fa-dot-circle-o fa-fw"></span> 
- **MSc in Engineering** <br>
+ **MSc in Engineering**, <small>*double degree program*</small> <br>
  <small>Royal Institute of Technology, Sweden.</small> <br>
- <small>(Double-degree student from the Polytechnic University of Turin.)</small> <br>
+ ; <small>(as a double degree student.)</small> <br>
+ ; <small>(Double degree student from the Polytechnic University of Turin.)</small> <br>
  * <span class="icon fa-li fa fa-dot-circle-o fa-fw"></span> 
  **MSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br>
  <small>Polytechnic University of Turin, Italy.</small>
