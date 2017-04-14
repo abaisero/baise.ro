@@ -3,12 +3,12 @@ icon: fa-info-circle
 
 # About
 
-### Me
+; ### Me
 
-Find more about my academic and professional experience on my [<span
-class="icon fa fa-file-pdf-o fa-lg"></span> CV][cv].
+; Find more about my academic and professional experience on my [<span
+; class="icon fa fa-file-pdf-o fa-lg"></span> CV][cv].
 
-[cv]: /static/docs/cv_baisero.pdf
+; [cv]: /static/docs/cv_baisero.pdf
 
 ### Awards
 
