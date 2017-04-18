@@ -56,7 +56,12 @@ div#pagecontent h3:before {
   content: "# "
 }
 
+.clear {
+  clear: both;
+}
+
 footer {
+  /* padding-top: 5px; */
   margin-bottom: 20px;
 }
 
