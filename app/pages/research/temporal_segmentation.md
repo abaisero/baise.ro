@@ -3,14 +3,14 @@ icon: fa-flask
 
 # Temporal Segmentation of Sequential Manipulations
 
-; I defined a motion-based graphical model which temporally segments human
-; demonstrations into the fundamental interaction sequences which concurrently
-; manifest between hand-object and object-object pairs.
+;; I defined a motion-based graphical model which temporally segments human
+;; demonstrations into the fundamental interaction sequences which concurrently
+;; manifest between hand-object and object-object pairs.
 
-; The temporal segmentation can be used to autonomously break a complex
-; demonstration into its atomic components, and is also used on assembly
-; demonstrations to extract a set of transferrable instructions which abstract
-; the performed assembly task.
+;; The temporal segmentation can be used to autonomously break a complex
+;; demonstration into its atomic components, and is also used on assembly
+;; demonstrations to extract a set of transferrable instructions which abstract
+;; the performed assembly task.
 
 
 

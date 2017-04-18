@@ -3,12 +3,12 @@ icon: fa-info-circle
 
 # About
 
-; ### Me
+;; ### Me
 
-; Find more about my academic and professional experience on my [<span
-; class="icon fa fa-file-pdf-o fa-lg"></span> CV][cv].
+;; Find more about my academic and professional experience on my [<span
+;; class="icon fa fa-file-pdf-o fa-lg"></span> CV][cv].
 
-; [cv]: /static/docs/cv_baisero.pdf
+;; [cv]: /static/docs/cv_baisero.pdf
 
 ### Awards
 
@@ -19,7 +19,7 @@ icon: fa-info-circle
 
 ### Education
 
- ; * <span class="icon fa-li fa fa-spinner fa-pulse fa-fw"></span> 
+ ;; * <span class="icon fa-li fa fa-spinner fa-pulse fa-fw"></span> 
  * <span class="icon fa-li fa fa-spinner fa-spin fa-fw"></span> 
  PhD in Machine Learning, <small>*(ongoing)*</small> <br>
  <small>University of Stuttgart, Germany.</small>

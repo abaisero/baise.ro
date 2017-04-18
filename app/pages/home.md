@@ -1,5 +1,5 @@
 name: baise.ro
-; name: home
+;; name: home
 icon: fa-home
 
 # Hi!

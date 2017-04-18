@@ -13,20 +13,20 @@ Sure, you once were sure;
 and future bright and obvious.
 Get up and endure.
 
-; .haiku
-; A most honest wish.
-; I hope, may you not desire
-; what you can't achieve.
+;; .haiku
+;; A most honest wish.
+;; I hope, may you not desire
+;; what you can't achieve.
 
 .haiku
 Step by step by step,
 I persevere 'cause I trust
 that small things matter.
 
-; .haiku
-; Days, weeks, months or years.
-; How much to wait for real joy?
-; How to discount life?
+;; .haiku
+;; Days, weeks, months or years.
+;; How much to wait for real joy?
+;; How to discount life?
 
 ## From [<span class="fa fa-reddit-alien"></span> r/haiku][haikusub]
 

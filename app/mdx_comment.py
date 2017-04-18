@@ -6,7 +6,7 @@ import re
 class CommentPreprocessor(Preprocessor):
     """ Abbreviation Preprocessor - parse text for abbr references. """
 
-    regex = re.compile(';.*')
+    regex = re.compile(';;.*')
 
     def run(self, lines):
         '''
