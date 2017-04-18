@@ -19,6 +19,15 @@ jinja2.filters.FILTERS['basename'] = os.path.basename
 import nbformat
 import nbconvert
 
+#  Allows for slash-less urls to work seemlessly
+app.url_map.strict_slashes = False
+@app.before_request
+def clear_trailing():
+    from flask import redirect, request
+
+    rp = request.path 
+    if rp != '/' and rp.endswith('/'):
+        return redirect(rp[:-1])
 
 @app.template_filter('fmt_date')
 def fmt_date_filter(value):
@@ -54,7 +63,7 @@ def utility_processor():
     return dict(notebook=notebook)
 
 
-@app.route('/<path:ppath>/')
+@app.route('/<path:ppath>')
 @app.route('/', defaults={'ppath': 'home'})
 def page(ppath):
     print 'serving PAGE {}'.format(ppath)
@@ -63,7 +72,7 @@ def page(ppath):
     return render_template('page.html', active=active, page=page)
 
 
-@app.route('/weblog/')
+@app.route('/weblog')
 def weblog():
     print 'serving WEBLOG'
     page = pages.get_or_404('weblog')
@@ -77,7 +86,7 @@ def weblog():
     return render_template('weblog.html', active=active, page=page, weblogs=weblogs)
 
 
-@app.route('/weblog/<pname>/')
+@app.route('/weblog/<pname>')
 def post(pname):
     print 'serving WEBLOG {}'.format(pname)
     post = posts.get_or_404(pname)
@@ -95,7 +104,7 @@ def post(pname):
     return render_template('post.html', active='weblog', post=post)
 
 
-# @app.route('/research/publications/')
+# @app.route('/research/publications')
 # def publications():
 #     print 'serving PUBLICATIONS'
 
@@ -156,7 +165,7 @@ def _get_authors(entry):
     return ", ".join(authors)
 
 
-@app.route('/research/publications/')
+@app.route('/research/publications')
 def publications():
     print 'serving publications'
 

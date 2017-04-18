@@ -4,7 +4,7 @@ icon: fa-code
 
 # Public Code
 
-### RL
+### RL {:#rl}
 
 I am developing a simple reinforcement learning library as an exercise to learn
 more on the subject and to solve some of the programming exercises from Sutton
@@ -21,7 +21,7 @@ abaisero/rl][rl].
 
 [rl]: https://github.com/abaisero/rl "Reinforcement learning repository"
 
-### Pytk: Python toolkit
+### PyTk: Python toolkit {:#pytk}
 
 A personal repository containing general purpose utilities including: context
 managers, decorators, iterators, collections, and 3D geometry classes.
@@ -32,7 +32,7 @@ fa-github-alt fa-lg"></span> abaisero/pytk][pytk].
 
 [pytk]: https://github.com/abaisero/pytk "Python toolkit repository"
 
-### Baise.ro
+### Baise.ro {:#baise.ro}
 
 This website is developed using [Flask][flask], a minimalistic python framework
 for webapp development which uses the [Jinja][jinja] templating language to

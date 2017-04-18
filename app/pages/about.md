@@ -38,7 +38,7 @@ icon: fa-info-circle
 
 ---
 
-Find more about this website on the [<span class="icon fa fa-code"></span>
-code][code] page.
+Find more about this website on the corresponding section in the [<span
+class="icon fa fa-code"></span> code][code] page.
 
-[code]: /code
+[code]: /code#baise.ro
