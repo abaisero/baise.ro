@@ -4,7 +4,7 @@ icon: fa-home
 
 # Hi!
 
-![profile][profile]{:style="width:150px;float:left;margin-right:10px;margin-bottom:10px;"}
+;; ![profile][profile]{:style="width:150px;float:left;margin-right:10px;margin-bottom:10px;"}
 
 I'm Andrea Baisero, an aspiring researcher in the field of machine learning.
 
