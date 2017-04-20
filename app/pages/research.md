@@ -3,7 +3,7 @@ icon: fa-flask
 
 # Research
 
-[Publications][pubs]
+Check out my [<span class="icon fa fa-files-o"></span> Publications][pubs].
 
 [pubs]: /research/publications
 
