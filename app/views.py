@@ -199,18 +199,21 @@ def publications():
 
     return render_template('publications.html', active='research', page=page, bib=bib)
 
+
+# setup global menu variable
 @app.before_first_request
 def setup_menu():
     global menu
-    menu = [pages.get(page) for page in [
+    menu = map(pages.get, [
         'home',
         'research',
         'teaching',
         'code',
         'weblog',
         'about',
-        ]]
+    ])
 
+# inject menu list into templates 
 @app.context_processor
 def inject_menu():
     return dict(menu=menu)
