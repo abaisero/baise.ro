@@ -2,20 +2,19 @@
 
 {% block content %}
 {{ super() }}
-<ul class="list-group">
+
+<div class="list-group">
   {% for post in weblogs %}
-  <li class="list-group-item">
-  <small><strong>
-    {# {{ post.meta.date | fmt_date }} #}
-    {{ post.meta.date }}
-  </strong></small>
+  <a class="list-group-item" href="{{ url_for('post', pname=post.path) }}">
+    <small><strong> {{ post.meta.date }} </strong></small>
     <span class="icon fa {{ post.meta.icon if post.meta.icon else "fa-pencil" }}"></span>
-    <a href="{{ url_for('post', pname=post.path) }}">{{ post.meta.title }}</a>
+    <strong> {{ post.meta.title }} </strong>
     <br>
     {% if post.meta.description %}
-    <small> {{ post.meta.description }}</small>
+      <small> {{ post.meta.description }}</small>
     {% endif %}
-  </li>
+  </a>
   {% endfor %}
-</ul>
+</div>
+
 {% endblock %}

@@ -16,22 +16,65 @@
   }
 </script>
 
+<!-- <div class="panel-group"> -->
+<!-- {% for entry in bib %} -->
+<!--   <div class="panel panel-default row"> -->
+<!--     <div class="col-xs-2"> -->
+<!--       <a href="{{ url_for('static', filename='docs/pubs/{}.pdf'.format(entry.key)) }}"> -->
+<!--       <1!-- <img class="pub-preview" src="{{ url_for('static', filename='docs/pubs/{}.png'.format(entry.key)) }}"> --1> -->
+<!--       <img class="img-thumbnail img-rounded" src="{{ url_for('static', filename='docs/pubs/{}.png'.format(entry.key)) }}"> -->
+<!--       </a> -->
+<!--     </div> -->
+
+<!--     <div class="col-xs-10"> -->
+<!--     <1!-- <div class="panel-heading">{{entry.title}}</div> --1> -->
+
+
+<!--     <div class="panel-body"> -->
+<!--       <a name="{{ entry.key }}"></a> -->
+<!--       {{ entry.title }} -->
+<!--       <a href="#{{ entry.key }}">¶</a> -->
+
+<!--       <br/> -->
+<!--       <span class="pub-authors"><small>{{ entry.authors | boldify('Baisero') | safe }}</small></span>.<br/> -->
+<!--         {% if entry.booktitle %} -->
+<!--           {{ entry.booktitle }}, -->
+<!--         {% elif entry.journal %} -->
+<!--           {{ entry.journal }}, -->
+<!--         {% elif entry.school %} -->
+<!--           {{ entry.school }}, -->
+<!--           {% if entry.type_ == "mastersthesis" %} -->
+<!--           Master's Thesis, -->
+<!--           {% endif %} -->
+<!--         {% endif %} -->
+<!--         {{ entry.year }} -->
+<!--         {% if entry.note %} -->
+<!--           - <strong>{{ entry.note }}</strong> -->
+<!--         {% endif %} -->
+<!--     </div> -->
+<!--     </div> -->
+<!--   </div> -->
+<!-- {% endfor %} -->
+
 {% for entry in bib %}
   <div class="row">
-
-    <div class="two columns">
+    <!-- <div class="two columns"> -->
+    <div class="col-xs-2">
       <a href="{{ url_for('static', filename='docs/pubs/{}.pdf'.format(entry.key)) }}">
-      <img class="pub-preview" src="{{ url_for('static', filename='docs/pubs/{}.png'.format(entry.key)) }}">
+      <!-- <img class="pub-preview" src="{{ url_for('static', filename='docs/pubs/{}.png'.format(entry.key)) }}"> -->
+      <img class="img-thumbnail img-rounded" src="{{ url_for('static', filename='docs/pubs/{}.png'.format(entry.key)) }}">
       </a>
 
       <div class="pub-links">
+        <a href="{{ url_for('static', filename='docs/pubs/{}.pdf'.format(entry.key)) }}">pdf</a>
         <a href="javascript:disp_bibtex('{{ entry.bibtex | replace('\n', '\\n') }}');">bibtex</a> 
         {% if entry.pdf %} | <a href="{{ entry.pdf }}">pdf</a> {% endif %}
         {% if entry.talk %} | <a href="{{ entry.talk }}">talk</a> {% endif %}
       </div>
     </div>
 
-    <div class="ten columns">
+    <!-- <div class="ten columns"> -->
+    <div class="col-xs-10">
       <div class="pub-title">
         <a name="{{ entry.key }}"></a>
         {{ entry.title }}

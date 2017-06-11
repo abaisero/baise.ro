@@ -5,8 +5,6 @@ icon: fa-graduation-cap
 
 ### University of Stuttgart
 
-I have worked as TA for the following courses:
-
  * `WS 2016` [Mathematics for Intelligent Systems][maths16]
  * `SS 2016` [Machine Learning][ml16]
  * `WS 2015` [Seminar in Machine Learning][hsml15]
