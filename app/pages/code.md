@@ -37,11 +37,10 @@ fa-github-alt fa-lg"></span> abaisero/pytk][pytk].
 This website is developed using [Flask][flask], a minimalistic python framework
 for webapp development which uses the [Jinja][jinja] templating language to
 build page structure and [Markdown][markdown] to fill in the content.  The
-style is powered by [Skeleton][skeleton] (a CSS boilerplate),
-[Bootstrap][bootstrap] (an HTML/CSS/JS framework), [Font Awesome][fontawesome]
-(an icon toolkit), and [Font-Mfizz][fontmfizz] (a complementary icon toolkit).
-Despite not being a web developer, these tools allowed me to create this
-website with fun and ease.
+style is powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework), [Font
+Awesome][fontawesome] (an icon toolkit), and [Font-Mfizz][fontmfizz] (a
+complementary icon toolkit).  Despite not being a web developer, these tools
+allowed me to create this website with fun and ease.
 
 The complete source code is available on its [<span class="icon fa
 fa-github-alt fa-lg"></span> github][baise.ro] page.
@@ -51,7 +50,6 @@ fa-github-alt fa-lg"></span> github][baise.ro] page.
 
 [flask]: http://flask.pocoo.org "Flask"
 [jekyll]: http://jekyllrb.com "Jekyll"
-[skeleton]: http://getskeleton.com/ "Skeleton"
 [bootstrap]: http://getbootstrap.com "Bootstrap"
 [fontawesome]: http://fortawesome.github.io/Font-Awesome/ "Font Awesome"
 [fontmfizz]: http://fizzed.com/oss/font-mfizz

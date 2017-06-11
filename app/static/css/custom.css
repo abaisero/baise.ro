@@ -39,6 +39,10 @@ hr {
   background-color: gray;
 }
 
+div#header {
+  background: white;
+}
+
 div#pagebanner {
   width: 612px;
   width: 682px;
@@ -50,10 +54,14 @@ div#pagecontent {
   position: relative;
 }
 
-div#pagecontent h1:before,
-div#pagecontent h2:before,
-div#pagecontent h3:before {
+div#content h1:before,
+div#content h2:before,
+div#content h3:before {
   content: "# "
+}
+
+#menu {
+  margin-top: 15px;
 }
 
 .clear {
@@ -115,11 +123,11 @@ div.haiku > p:nth-of-type(3n-2) { text-align: left; }
 div.haiku > p:nth-of-type(3n-1) { text-align: center; }
 div.haiku > p:nth-of-type(3n) { text-align: right; }
 
-div.haiku-leaf {
-  position: fixed;
-  bottom: 10px;
-  right: 10px;
-}
+/* div.haiku-leaf { */
+/*   position: fixed; */
+/*   bottom: 10px; */
+/*   right: 10px; */
+/* } */
 
 div.ipyprompt {
   position: absolute;
@@ -152,17 +160,17 @@ object.notebook {
   left: -200px;
 }
 
-/* html, body, div#pagewrap, div#pagecontent, article, div.notebook, object.notebook { */
-/*   /1* for notebook object auto height *1/ */
-/*   height: 100%; */
-/* } */
+html, body, div#pagewrap, div#pagecontent, article, div.notebook, object.notebook {
+  /* for notebook object auto height */
+  height: 100%;
+}
 
 
-/* .email:before { */
-/*   href: attr(data-website) "\0040" attr(data-user); */
-/*   unicode-bidi: bidi-override; */
-/*   direction: rtl; */
-/* } */
+.email:before {
+  href: attr(data-website) "\0040" attr(data-user);
+  unicode-bidi: bidi-override;
+  direction: rtl;
+}
 
 /* PUBLICATION */
 .pub-title {
@@ -186,3 +194,39 @@ object.notebook {
   width: 95%;
   border: 1px solid #eee;
 }
+
+#blirg {
+  background: red;
+}
+#blarg {
+  background: blue;
+}
+
+
+/* Extra small devices (phones, less than 768px) */
+/* No media query since this is the default in Bootstrap */
+
+/* #main { */
+/*   width: 300px; */
+/* } */
+
+/* Small devices (tablets, 768px and up) */
+@media (min-width: @screen-sm-min) {
+  /* #main { */
+  /*   width: 890px; */
+  /* } */
+}
+
+/* /1* Medium devices (desktops, 992px and up) *1/ */
+/* @media (min-width: @screen-md-min) { */
+/*   #main { */
+/*     width: 890px; */
+/*   } */
+/* } */
+
+/* /1* Large devices (large desktops, 1200px and up) *1/ */
+/* @media (min-width: @screen-lg-min) { */
+/*   #main { */
+/*     width: 890px; */
+/*   } */
+/* } */

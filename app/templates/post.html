@@ -4,11 +4,8 @@
 
 <header>
   <h1> {{ post.meta.title }} </h1>
-  <small>
-    <strong>
-      Posted on {{ post.meta.date | fmt_date }}
-    </strong>
-  </small>
+  <!-- <small><strong>Posted on {# post.meta.date | fmt_date #}</strong></small> -->
+  <small><strong>Posted on {{ post.meta.date }}</strong></small>
 
   {% if post.meta.notebook %}
   <br/>

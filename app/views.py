@@ -25,13 +25,14 @@ app.url_map.strict_slashes = False
 def clear_trailing():
     from flask import redirect, request
 
-    rp = request.path 
+    rp = request.path
     if rp != '/' and rp.endswith('/'):
         return redirect(rp[:-1])
 
-@app.template_filter('fmt_date')
-def fmt_date_filter(value):
-    return datetime.datetime.strptime(value, '%d.%m.%Y').strftime('%d %b %Y')
+# TODO old and obsolete
+# @app.template_filter('fmt_date')
+# def fmt_date_filter(value):
+#     return datetime.datetime.strptime(value, '%d.%m.%Y').strftime('%d %b %Y')
 
 import re
 @app.template_filter('boldify')
@@ -80,7 +81,9 @@ def weblog():
     posts_display = (post for post in posts if not post.meta.get('nopost', False))
     weblogs = sorted(
         posts_display,
-        key = lambda post: datetime.datetime.strptime(post.meta['date'], '%d.%m.%Y'),
+        # key = lambda post: datetime.datetime.strptime(post.meta['date'], '%d.%m.%Y'),
+        # key = lambda post: datetime.datetime.strptime(post.meta['date'], '%Y-%m-%d'),
+        key = lambda post: post.meta['date'],
         reverse = True,
     )
     return render_template('weblog.html', active=active, page=page, weblogs=weblogs)
@@ -112,13 +115,13 @@ def post(pname):
 #     bibfname = '{}/docs/pubs/refs.bib'.format(app.config['STATIC_DIR'])
 #     with open(bibfname, 'r') as bibfile:
 #         bp = bibtexparser.load(bibfile)
-#     references = sorted(bp.get_entry_list(), key=lambda x: x['year'], reverse=True)        
+#     references = sorted(bp.get_entry_list(), key=lambda x: x['year'], reverse=True)
 #     refs = defaultdict(list)
 
 #     #Preprocess the references
 #     for r in references:
 #         if 'labels' in r:
-#             r['keywordlist'] = r['labels'].split(',')        
+#             r['keywordlist'] = r['labels'].split(',')
 #         if 'booktitle' in r:
 #             r['booktitle'] = r['booktitle'].replace('\&', '&amp;')
 #         r['title'] = r['title'].replace('\&', '&amp;')
@@ -127,7 +130,7 @@ def post(pname):
 #     page = pages.get_or_404('research/publications')
 
 #     #Sort years
-#     refsbyyear = sorted(refs.items(), key=lambda x: x[0], reverse=True)       
+#     refsbyyear = sorted(refs.items(), key=lambda x: x[0], reverse=True)
 #     return render_template('publications.html', active='research', page=page, references=refsbyyear)
 
 
@@ -204,6 +207,11 @@ def publications():
 @app.before_first_request
 def setup_menu():
     global menu
+    # menu = dict(
+    #     # header=map(pages.get, ['home']),
+    #     left=map(pages.get, ['home', 'research', 'teaching', 'code', 'weblog']),
+    #     right=map(pages.get, ['about']),
+    # )
     menu = map(pages.get, [
         'home',
         'research',
@@ -213,7 +221,7 @@ def setup_menu():
         'about',
     ])
 
-# inject menu list into templates 
+# inject menu list into templates
 @app.context_processor
 def inject_menu():
     return dict(menu=menu)
