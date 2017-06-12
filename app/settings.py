@@ -40,13 +40,13 @@ FREEZER_REMOVE_EXTRA_FILES = False  # IMPORTANT: If this is True, all app files
 FLATPAGES_AUTO_RELOAD = True
 FLATPAGES_ROOT = PAGES_DIR
 FLATPAGES_EXTENSION = '.md'
-FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment', 'app.mdx_mathjax']
+FLATPAGES_MARKDOWN_EXTENSIONS = ['codehilite', 'abbr', 'attr_list', 'def_list', 'tables', 'app.mdx_haiku', 'app.mdx_comment', 'app.mdx_mathjax']
 
 FLATPAGES_WEBLOG_AUTO_RELOAD = True
 FLATPAGES_WEBLOG_ROOT = POSTS_DIR
 FLATPAGES_WEBLOG_EXTENSION = '.md'
 # FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment', 'app.mdx_ipynb']
-FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'app.mdx_haiku', 'app.mdx_comment', 'app.mdx_mathjax']
+FLATPAGES_WEBLOG_MARKDOWN_EXTENSIONS = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'tables', 'app.mdx_haiku', 'app.mdx_comment', 'app.mdx_mathjax']
 
 # TODO what was this for??
 WTF_CSRF_ENABLED = True

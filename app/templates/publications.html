@@ -7,10 +7,13 @@
   <div class="row">
 
     <div class="col-xs-2">
+      <div class="pub-preview">
       <a href="{{ url_for('static', filename='docs/pubs/{}.pdf'.format(entry.key)) }}">
         <img class="img-thumbnail img-rounded" src="{{ url_for('static', filename='docs/pubs/{}.png'.format(entry.key)) }}">
       </a>
-      <div class="pub-links">
+      </div>
+      <!-- <div class="pub-links"> -->
+      <div class="text-center">
         <a role="button" class="btn btn-xs btn-default" href="{{url_for('static', filename='docs/pubs/{}.pdf'.format(entry.key))}}">
           <span class="icon fa fa-files-o"></span> pdf
         </a>
@@ -19,29 +22,30 @@
     </div> <!-- col -->
 
     <div class="col-xs-10">
-      <div class="pub-title">
-        <a name="{{ entry.key }}"></a>
-        {{ entry.title }}
-        <a href="#{{ entry.key }}">¶</a>
-      </div>
-      <span class="pub-authors"><small>{{ entry.authors | boldify('Baisero') | safe }}</small></span>.
+      <a name="{{ entry.key }}"></a>
+      {{ entry.title }}
+      <a href="#{{ entry.key }}">¶</a>
       <br/>
-      <span class="pub-conf">
-        {% if entry.booktitle %}
-          {{ entry.booktitle }},
-        {% elif entry.journal %}
-          {{ entry.journal }},
-        {% elif entry.school %}
-          {{ entry.school }},
-          {% if entry.type_ == "mastersthesis" %}
-          Master's Thesis,
-          {% endif %}
+
+      <small>{{ entry.authors | strongify('Baisero') | safe }}.</small>
+      <br/>
+
+      <small>
+      {% if entry.booktitle %}
+        {{ entry.booktitle }},
+      {% elif entry.journal %}
+        {{ entry.journal }},
+      {% elif entry.school %}
+        {{ entry.school }},
+        {% if entry.type_ == "mastersthesis" %}
+        Master's Thesis,
         {% endif %}
-        {{ entry.year }}
-        {% if entry.note %}
-          - <strong>{{ entry.note }}</strong>
-        {% endif %}
-      </span>
+      {% endif %}
+      {{ entry.year }}
+      {% if entry.note %}
+        - <strong>{{ entry.note }}</strong>
+      {% endif %}
+      </small>
 
       <div class="collapse" id="collapse_{{entry.key}}">
         <small><pre>{{entry.bibtex | replace('\n', '<br/>') | safe}}</pre></small>

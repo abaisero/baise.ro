@@ -35,9 +35,9 @@ def clear_trailing():
 #     return datetime.datetime.strptime(value, '%d.%m.%Y').strftime('%d %b %Y')
 
 import re
-@app.template_filter('boldify')
-def boldify_filter(text, author):
-    return re.sub(author, '<span class="pub-mainauthor">{}</span>'.format(author), text)
+@app.template_filter('strongify')
+def strongify_filter(string, pattern):
+    return re.sub(pattern, '<strong>{}</strong>'.format(pattern), string)
 
 
 @app.context_processor

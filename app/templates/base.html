@@ -47,7 +47,7 @@
 </head>
 <body>
 
-  <div class="container" id="main">
+  <div class="container">
     <!-- debug -->
     <!-- <span class="visible-xs">SIZE XS</span> -->
     <!-- <span class="visible-sm">SIZE SM</span> -->
@@ -55,35 +55,33 @@
     <!-- <span class="visible-lg">SIZE LG</span> -->
 
     <!-- menu -->
-    <nav class="navbar navbar-default" id="menu">
-      <div class="navbar-header">
+    <header>
+      <nav class="navbar navbar-default" id="menu">
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
           <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
+          <span class="fa fa-bars fa-lg"></span>
         </button>
         <a class="navbar-brand" href="{{ url_for('page', ppath='/') }}"><strong>Baise.ro</strong></a>
-      </div> <!-- brand -->
 
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="nav navbar-nav">
-          {% for p in menu %}
-          <li{% if p.meta.name | lower == active | lower %} class="active"{% endif %}>
-            <a href="{{ url_for('page', ppath=p.path) }}"><strong><span class="icon fa {{ p.meta.icon }} fa-fw"></span>{{ p.meta.name | capitalize }}</strong></a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div> <!-- navbar -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="nav navbar-nav">
+            {% for p in menu %}
+            <li{% if p.meta.name | lower == active | lower %} class="active"{% endif %}>
+              <a href="{{ url_for('page', ppath=p.path) }}"><strong><span class="icon fa {{ p.meta.icon }} fa-fw"></span>{{ p.meta.name | capitalize }}</strong></a>
+            </li>
+            {% endfor %}
+          </ul>
+        </div> <!-- navbar -->
 
-    </nav>
+      </nav>
+    </header>
 
-    <div id="content"> 
+    <main id="content"> 
       <!-- content -->
       {% block content %} {% endblock %}
-    </div> <!-- content -->
+    </main> <!-- content -->
 
-  </div> <!-- main -->
+  </div> <!-- container -->
 
   <!-- <div class="haiku-leaf"> -->
   <!--   <a href="/haiku"><span class="icon fa fa-leaf fa-lg"></span></a> -->

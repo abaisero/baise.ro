@@ -9,13 +9,15 @@ Check out my [<span class="icon fa fa-files-o"></span> Publications][pubs].
 
 ### CCIS @ Northeastern Uni
 
-I will begin working at Northeastern Uni in the Fall of 2017.
-{:.text-info}
+<div class="alert alert-info" role="alert">
+  <strong>Heads up!</strong> I will begin working at Northeastern Uni in the Fall of 2017.
+</div>
 
-### MLR @ Uni of Stuttgart
+### MLR @ Uni-Stuttgart
 
-This page is being updated;  the content will be restored shortly.
-{:.text-warning}
+<div class="alert alert-warning" role="alert">
+  <strong>Uh-oh!</strong> This content is currently being updated and will be restored shortly.
+</div>
 
 ;; At the MLR group I worked for the Machine Learning and Robotics group a
 
@@ -33,8 +35,9 @@ This page is being updated;  the content will be restored shortly.
 
 ### CVAP @ KTH
 
-This page is being updated;  the content will be restored shortly.
-{:.text-warning}
+<div class="alert alert-warning" role="alert">
+  <strong>Uh-oh!</strong> This content is currently being updated and will be restored shortly.
+</div>
 
 ;; During my Master thesis work, 
 ;; I developed my MSc thesis on modular kernel functions for sequential data.
