@@ -64,47 +64,26 @@
           <span class="icon-bar"></span>
         </button>
         <a class="navbar-brand" href="{{ url_for('page', ppath='/') }}"><strong>Baise.ro</strong></a>
-      </div>
+      </div> <!-- brand -->
 
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="nav navbar-nav">
           {% for p in menu %}
-          <li class="{% if p.meta.name | lower == active | lower %}active{% endif %}">
-            <a href="{{ url_for('page', ppath=p.path) }}">
-              <strong><span class="icon fa {{ p.meta.icon }} fa-fw"></span>{{ p.meta.name | capitalize }}</strong>
-            </a>
+          <li{% if p.meta.name | lower == active | lower %} class="active"{% endif %}>
+            <a href="{{ url_for('page', ppath=p.path) }}"><strong><span class="icon fa {{ p.meta.icon }} fa-fw"></span>{{ p.meta.name | capitalize }}</strong></a>
           </li>
           {% endfor %}
         </ul>
-      </div>
+      </div> <!-- navbar -->
 
     </nav>
 
-    <div id="content">
+    <div id="content"> 
       <!-- content -->
       {% block content %} {% endblock %}
-    </div>
+    </div> <!-- content -->
 
-    <!-- <script type="text/javascript"> -->
-    <!--   var username = "andrea.baisero"; -->
-    <!--   var hostname = "ipvs.uni-stuttgart.de"; -->
-    <!--   var linktext = username + "@" + hostname; -->
-    <!--   var linkref = "mail" + "to:" + username + "@" + hostname; -->
-
-    <!--   document.write("<a href='" + linkref + "'>" + linktext + "</a>"); -->
-    <!-- </script> -->
-
-    <!-- footer -->
-    <!-- <footer class="clear"> -->
-    <!--   <hr> -->
-    <!--   <1!-- Contact me at: <code><span class="email">andrea[PUNTO]baisero[CHIOCCIOLA]ipvs[PUNTO]uni[TRATTINO]stuttgart[PUNTO]de</span></code> --1> -->
-    <!--   <small> -->
-    <!--   <small> -->
-    <!--   Contact me at: <span class="text-primary">andrea DOT baisero AT ipvs DOT uni DASH stuttgart DOT de</span> -->
-    <!--   </small> -->
-    <!--   </small> -->
-    <!-- </footer> -->
-  </div>
+  </div> <!-- main -->
 
   <!-- <div class="haiku-leaf"> -->
   <!--   <a href="/haiku"><span class="icon fa fa-leaf fa-lg"></span></a> -->
