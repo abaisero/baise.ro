@@ -7,13 +7,13 @@ Check out my [<span class="icon fa fa-files-o"></span> Publications][pubs].
 
 [pubs]: /research/publications
 
-### CCIS @ Northeastern Uni
+### CCIS @ Northeastern University
 
 <div class="alert alert-info" role="alert">
   <strong>Heads up!</strong> I will begin working at Northeastern Uni in the Fall of 2017.
 </div>
 
-### MLR @ Uni-Stuttgart
+### MLR @ University of Stuttgart
 
 <div class="alert alert-warning" role="alert">
   <strong>Uh-oh!</strong> This content is currently being updated and will be restored shortly.
