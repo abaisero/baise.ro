@@ -40,4 +40,9 @@ As the seasons pass,
 do not be sad they are gone.
 We used them to grow.
 
+.haiku
+Cross a river twice
+and the river meets two men;
+and you, two rivers.
+
 [haikusub]: https://www.reddit.com/r/haiku/ "r/haiku"

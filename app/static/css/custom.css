@@ -62,6 +62,15 @@ header {
   margin-top: 15px;
 }
 
+footer {
+  height: 25px;
+}
+
+div.pubrow {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
 main#content h1:before,
 main#content h2:before,
 main#content h3:before {

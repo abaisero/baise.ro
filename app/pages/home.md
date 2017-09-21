@@ -8,10 +8,10 @@ icon: fa-home
 
 [profile]: /static/img/profile.jpg
 
-In the Fall, I will be joining Prof. Chris Amato at Northeastern University as
-a PhD student to work on multi-agent reinforcement learning.  Alongside
-reinforcement learning, my other interests include stochastic models, bayesian
-inference, information theory, and game theory.
+I am a PhD student at Northeastern University, where I am working under Prof.
+Chris Amato on (multi-agent) reinforcement learning.  Alongside reinforcement
+learning, my other interests include stochastic models, bayesian inference,
+information theory, and game theory.
 
 ;; My research interests focus on stochastic models for pattern recognition,
 ;; representation learning, symbol learning and logic-geometric information
