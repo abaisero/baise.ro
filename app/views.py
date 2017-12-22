@@ -165,7 +165,7 @@ def _get_authors(entry):
     #     print(author.first(), author.middle(), author.last())
     #     print(author)
     authors = [author.last()[0] for author in entry.persons["author"]]
-    return ", ".join(authors)
+    return ', '.join(authors)
 
 
 @app.route('/research/publications')
@@ -179,7 +179,7 @@ def publications():
 
     page = pages.get_or_404('research/publications')
 
-    bib = [
+    bib_entries = [
         dict(
             type_=entry.type,
             key=key,
@@ -198,9 +198,9 @@ def publications():
 
     # NOTE inverting manually enforces that the bibtex file order is also
     # inverted in the case of same year.
-    bib = sorted(bib, key=lambda entry: entry['year'])[::-1]
+    bib_entries = sorted(bib_entries, key=lambda entry: entry['year'])[::-1]
 
-    return render_template('publications.html', active='research', page=page, bib=bib)
+    return render_template('publications.html', active='research', page=page, bib_entries=bib_entries)
 
 
 # setup global menu variable

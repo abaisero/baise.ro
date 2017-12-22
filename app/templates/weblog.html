@@ -8,9 +8,9 @@
   <a class="list-group-item" href="{{ url_for('post', pname=post.path) }}">
     <!-- <small><strong> {{ post.meta.date }} </strong></small> -->
     {{ post.meta.date }}
-    <span class="icon fa {{ post.meta.icon if post.meta.icon else "fa-pencil" }}"></span>
+    <span class="icon {{ post.meta.icon if post.meta.icon else "fas fa-pencil-alt" }}"></span>
     <strong> {{ post.meta.title }} </strong>
-    <br>
+    <br/>
     {% if post.meta.description %}
       <small> {{ post.meta.description }}</small>
     {% endif %}

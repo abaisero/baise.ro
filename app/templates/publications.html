@@ -3,8 +3,9 @@
 {% block content %}
 {{ super() }}
 
-{% for entry in bib %}
-  <div class="row pubrow">
+<div id="publications">
+{% for entry in bib_entries %}
+  <div class="row pub-entry">
 
     <div class="col-xs-2">
       <div class="pub-preview">
@@ -15,16 +16,14 @@
       <!-- <div class="pub-links"> -->
       <div class="text-center">
         <a role="button" class="btn btn-xs btn-default" href="{{url_for('static', filename='docs/pubs/{}.pdf'.format(entry.key))}}">
-          <span class="icon fa fa-files-o"></span> pdf
+          <span class="icon fas fa-file-pdf"></span> pdf
         </a>
         <a role="button" class="btn btn-xs btn-default" href="#collapse_{{entry.key}}" data-toggle="collapse" aria-expanded="false" aria-controls="collapse_{{entry.key}}">bibtex</a>
       </div>
     </div> <!-- col -->
 
     <div class="col-xs-10">
-      <a name="{{ entry.key }}"></a>
-      {{ entry.title }}
-      <a href="#{{ entry.key }}">¶</a>
+      <a name="{{ entry.key }}"></a> {{ entry.title }} <a href="#{{ entry.key }}">¶</a>
       <br/>
 
       <small>{{ entry.authors | strongify('Baisero') | safe }}.</small>
@@ -54,5 +53,6 @@
 
   </div> <!-- row -->
 {% endfor %}
+<div>
 
 {% endblock %}

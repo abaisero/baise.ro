@@ -16,7 +16,7 @@ Markov decision process problem structures, and an increasing amount of
 solution methods:  Policy and value iteration, SARSA, Q-learning, MCTS, and
 temporal difference search, with more to come.
 
-Available at [<span class="icon fa fa-github-alt fa-lg"></span>
+Available at [<span class="icon fab fa-github-alt fa-lg"></span>
 abaisero/rl][rl].
 
 [rl]: https://github.com/abaisero/rl "Reinforcement learning repository"
@@ -27,7 +27,7 @@ A personal repository containing general purpose utilities including: context
 managers, decorators, iterators, collections, and 3D geometry classes.
 
 The code is in continuous fluctuation and not significantly stable but, if you
-want to check it out, can be found at [<span class="icon fa
+want to check it out, can be found at [<span class="icon fab
 fa-github-alt fa-lg"></span> abaisero/pytk][pytk].
 
 [pytk]: https://github.com/abaisero/pytk "Python toolkit repository"
@@ -37,12 +37,11 @@ fa-github-alt fa-lg"></span> abaisero/pytk][pytk].
 This website is developed using [Flask][flask], a minimalistic python framework
 for webapp development which uses the [Jinja][jinja] templating language to
 build page structure and [Markdown][markdown] to fill in the content.  The
-style is powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework), [Font
-Awesome][fontawesome] (an icon toolkit), and [Font-Mfizz][fontmfizz] (a
-complementary icon toolkit).  Despite not being a web developer, these tools
-allowed me to create this website with fun and ease.
+style is powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework) and [Font
+Awesome][fontawesome] (an icon toolkit).  Despite not being a web developer,
+these tools allowed me to create this website with ease.
 
-The complete source code is available on its [<span class="icon fa
+The complete source code is available on its [<span class="icon fab
 fa-github-alt fa-lg"></span> github][baise.ro] page.
 
 ;; KEEP THIS IN MIND
@@ -51,7 +50,7 @@ fa-github-alt fa-lg"></span> github][baise.ro] page.
 [flask]: http://flask.pocoo.org "Flask"
 [jekyll]: http://jekyllrb.com "Jekyll"
 [bootstrap]: http://getbootstrap.com "Bootstrap"
-[fontawesome]: http://fortawesome.github.io/Font-Awesome/ "Font Awesome"
+[fontawesome]: http://fontawesome.io/ "Font Awesome"
 [fontmfizz]: http://fizzed.com/oss/font-mfizz
 [markdown]: http://daringfireball.net/projects/markdown/syntax "Markdown"
 [liquid]: http://liquidmarkup.org "Liquid"
