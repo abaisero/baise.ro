@@ -101,15 +101,10 @@ img.img-thumbnail {
   margin: 5px;
 }
 
-img.me {
-  width: 204px;
-  margin-left: 0px;
-  margin-right: 10px;
-  float: left;
-}
-
-div.home {
-  text-align: center;
+#haikusecret {
+  position: fixed;
+  top: 10px;
+  left: 10px;
 }
 
 div.haiku {
@@ -123,11 +118,11 @@ div.haiku {
 }
 
 div.haiku:nth-of-type(odd) {
-  margin-right: 0;
+  margin-right: 20%;
 }
 
 div.haiku:nth-of-type(even) {
-  margin-left: 0;
+  margin-left: 20%;
 }
 
 div.haiku:nth-of-type(3n-2) {
@@ -142,15 +137,19 @@ div.haiku:nth-of-type(3n) {
   background-image: url("/static/img/haiku/sakura3.png");
 }
 
+div.haiku > p { color: #333; }
 div.haiku > p:nth-of-type(3n-2) { text-align: left; }
 div.haiku > p:nth-of-type(3n-1) { text-align: center; }
 div.haiku > p:nth-of-type(3n) { text-align: right; }
 
-/* div.haiku-leaf { */
-/*   position: fixed; */
-/*   bottom: 10px; */
-/*   right: 10px; */
-/* } */
+.showonhover {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.showonhover:hover {
+  opacity: 1;
+}
 
 div.ipyprompt {
   position: absolute;

@@ -17,7 +17,7 @@ Full publication list [<span class="icon far fa-file"></span> here][pubs].
 
 ### Active Goal Recognition
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
   <strong>Uh-oh!</strong> This content is currently being updated and will be restored shortly.
 </div>
 
@@ -27,10 +27,14 @@ Full publication list [<span class="icon far fa-file"></span> here][pubs].
 
 ## MLR @ University of Stuttgart (2013&ndash;2017)
 
-As a research assistant at the Machine Learning and Robotics (MLR) group,
-I worked on the following topics:
+;; As a research assistant at the Machine Learning and Robotics (MLR) group,
+;; I worked on the following topics:
 
 ### Decoding the Geometry out of Relational Descriptions
+
+<img src="/static/img/rfdm.png"
+  class="pull-right"
+  style="width:66%"/>
 
 Human cooperation very often depends on a specific type of interaction, in
 which one agent Alice defines a task via a high-level description of the goal
@@ -40,7 +44,7 @@ state and compress it into a predicate-based relational description, while Bob
 has to be able to take such description and decode it into a belief over the
 possible wanted geometric states.
 
-<div class="alert alert-warning" role="alert">
+<div class="alert alert-info" role="alert">
   <strong>Uh-oh!</strong> This content is currently being updated and will be restored shortly.
 </div>
 
@@ -79,30 +83,23 @@ make the referent object distinguishible from the rest of the environment.
   <div class="panel-body">
     <ul class="list-unstyled">
       <li>
-        <a href="/research/publications#2017_baisero_identification">
-          <span class="icon fas fa-link"></span> link
-        </a> -
-        <a href="/static/docs/pubs/2017_baisero_identification.pdf">
-          <span class="icon far fa-file-pdf"></span> pdf
-        </a> -
+        <a class="btn btn-link btn-xs" href="/research/publications#2017_baisero_identification">
+          <span class="icon fas fa-link"></span> link</a>
+        <a class="btn btn-link btn-xs" href="/research/publications/2017_baisero_identification.pdf">
+          <span class="icon far fa-file-pdf"></span> pdf</a>
+        <a class="btn btn-link btn-xs" href="/research/publications/2017_baisero_identification.mp4">
+          <span class="icon fas fa-video"></span> mp4</a>
+        &mdash;
         Identification of Unmodeled Objects from Symbolic Descriptions
       </li>
     </ul>
   </div>
 </div>
 
-;; #### Relevant publications:
-
-;; * [<span class="icon fas fa-link"></span>
-;;     link](/research/publications#2017_baisero_identification) -
-;;   [<span class="icon far fa-file-pdf"></span>
-;;     pdf](/static/docs/pubs/2017_baisero_identification.pdf) -
-;;   Identification of Unmodeled Objects from Symbolic Descriptions
-
 ### Temporal Segmentation of Concurrent Asynchronous Manipulations
 
-<img src="/static/img/tseg.png" 
-  class="pull-right" 
+<img src="/static/img/tseg.png"
+  class="pull-right"
   style="width:26em"/>
 
 A general human demonstration of a complex task is typically composed of
@@ -125,41 +122,29 @@ assembly tasks.
   <div class="panel-body">
     <ul class="list-unstyled">
       <li>
-        <a href="/research/publications#2015_baisero_temporal">
-          <span class="icon fas fa-link"></span> link
-        </a> -
-        <a href="/static/docs/pubs/2015_baisero_temporal.pdf">
-          <span class="icon far fa-file-pdf"></span> pdf
-        </a> -
+        <a class="btn btn-link btn-xs" href="/research/publications#2015_baisero_temporal">
+          <span class="icon fas fa-link"></span> link</a>
+        <a class="btn btn-link btn-xs" href="/research/publications/2015_baisero_temporal.pdf">
+          <span class="icon far fa-file-pdf"></span> pdf</a>
+        <a class="btn btn-link btn-xs" href="/research/publications/2015_baisero_temporal.mp4">
+          <span class="icon fas fa-video"></span> mp4</a>
+        &mdash;
         Temporal Segmentation of Pair-Wise Interaction Phases in Sequential
         Manipulation Demonstrations
       </li>
       <li>
-        <a href="/research/publications#2015_mollard_robot">
-          <span class="icon fas fa-link"></span> link
-        </a> -
-        <a href="/static/docs/pubs/2015_mollard_robot.pdf">
-          <span class="icon far fa-file-pdf"></span> pdf
-        </a> -
+        <a class="btn btn-link btn-xs" href="/research/publications#2015_mollard_robot">
+          <span class="icon fas fa-link"></span> link</a>
+        <a class="btn btn-link btn-xs" href="/research/publications/2015_mollard_robot.pdf">
+          <span class="icon far fa-file-pdf"></span> pdf</a>
+        <a class="btn btn-link btn-xs disabled" href="#">
+        <del><span class="icon fas fa-video"></span> mp4</del></a>
+        &mdash;
         Robot Programming from Demonstration, Feedback and Transfer
       </li>
     </ul>
   </div>
 </div>
-
-;; #### Relevant publications:
-
-;; * [<span class="icon fas fa-link"></span>
-;;     link](/research/publications#2015_baisero_temporal) -
-;;   [<span class="icon far fa-file-pdf"></span>
-;;     pdf](/static/docs/pubs/2015_baisero_temporal.pdf) -
-;;   Temporal Segmentation of Pair-Wise Interaction Phases in Sequential
-;;   Manipulation Demonstrations
-;; * [<span class="icon fas fa-link"></span>
-;;     link](/research/publications#2015_mollard_robot) -
-;;   [<span class="icon far fa-file-pdf"></span>
-;;     pdf](/static/docs/pubs/2015_mollard_robot.pdf) -
-;;   Robot Programming from Demonstration, Feedback and Transfer
 
 ---
 
@@ -167,12 +152,16 @@ assembly tasks.
 
 ### Kernels for Sequential Structures
 
-<img src="/static/img/pathkernel_intuition.png" 
+<div class="pull-right" style="width:26em">
+<img src="/static/img/pathkernel_stretches.png"
+  style="width:26em;padding:.5em;"/>
+<img src="/static/img/pathkernel_intuition.png"
+  class="pull-left"
+  style="width:13em;padding:.5em;"/>
+<img src="/static/img/pathkernel.png"
   class="pull-right"
-  style="width:13em"/>
-<img src="/static/img/pathkernel.png" 
-  class="pull-right" 
-  style="width:13em"/>
+  style="width:13em;padding:.5em;"/>
+</div>
 
 At the Computer Vision and Active Perception (CVAP) lab, I worked on my MSc
 thesis on the topic of kernel functions for sequential data.  The main result
@@ -196,67 +185,47 @@ domain can be embedded.
   <div class="panel-body">
     <ul class="list-unstyled">
       <li>
-        <a href="/research/publications#2012_baisero_encoding">
-          <span class="icon fas fa-link"></span> link
-        </a> -
-        <a href="/static/docs/pubs/2012_baisero_encoding.pdf">
-          <span class="icon far fa-file-pdf"></span> pdf
-        </a> -
+        <a class="btn btn-link btn-xs" href="/research/publications#2012_baisero_encoding">
+          <span class="icon fas fa-link"></span> link</a>
+        <a class="btn btn-link btn-xs" href="/research/publications/2012_baisero_encoding.pdf">
+          <span class="icon far fa-file-pdf"></span> pdf</a>
+        <a class="btn btn-link btn-xs disabled" href="#">
+          <del><span class="icon fas fa-video"></span> mp4</del></a>
+        &mdash;
         Encoding Sequential Structures using Kernels
       </li>
       <li>
-        <a href="/research/publications#2013_baisero_path">
-          <span class="icon fas fa-link"></span> link
-        </a> -
-        <a href="/static/docs/pubs/2013_baisero_path.pdf">
-          <span class="icon far fa-file-pdf"></span> pdf
-        </a> -
+        <a class="btn btn-link btn-xs" href="/research/publications#2013_baisero_path">
+          <span class="icon fas fa-link"></span> link</a>
+        <a class="btn btn-link btn-xs" href="/research/publications/2013_baisero_path.pdf">
+          <span class="icon far fa-file-pdf"></span> pdf</a>
+        <a class="btn btn-link btn-xs disabled" href="#">
+          <del><span class="icon fas fa-video"></span> mp4</del></a>
+        &mdash;
         The Path Kernel
       </li>
       <li>
-        <a href="/research/publications#2015_baisero_family">
-          <span class="icon fas fa-link"></span> link
-        </a> -
-        <a href="/static/docs/pubs/2015_baisero_family.pdf">
-          <span class="icon far fa-file-pdf"></span> pdf
-        </a> -
+        <a class="btn btn-link btn-xs" href="/research/publications#2015_baisero_family">
+          <span class="icon fas fa-link"></span> link</a>
+        <a class="btn btn-link btn-xs" href="/research/publications/2015_baisero_family.pdf">
+          <span class="icon far fa-file-pdf"></span> pdf</a>
+        <a class="btn btn-link btn-xs disabled" href="#">
+          <del><span class="icon fas fa-video"></span> mp4</del></a>
+        &mdash;
         On a Family of Decomposable Kernels on Sequences
       </li>
       <li>
-        <a href="/research/publications#2015_baisero_path">
-          <span class="icon fas fa-link"></span> link
-        </a> -
-        <a href="/static/docs/pubs/2015_baisero_path.pdf">
-          <span class="icon far fa-file-pdf"></span> pdf
-        </a> -
+        <a class="btn btn-link btn-xs" href="/research/publications#2015_baisero_path">
+          <span class="icon fas fa-link"></span> link</a>
+        <a class="btn btn-link btn-xs" href="/research/publications/2015_baisero_path.pdf"><span class="icon far fa-file-pdf"></span> pdf</a>
+        <a class="btn btn-link btn-xs disabled" href="#">
+          <del><span class="icon fas fa-video"></span> mp4</del></a>
+        &mdash;
         The Path Kernel:  A Novel Kernel for Sequential Data
       </li>
     </ul>
   </div>
 </div>
-
-;; #### Relevant publications:
-
-;; * [<span class="icon fas fa-link"></span>
-;;     link](/research/publications#2012_baisero_encoding) -
-;;   [<span class="icon far fa-file-pdf"></span>
-;;     pdf](/static/docs/pubs/2012_baisero_encoding.pdf) -
-;;   Encoding Sequential Structures using Kernels 
-;; * [<span class="icon fas fa-link"></span>
-;;     link](/research/publications#2013_baisero_path) -
-;;   [<span class="icon far fa-file-pdf"></span>
-;;     pdf](/static/docs/pubs/2013_baisero_path.pdf) -
-;;   The Path Kernel
-;; * [<span class="icon fas fa-link"></span>
-;;     link](/research/publications#2015_baisero_family) -
-;;   [<span class="icon far fa-file-pdf"></span>
-;;     pdf](/static/docs/pubs/2015_baisero_family.pdf) -
-;;   On a Family of Decomposable Kernels on Sequences
-;; * [<span class="icon fas fa-link"></span>
-;;     link](/research/publications#2015_baisero_path) -
-;;   [<span class="icon far fa-file-pdf"></span>
-;;     pdf](/static/docs/pubs/2015_baisero_path.pdf) -
-;;   The Path Kernel:  A Novel Kernel for Sequential Data
 
 
 *[CCIS]: College of Computer and Information Science

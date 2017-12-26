@@ -3,10 +3,10 @@ icon: fa-leaf
 
 # Haiku
 
-.haiku
-Oh how I dearly
-long to grow.  I look out, and
-the tree within grows.
+;; .haiku
+;; Oh how I dearly
+;; long to grow.  I look out, and
+;; the tree within grows.
 
 .haiku
 Sure, you once were sure;
@@ -18,17 +18,24 @@ Get up and endure.
 ;; I hope, may you not desire
 ;; what you can't achieve.
 
-.haiku
-Step by step by step,
-I persevere 'cause I trust
-that small things matter.
+;; .haiku
+;; Step by step by step,
+;; I persevere 'cause I trust
+;; that small things matter.
 
 ;; .haiku
 ;; Days, weeks, months or years.
 ;; How much to wait for real joy?
 ;; How to discount life?
 
-## From [<span class="fa fa-reddit-alien"></span> r/haiku][haikusub]
+.haiku
+To climb mount Fuji
+more than once or not even
+is man's biggest fear.
+
+## From [<span class="fab fa-reddit-alien"></span> r/haiku][haikusub]
+
+[haikusub]: https://www.reddit.com/r/haiku/ "r/haiku"
 
 .haiku
 Hungry lambs cry out.
@@ -45,4 +52,7 @@ Cross a river twice
 and the river meets two men;
 and you, two rivers.
 
-[haikusub]: https://www.reddit.com/r/haiku/ "r/haiku"
+.haiku
+All good things end;
+in gaining a lover
+I've lost a good friend.

@@ -1,43 +1,31 @@
 import os
-import pathlib2
+from pathlib2 import Path
 import datetime
 
-from flask import g, render_template, url_for, request, abort
+import flask
+
 # from app import app, pages, posts, notebooks
 from app import app, pages, posts
 
 # import bibtexparser
 from collections import defaultdict
 
-# import views_rubus
-
-### Adding useful filter to jinja2
-import jinja2
-jinja2.filters.FILTERS['basename'] = os.path.basename
-###
-
 import nbformat
 import nbconvert
 
-#  Allows for slash-less urls to work seemlessly
+#  Allows for slash-less urls to work seamlessly
 app.url_map.strict_slashes = False
 @app.before_request
 def clear_trailing():
-    from flask import redirect, request
-
-    rp = request.path
+    rp = flask.request.path
     if rp != '/' and rp.endswith('/'):
-        return redirect(rp[:-1])
+        return flask.redirect(rp[:-1])
 
-# TODO old and obsolete
-# @app.template_filter('fmt_date')
-# def fmt_date_filter(value):
-#     return datetime.datetime.strptime(value, '%d.%m.%Y').strftime('%d %b %Y')
 
 import re
-@app.template_filter('strongify')
-def strongify_filter(string, pattern):
-    return re.sub(pattern, '<strong>{}</strong>'.format(pattern), string)
+@app.template_filter()
+def tagify(string, pattern, tag):
+    return re.sub(pattern, '<{}>{}</{}>'.format(tag, pattern, tag), string)
 
 
 @app.context_processor
@@ -47,7 +35,7 @@ def utility_processor():
         try:
             notebook = nbformat.read(fpath, 4)
         except IOError:
-            abort(404)
+            flask.abort(404)
 
         exportMarkdown = nbconvert.MarkdownExporter()
         body, resources = exportMarkdown.from_notebook_node(notebook)
@@ -55,27 +43,28 @@ def utility_processor():
         import re
         for png in resources['outputs'].keys():
             new_png = re.sub('output', post.meta['notebook'], png)
-            new_png = url_for('static', filename='notebooks/{}_files/{}'.format(post.meta['notebook'], new_png))
+            new_png = flask.url_for('static', filename='notebooks/{}_files/{}'.format(post.meta['notebook'], new_png))
             body = re.sub(png, new_png, body)
 
         from flask_flatpages.utils import pygmented_markdown
         return pygmented_markdown(body, posts)
         return body
+
     return dict(notebook=notebook)
 
 
 @app.route('/<path:ppath>')
 @app.route('/', defaults={'ppath': 'home'})
 def page(ppath):
-    print 'serving PAGE {}'.format(ppath)
+    app.logger.info('Serving PAGE {}'.format(ppath))
     page = pages.get_or_404(ppath)
     active = page.meta['name']
-    return render_template('page.html', active=active, page=page)
+    return flask.render_template('page.html', active=active, page=page)
 
 
 @app.route('/weblog')
 def weblog():
-    print 'serving WEBLOG'
+    app.logger.info('Serving WEBLOG')
     page = pages.get_or_404('weblog')
     active = page.meta['name']
     posts_display = (post for post in posts if not post.meta.get('nopost', False))
@@ -86,12 +75,12 @@ def weblog():
         key = lambda post: post.meta['date'],
         reverse = True,
     )
-    return render_template('weblog.html', active=active, page=page, weblogs=weblogs)
+    return flask.render_template('weblog.html', active=active, page=page, weblogs=weblogs)
 
 
 @app.route('/weblog/<pname>')
 def post(pname):
-    print 'serving WEBLOG {}'.format(pname)
+    app.logger.info('Serving WEBLOG {}'.format(pname))
     post = posts.get_or_404(pname)
 
     _notebook = post.meta.get('notebook', False)
@@ -101,10 +90,10 @@ def post(pname):
 
         post.meta['_notebook'] = notebook
         post.meta['_notebook_md'] = notebook_md
-        post.meta['_notebook_url'] = url_for('static', filename='notebooks/{}'.format(notebook))
-        post.meta['_notebook_md_url'] = url_for('static', filename='notebooks/{}'.format(notebook_md))
+        post.meta['_notebook_url'] = flask.url_for('static', filename='notebooks/{}'.format(notebook))
+        post.meta['_notebook_md_url'] = flask.url_for('static', filename='notebooks/{}'.format(notebook_md))
 
-    return render_template('post.html', active='weblog', post=post)
+    return flask.render_template('post.html', active='weblog', post=post)
 
 
 # @app.route('/research/publications')
@@ -131,7 +120,7 @@ def post(pname):
 
 #     #Sort years
 #     refsbyyear = sorted(refs.items(), key=lambda x: x[0], reverse=True)
-#     return render_template('publications.html', active='research', page=page, references=refsbyyear)
+#     return flask.render_template('publications.html', active='research', page=page, references=refsbyyear)
 
 
 try:
@@ -143,75 +132,69 @@ from pybtex.database.input import bibtex
 from pybtex.database.output.bibtex import Writer
 
 
-def _get_bibtex_repr(entry):
-    """
-    Return the bibtex representation of the entry.
-
-    """
+def _bibentry_bibtex(entry):
+    """ Return the bibtex representation of the entry.  """
     bib_data = BibliographyData(entries={entry.key: entry})
     bibtex_repr = StringIO()
     Writer().write_stream(bib_data, bibtex_repr)
     return bibtex_repr.getvalue()
 
 
-def _get_authors(entry):
-    """
-    Return the list of authors as nicely formated string.
-
-    """
-    # authors = [" ".join([author.first()[0], author.last()[0]])
-    #            for author in entry.persons["author"]]
-    # for author in entry.persons["author"]:
-    #     print(author.first(), author.middle(), author.last())
-    #     print(author)
-    authors = [author.last()[0] for author in entry.persons["author"]]
+def _bibentry_authors(entry):
+    print(entry.persons)
+    """ Return the list of authors as nicely formated string.  """
+    authors = [author.last_names[0] for author in entry.persons['author']]
     return ', '.join(authors)
 
+def _bibentry_has_mp4(entry):
+    """ Return link to video, if it exists """
+    fpath = 'docs/pubs/{}/{}.mp4'.format(entry.key, entry.key)
+    fpath = flask.safe_join(app.config['STATIC_DIR'], fpath)
+    return os.path.exists(fpath)
+
+@app.context_processor
+def pub_processor():
+    return dict(
+        pub_authors=_bibentry_authors,
+        pub_has_mp4=_bibentry_has_mp4,
+        pub_bibtex=_bibentry_bibtex,
+    )
+
+
+# TODO make better 404 template
+@app.errorhandler(404)
+def page_not_found(e):
+    app.logger.info('DEBUGGING')
+    return flask.render_template('404.html'), 404
+
+@app.route('/research/publications/<key>')
+def pub(key):
+    flask.abort(404)
+
+@app.route('/research/publications/<key>.pdf')
+def pub_pdf(key):
+    return app.send_static_file('docs/pubs/{}/{}.pdf'.format(key, key))
+
+@app.route('/research/publications/<key>.mp4')
+def pub_mp4(key):
+    return app.send_static_file('docs/pubs/{}/{}.mp4'.format(key, key))
 
 @app.route('/research/publications')
 def publications():
-    print 'serving publications'
-
-    #Load file
-    bibtex_file = '{}/docs/pubs/refs.bib'.format(app.config['STATIC_DIR'])
-    parser = bibtex.Parser()
-    entries = parser.parse_file(bibtex_file)
+    app.logger.info('Serving publications')
 
     page = pages.get_or_404('research/publications')
 
-    bib_entries = [
-        dict(
-            type_=entry.type,
-            key=key,
-            title=entry.fields['title'],
-            authors=_get_authors(entry),
-            booktitle=entry.fields.get('booktitle', None),
-            journal=entry.fields.get('journal', None),
-            school=entry.fields.get('school', None),
-            year=entry.fields['year'],
-            pdf=entry.fields.get('pdf', None),
-            bibtex=_get_bibtex_repr(entry),
-            talk=entry.fields.get('talk', None),
-            note=entry.fields.get('note', None),
-        ) for key, entry in entries.entries.iteritems()
-    ]
+    fname = '{}/docs/pubs/refs.bib'.format(app.config['STATIC_DIR'])
+    publications = bibtex.Parser().parse_file(fname)
 
-    # NOTE inverting manually enforces that the bibtex file order is also
-    # inverted in the case of same year.
-    bib_entries = sorted(bib_entries, key=lambda entry: entry['year'])[::-1]
-
-    return render_template('publications.html', active='research', page=page, bib_entries=bib_entries)
+    return flask.render_template('publications.html', active='research', page=page, publications=publications)
 
 
 # setup global menu variable
 @app.before_first_request
 def setup_menu():
     global menu
-    # menu = dict(
-    #     # header=map(pages.get, ['home']),
-    #     left=map(pages.get, ['home', 'research', 'teaching', 'code', 'weblog']),
-    #     right=map(pages.get, ['about']),
-    # )
     menu = map(pages.get, [
         'home',
         'research',

@@ -20,30 +20,39 @@
 
   <title>Andrea Baisero - {{ active | capitalize }}</title>
 
-  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}">
-  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/normalize.css') }}">
+  <link type="text/css" rel="stylesheet"
+    href="{{url_for('static', filename='bootstrap/css/bootstrap.css')}}">
+  <link type="text/css" rel="stylesheet"
+    href="{{url_for('static', filename='css/normalize.css')}}">
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
   <!-- <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.min.css"> -->
-  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
-  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/pygments.css') }}">
+  <link type="text/css" rel="stylesheet"
+    href="{{url_for('static', filename='css/style.css')}}">
+  <link type="text/css" rel="stylesheet"
+    href="{{url_for('static', filename='css/pygments.css')}}">
 
-  <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-    MathJax.Hub.Config({
-      extensions: ["tex2jax.js"],
-      jax: ["input/TeX", "output/HTML-CSS"],
-      tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-        displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
-      },
-      "HTML-CSS": { availableFonts: ["TeX"] },
-    });
+  <script type="text/javascript"
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+      MathJax.Hub.Config({
+        'extensions': ['tex2jax.js'],
+        'jax': ['input/TeX', 'output/HTML-CSS'],
+        'tex2jax': {
+          'inlineMath': [ ['$','$'], ['\\(','\\)'] ],
+          'displayMath': [ ['$$','$$'], ['\\[','\\]'] ],
+        },
+        'HTML-CSS': { availableFonts: ['TeX'] },
+      });
   </script>
- 
-  <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/ab.js') }}"></script>
-  <script type="text/javascript" src="{{ url_for('static', filename='js/email.js') }}"></script>
+
+  <script type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script type="text/javascript"
+    src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+  <script type="text/javascript"
+    src="{{url_for('static', filename='js/ab.js')}}"></script>
+  <script type="text/javascript"
+    src="{{url_for('static', filename='js/email.js')}}"></script>
 </head>
 <body>
 
@@ -57,17 +66,16 @@
     <!-- menu -->
     <header>
       <nav id="menu" class="navbar navbar-default">
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbarSupportedContent" aria-expanded="false">
-          <span class="sr-only">Toggle navigation</span>
+        <button type="button" class="navbar-toggle collapsed" data-target="#navbarMenu" data-toggle="collapse">
           <span class="fas fa-bars fa-lg"></span>
         </button>
-        <a class="navbar-brand" href="{{ url_for('page', ppath='/') }}"><strong>Baise.ro</strong></a>
+        <a class="navbar-brand" href="{{url_for('page')}}"><strong>Baise.ro</strong></a>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="collapse navbar-collapse" id="navbarMenu">
           <ul class="nav navbar-nav">
             {% for p in menu %}
-            <li{% if p.meta.name | lower == active | lower %} class="active"{% endif %}>
-              <a href="{{ url_for('page', ppath=p.path) }}"><strong><span class="icon fas {{ p.meta.icon }} fa-fw"></span> {{ p.meta.name | capitalize }}</strong></a>
+            <li {% if p.meta.name | lower == active | lower %} class="active"{% endif %}>
+              <a href="{{url_for('page', ppath=p.path)}}"><strong><span class="icon fas {{p.meta.icon}} fa-fw"></span> {{p.meta.name | capitalize}}</strong></a>
             </li>
             {% endfor %}
           </ul>
@@ -76,7 +84,7 @@
       </nav>
     </header>
 
-    <main id="content"> 
+    <main id="content">
       <!-- content -->
       {% block content %} {% endblock %}
     </main> <!-- content -->
@@ -85,9 +93,9 @@
     </footer>
   </div> <!-- container -->
 
-  <!-- <div class="haiku-leaf"> -->
-  <!--   <a href="/haiku"><span class="icon fas fa-leaf fa-lg"></span></a> -->
-  <!-- </div> -->
+  <div class="showonhover" id="haikusecret">
+    <a href="{{url_for('page', ppath='haiku')}}"><span class="icon fas fa-leaf fa-lg"></span></a>
+  </div>
 
 </body>
 </html>
