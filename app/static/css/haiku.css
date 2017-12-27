@@ -1,0 +1,34 @@
+div.haiku {
+  display: table;
+  margin: 0 auto;
+  /* border: 2px solid green; */
+  background-image: url("/static/img/haiku/sakura1.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+div.haiku:nth-of-type(odd) {
+  margin-right: 20%;
+}
+
+div.haiku:nth-of-type(even) {
+  margin-left: 20%;
+}
+
+div.haiku:nth-of-type(3n-2) {
+  background-image: url("/static/img/haiku/sakura1.png");
+}
+
+div.haiku:nth-of-type(3n-1) {
+  background-image: url("/static/img/haiku/sakura2.png");
+}
+
+div.haiku:nth-of-type(3n) {
+  background-image: url("/static/img/haiku/sakura3.png");
+}
+
+div.haiku > p { color: #333; }
+div.haiku > p:nth-of-type(3n-2) { text-align: left; }
+div.haiku > p:nth-of-type(3n-1) { text-align: center; }
+div.haiku > p:nth-of-type(3n) { text-align: right; }

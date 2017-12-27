@@ -30,6 +30,10 @@
   <link type="text/css" rel="stylesheet"
     href="{{url_for('static', filename='css/style.css')}}">
   <link type="text/css" rel="stylesheet"
+    href="{{url_for('static', filename='css/haiku.css')}}">
+  <link type="text/css" rel="stylesheet"
+    href="{{url_for('static', filename='css/util.css')}}">
+  <link type="text/css" rel="stylesheet"
     href="{{url_for('static', filename='css/pygments.css')}}">
 
   <script type="text/javascript"
@@ -53,6 +57,8 @@
     src="{{url_for('static', filename='js/ab.js')}}"></script>
   <script type="text/javascript"
     src="{{url_for('static', filename='js/email.js')}}"></script>
+  <script type="text/javascript"
+    src="{{url_for('static', filename='js/table.js')}}"></script>
 </head>
 <body>
 
@@ -64,7 +70,7 @@
     <!-- <span class="visible-lg">SIZE LG</span> -->
 
     <!-- menu -->
-    <header>
+    <header id="header">
       <nav id="menu" class="navbar navbar-default">
         <button type="button" class="navbar-toggle collapsed" data-target="#navbarMenu" data-toggle="collapse">
           <span class="fas fa-bars fa-lg"></span>
@@ -72,7 +78,7 @@
         <a class="navbar-brand" href="{{url_for('page')}}"><strong>Baise.ro</strong></a>
 
         <div class="collapse navbar-collapse" id="navbarMenu">
-          <ul class="nav navbar-nav">
+          <ul id="menulist" class="nav navbar-nav">
             {% for p in menu %}
             <li {% if p.meta.name | lower == active | lower %} class="active"{% endif %}>
               <a href="{{url_for('page', ppath=p.path)}}"><strong><span class="icon fas {{p.meta.icon}} fa-fw"></span> {{p.meta.name | capitalize}}</strong></a>
@@ -89,11 +95,20 @@
       {% block content %} {% endblock %}
     </main> <!-- content -->
 
-    <footer>
+    <hr/>
+
+    <footer id="footer">
+      <!-- footer -->
+      {% block footer %} {% endblock %}
+      <small><strong>
+        Copyright
+        <span class="far fa-copyright fa-sm"></span>
+        2015&ndash;{{today.year}} Andrea Baisero
+      </strong></small>
     </footer>
   </div> <!-- container -->
 
-  <div class="showonhover" id="haikusecret">
+  <div id="haikusecret" class="showonhover">
     <a href="{{url_for('page', ppath='haiku')}}"><span class="icon fas fa-leaf fa-lg"></span></a>
   </div>
 

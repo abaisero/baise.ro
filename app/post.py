@@ -6,9 +6,7 @@ import json
 import IPython
 
 
-ansi_escape = re.compile(r'\x1b[^m]*m')
-
-
+# ansi_escape = re.compile(r'\x1b[^m]*m')
 # def strip_colors(string):
 #     return ansi_escape.sub('', string)
 

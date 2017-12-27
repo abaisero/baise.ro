@@ -29,7 +29,7 @@ def tagify(string, pattern, tag):
 
 
 @app.context_processor
-def utility_processor():
+def inject_notebook():
     def notebook(post):
         fpath = '{}/notebooks/{}.ipynb'.format(app.config['STATIC_DIR'], post.meta['notebook'])
         try:
@@ -51,6 +51,10 @@ def utility_processor():
         return body
 
     return dict(notebook=notebook)
+
+@app.context_processor
+def inject_today():
+    return dict(today=datetime.datetime.utcnow())
 
 
 @app.route('/<path:ppath>')
@@ -83,10 +87,10 @@ def post(pname):
     app.logger.info('Serving WEBLOG {}'.format(pname))
     post = posts.get_or_404(pname)
 
-    _notebook = post.meta.get('notebook', False)
-    if _notebook:
-        notebook = '{}.ipynb'.format(_notebook)
-        notebook_md = '{}.md'.format(_notebook)
+    nbname = post.meta.get('notebook', False)
+    if nbname:
+        notebook = '{}.ipynb'.format(nbname)
+        notebook_md = '{}.md'.format(nbname)
 
         post.meta['_notebook'] = notebook
         post.meta['_notebook_md'] = notebook_md
@@ -94,34 +98,6 @@ def post(pname):
         post.meta['_notebook_md_url'] = flask.url_for('static', filename='notebooks/{}'.format(notebook_md))
 
     return flask.render_template('post.html', active='weblog', post=post)
-
-
-# @app.route('/research/publications')
-# def publications():
-#     print 'serving PUBLICATIONS'
-
-#     #Load file
-#     bibfname = '{}/docs/pubs/refs.bib'.format(app.config['STATIC_DIR'])
-#     with open(bibfname, 'r') as bibfile:
-#         bp = bibtexparser.load(bibfile)
-#     references = sorted(bp.get_entry_list(), key=lambda x: x['year'], reverse=True)
-#     refs = defaultdict(list)
-
-#     #Preprocess the references
-#     for r in references:
-#         if 'labels' in r:
-#             r['keywordlist'] = r['labels'].split(',')
-#         if 'booktitle' in r:
-#             r['booktitle'] = r['booktitle'].replace('\&', '&amp;')
-#         r['title'] = r['title'].replace('\&', '&amp;')
-#         refs[r['year']].append(r)
-
-#     page = pages.get_or_404('research/publications')
-
-#     #Sort years
-#     refsbyyear = sorted(refs.items(), key=lambda x: x[0], reverse=True)
-#     return flask.render_template('publications.html', active='research', page=page, references=refsbyyear)
-
 
 try:
     from StringIO import StringIO
@@ -153,7 +129,7 @@ def _bibentry_has_mp4(entry):
     return os.path.exists(fpath)
 
 @app.context_processor
-def pub_processor():
+def inject_pubs():
     return dict(
         pub_authors=_bibentry_authors,
         pub_has_mp4=_bibentry_has_mp4,
@@ -194,15 +170,16 @@ def publications():
 # setup global menu variable
 @app.before_first_request
 def setup_menu():
-    global menu
-    menu = map(pages.get, [
+    pnames = [
         'home',
         'research',
         'teaching',
         'code',
         'weblog',
         'about',
-    ])
+    ]
+    global menu
+    menu = [pages.get(pname) for pname in pnames]
 
 # inject menu list into templates
 @app.context_processor

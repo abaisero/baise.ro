@@ -1,7 +1,5 @@
 @import url("http://fonts.googleapis.com/css?family=Droid+Serif:400,700");
 
-/* # TODO clean */
-
 body {
   font-family: 'Droid Serif', serif;
   font-weight: normal;
@@ -9,12 +7,13 @@ body {
   text-align: justify;
 }
 
-ul.nav {
+#menulist {
   font-size: 1.3em;
 }
 
 h1 {
   font-size: 1.7em;
+  text-decoration: underline;
 }
 
 h2 {
@@ -32,73 +31,65 @@ h4 {
   font-weight: bold;
 }
 
-
-div#pagewrap {
-  width: 612px;
-  width: 682px;
-  margin: 10px auto;
-  border: 2px;
-}
-
 hr {
   border: none;
-  width: 80%;
+  width: 90%;
   height: 1px;
-  /* background-color: pink; */
   background-color: gray;
 }
 
-div#header {
-  background: white;
-}
-
-div#pagebanner {
-  width: 612px;
-  width: 682px;
-  background: white;
-}
-
-div#pagecontent {
-  /* this is for the muhammad-mountain positioning system */
-  position: relative;
-}
-
-/* page layout */
-
-header {
-  margin-top: 15px;
-}
-
-footer {
-  height: 25px;
-}
-
-/* div.pubrow { */
-#publications div.pub-entry {
+#header {
   margin-top: 1em;
-  margin-bottom: 1em;
 }
 
-main#content h1:before,
-main#content h2:before,
-main#content h3:before {
+#content h1:before,
+#content h2:before,
+#content h3:before {
   content: "# ";
 }
 
-/* misc TODO clean */
-
-.clear {
-  clear: both;
+#content img {
+  padding-left: 1em;
+  padding-right: 1em;
 }
 
-footer {
-  /* padding-top: 5px; */
-  margin-bottom: 20px;
+#content .pub-entry {
+  padding-top: 1em;
+  padding-bottom: 1em;
 }
 
-img.img-thumbnail {
+#content .pub-entry:target {
+  border-left: 10px double lightpink;
+  border-right: 10px double lightpink;
+  border-top: 1px solid lightpink;
+  border-bottom: 1px solid lightpink;
+  border-radius: 1em;
+}
+
+#content .pub-thumbnail {
   width: 100%;
   margin: 5px;
+}
+
+/* #content .teaching-cell { */
+/*   padding-right: 1em; */
+/* } */
+
+/* #content th, */
+/* #content td { */
+/*   border-bottom: 1px solid #ddd; */
+/*   padding-top: .25em; */
+/*   padding-bottom: .25em; */
+/* } */
+
+/* #content tr:hover { */
+/*   background-color: #f5f5f5; */
+/* } */
+
+
+#footer {
+  margin-bottom: 1em;
+  text-align: center;
 }
 
 #haikusecret {
@@ -107,92 +98,41 @@ img.img-thumbnail {
   left: 10px;
 }
 
-div.haiku {
-  display: table;
-  margin: 0 auto;
-  /* border: 2px solid green; */
-  background-image: url("/static/img/haiku/sakura1.png");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
-}
+/* TODO remove? */
+/* div.ipyprompt { */
+/*   position: absolute; */
+/*   font-family: monospace; */
+/*   /1* background-color: green; *1/ */
+/*   left: -63px; */
+/* } */
 
-div.haiku:nth-of-type(odd) {
-  margin-right: 20%;
-}
+/* TODO remove? */
+/* div.ipycode { */
+/*   color: blue; */
+/* } */
 
-div.haiku:nth-of-type(even) {
-  margin-left: 20%;
-}
+/* TODO remove? */
+/* div.ipyoutput { */
+/*   color: red; */
+/* } */
 
-div.haiku:nth-of-type(3n-2) {
-  background-image: url("/static/img/haiku/sakura1.png");
-}
+/* TODO remove? */
+/* ol.bibliography { */
+/*   list-style-type: none; */
+/*   padding: 0; */
+/*   margin: 0; */
+/* } */
 
-div.haiku:nth-of-type(3n-1) {
-  background-image: url("/static/img/haiku/sakura2.png");
-}
+/* TODO remove? */
+/* object.notebook { */
+/*   /1* width: 129%; *1/ */
+/*   width: 146%; */
+/*   position: relative; */
+/*   left: -200px; */
+/* } */
 
-div.haiku:nth-of-type(3n) {
-  background-image: url("/static/img/haiku/sakura3.png");
-}
-
-div.haiku > p { color: #333; }
-div.haiku > p:nth-of-type(3n-2) { text-align: left; }
-div.haiku > p:nth-of-type(3n-1) { text-align: center; }
-div.haiku > p:nth-of-type(3n) { text-align: right; }
-
-.showonhover {
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
-
-.showonhover:hover {
-  opacity: 1;
-}
-
-div.ipyprompt {
-  position: absolute;
-  font-family: monospace;
-  /* background-color: green; */
-  left: -63px;
-}
-
-div.ipycode {
-  color: blue;
-}
-
-div.ipyoutput {
-  color: red;
-}
-
-ol.bibliography {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-div.notebook {
-}
-
-object.notebook {
-  /* width: 129%; */
-  width: 146%;
-  position: relative;
-  left: -200px;
-}
-
-html, body, div#pagewrap, div#pagecontent, article, div.notebook, object.notebook {
-  /* for notebook object auto height */
-  height: 100%;
-}
-
-div.pull-right {
-  /* padding-left: .5em; */
-  /* border: 1px solid black; */
-}
-
-img {
-  padding-left: 1em;
-  padding-right: 1em;
-}
+/* TODO remove? */
+/* html, body, div.notebook, object.notebook { */
+/*   /1* for notebook object auto height *1/ */
+/*   height: 100%; */
+/* } */
