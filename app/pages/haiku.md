@@ -33,6 +33,10 @@ To climb mount Fuji
 more than once or not even
 is man's biggest fear.
 
+;; .haiku
+;; ;
+;; Something from nothing.
+
 ## From [<span class="fab fa-reddit-alien"></span> r/haiku][haikusub]
 
 [haikusub]: https://www.reddit.com/r/haiku/ "r/haiku"

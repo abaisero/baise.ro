@@ -1,6 +1,8 @@
 name: code
-icon: fa-code
+;; icon: fa-code
 ;; icon: fa-terminal
+
+;; icon is hard-hacked into base.html
 
 # Public Code
 
@@ -16,7 +18,7 @@ Markov decision process problem structures, and an increasing amount of
 solution methods:  Policy and value iteration, SARSA, Q-learning, MCTS, and
 temporal difference search, with more to come.
 
-Available at [<span class="icon fab fa-github-alt fa-lg"></span>
+Available at [<span class="fab fa-github-alt fa-lg"></span>
 abaisero/rl][rl].
 
 [rl]: https://github.com/abaisero/rl "Reinforcement learning repository"
@@ -27,8 +29,8 @@ A personal repository containing general purpose utilities including: context
 managers, decorators, iterators, collections, and 3D geometry classes.
 
 The code is in continuous fluctuation and not significantly stable but, if you
-want to check it out, can be found at [<span class="icon fab
-fa-github-alt fa-lg"></span> abaisero/pytk][pytk].
+want to check it out, can be found at [<span class="fab fa-github-alt
+fa-lg"></span> abaisero/pytk][pytk].
 
 [pytk]: https://github.com/abaisero/pytk "Python toolkit repository"
 
@@ -41,8 +43,8 @@ style is powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework) and [Font
 Awesome][fontawesome] (an icon toolkit).  Despite not being a web developer,
 these tools allowed me to create this website with ease.
 
-The complete source code is available on its [<span class="icon fab
-fa-github-alt fa-lg"></span> github][baise.ro] page.
+The complete source code is available on its [<span class="fab fa-github-alt
+fa-lg"></span> github][baise.ro] page.
 
 ;; KEEP THIS IN MIND
 ;; http://l-lin.github.io/font-awesome-animation/
@@ -64,7 +66,7 @@ fa-github-alt fa-lg"></span> github][baise.ro] page.
 ;; While working on my PhD, I found myself in the need for a simple but highly
 ;; flexible graphical model library for python.  I ended up writing my own code
 ;; which has now become a side-project of its own.  The library is called PyFGraph
-;; and you can find the source code on its [<span class="icon fa fa-github-alt
+;; and you can find the source code on its [<span class="fa fa-github-alt
 ;; fa-lg"></span> github][github] page.
 
 ;; The code is still very primitive and in a fundamentally unorderly state, and

@@ -1,12 +1,12 @@
 name: about
-icon: fa-info-circle
+icon: fas fa-info-circle
 
 # About Me
 
 ;; ### Me
 
 ;; Find more about my academic and professional experience on my [<span
-;; class="icon far fa-file-pdf fa-lg"></span> CV][cv].
+;; class="far fa-file-pdf fa-lg"></span> CV][cv].
 
 ;; [cv]: /static/docs/cv_baisero.pdf
 
@@ -44,7 +44,11 @@ icon: fa-info-circle
 
 # About the Website
 
+;; Find more about this website on the corresponding section in the [<span
+;; class="fas fa-code"></span> code][code] page.
+
 Find more about this website on the corresponding section in the [<span
-class="icon fas fa-code"></span> code][code] page.
+class="fa-layers fa-fw"> <span class="fas fa-laptop"> </span> <span class="fas
+fa-code" data-fa-transform="shrink-9 up-2"></span> </span> code][code] page.
 
 [code]: /code#baise.ro

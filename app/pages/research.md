@@ -1,5 +1,5 @@
 name: research
-icon: fa-flask
+icon: fas fa-flask
 
 # Research
 

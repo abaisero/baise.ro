@@ -1,5 +1,5 @@
 name: weblog
-icon: fa-book
+icon: fas fa-book
 
 # Weblog
 

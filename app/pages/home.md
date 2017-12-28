@@ -1,6 +1,6 @@
 ;; name: baise.ro
 name: home
-icon: fa-home
+icon: fas fa-home
 
 # Andrea Baisero
 

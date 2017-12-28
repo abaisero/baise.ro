@@ -79,13 +79,27 @@
         data-toggle="collapse">
         <span class="fas fa-bars fa-lg"></span>
       </button>
-      <a class="navbar-brand" href="{{url_for('page')}}"><strong>Baise.ro</strong></a>
+      <a class="navbar-brand" href="{{url_for('page')}}">
+        <strong>Baise.ro</strong>
+      </a>
 
       <div id="navbarMenu" class="collapse navbar-collapse">
         <ul id="menulist" class="nav navbar-nav">
           {% for p in menu %}
           <li {% if p.meta.name | lower == active | lower %} class="active"{% endif %}>
-            <a href="{{url_for('page', ppath=p.path)}}"><strong><span class="icon fas {{p.meta.icon}} fa-fw"></span> {{p.meta.name | capitalize}}</strong></a>
+            <!-- <a href="{{url_for('page', ppath=p.path)}}"><strong><span class="fas {{p.meta.icon}} fa-fw"></span> {{p.meta.name | capitalize}}</strong></a> -->
+            <a href="{{url_for('page', ppath=p.path)}}"><strong>
+
+                <!-- hack for code.md icon -->
+                {% if p.meta.name == 'code' %}
+                  <span class="fa-layers fa-fw">
+                    <span class="fas fa-laptop"></span>
+                    <span class="fas fa-code" data-fa-transform="shrink-9 up-2"></span>
+                  </span>
+                {% else %}
+                  <span class="{{p.meta.icon}} fa-fw"></span>
+                {% endif %}
+                {{p.meta.name | capitalize}}</strong></a>
           </li>
           {% endfor %}
         </ul>
@@ -109,7 +123,7 @@
   </div> <!-- #container -->
 
   <div id="haikusecret" class="showonhover">
-    <a href="{{url_for('page', ppath='haiku')}}"><span class="icon fas fa-leaf fa-lg"></span></a>
+    <a href="{{url_for('page', ppath='haiku')}}"><span class="fas fa-leaf fa-lg"></span></a>
   </div>
 
 </body>

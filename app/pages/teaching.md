@@ -1,5 +1,5 @@
 name: teaching
-icon: fa-graduation-cap
+icon: fas fa-graduation-cap
 
 # Teaching
 
