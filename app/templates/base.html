@@ -63,7 +63,7 @@
 </head>
 <body>
 
-  <div class="container">
+  <div id="container" class="container">
     <!-- debug -->
     <!-- <span class="visible-xs">SIZE XS</span> -->
     <!-- <span class="visible-sm">SIZE SM</span> -->
@@ -71,35 +71,33 @@
     <!-- <span class="visible-lg">SIZE LG</span> -->
 
     <!-- menu -->
-    <header id="header">
-      <nav id="menu" class="navbar navbar-default">
-        <button type="button" class="navbar-toggle collapsed" data-target="#navbarMenu" data-toggle="collapse">
-          <span class="fas fa-bars fa-lg"></span>
-        </button>
-        <a class="navbar-brand" href="{{url_for('page')}}"><strong>Baise.ro</strong></a>
+    <nav id="menu" class="navbar navbar-default">
+      <button
+        type="button"
+        class="navbar-toggle collapsed"
+        data-target="#navbarMenu"
+        data-toggle="collapse">
+        <span class="fas fa-bars fa-lg"></span>
+      </button>
+      <a class="navbar-brand" href="{{url_for('page')}}"><strong>Baise.ro</strong></a>
 
-        <div class="collapse navbar-collapse" id="navbarMenu">
-          <ul id="menulist" class="nav navbar-nav">
-            {% for p in menu %}
-            <li {% if p.meta.name | lower == active | lower %} class="active"{% endif %}>
-              <a href="{{url_for('page', ppath=p.path)}}"><strong><span class="icon fas {{p.meta.icon}} fa-fw"></span> {{p.meta.name | capitalize}}</strong></a>
-            </li>
-            {% endfor %}
-          </ul>
-        </div> <!-- navbar -->
+      <div id="navbarMenu" class="collapse navbar-collapse">
+        <ul id="menulist" class="nav navbar-nav">
+          {% for p in menu %}
+          <li {% if p.meta.name | lower == active | lower %} class="active"{% endif %}>
+            <a href="{{url_for('page', ppath=p.path)}}"><strong><span class="icon fas {{p.meta.icon}} fa-fw"></span> {{p.meta.name | capitalize}}</strong></a>
+          </li>
+          {% endfor %}
+        </ul>
+      </div> <!-- #navbarMenu -->
 
-      </nav>
-    </header>
+    </nav> <!-- #menu -->
 
     <main id="content">
-      <!-- content -->
       {% block content %} {% endblock %}
-    </main> <!-- content -->
-
-    <hr/>
+    </main> <!-- #content -->
 
     <footer id="footer">
-      <!-- footer -->
       {% block footer %} {% endblock %}
       <small><strong>
         Copyright
@@ -107,7 +105,8 @@
         2015&ndash;{{today.year}} Andrea Baisero
       </strong></small>
     </footer>
-  </div> <!-- container -->
+
+  </div> <!-- #container -->
 
   <div id="haikusecret" class="showonhover">
     <a href="{{url_for('page', ppath='haiku')}}"><span class="icon fas fa-leaf fa-lg"></span></a>

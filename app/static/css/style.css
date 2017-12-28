@@ -1,5 +1,9 @@
 @import url("http://fonts.googleapis.com/css?family=Droid+Serif:400,700");
 
+html, body {
+  height: 100%;
+}
+
 body {
   font-family: 'Droid Serif', serif;
   font-weight: normal;
@@ -7,39 +11,38 @@ body {
   text-align: justify;
 }
 
-#menulist {
-  font-size: 1.3em;
-}
-
-h1 {
+#content h1 {
   font-size: 1.7em;
   text-decoration: underline;
 }
 
-h2 {
+#content h2 {
   font-size: 1.35em;
   font-weight: bold;
 }
 
-h3 {
+#content h3 {
   font-size: 1em;
   font-weight: bold;
 }
 
-h4 {
+#content h4 {
   font-size: 1em;
   font-weight: bold;
 }
 
-hr {
-  border: none;
-  width: 90%;
-  height: 1px;
-  background-color: gray;
+#container {
+  height: 100%;
+  display: flex;
+  flex-flow: column;
 }
 
-#header {
+#menu {
   margin-top: 1em;
+}
+
+#menu #menulist {
+  font-size: 1.3em;
 }
 
 #content h1:before,
@@ -71,24 +74,10 @@ hr {
   margin: 5px;
 }
 
-/* #content .teaching-cell { */
-/*   padding-right: 1em; */
-/* } */
-
-/* #content th, */
-/* #content td { */
-/*   border-bottom: 1px solid #ddd; */
-/*   padding-top: .25em; */
-/*   padding-bottom: .25em; */
-/* } */
-
-/* #content tr:hover { */
-/*   background-color: #f5f5f5; */
-/* } */
-
-
 #footer {
-  margin-bottom: 1em;
+  margin-top: auto;
+  /* margin-bottom would be overruled by margin-top if page were high enough */
+  padding-bottom: 1em;
   text-align: center;
 }
 
@@ -98,41 +87,9 @@ hr {
   left: 10px;
 }
 
-/* TODO remove? */
-/* div.ipyprompt { */
-/*   position: absolute; */
-/*   font-family: monospace; */
-/*   /1* background-color: green; *1/ */
-/*   left: -63px; */
-/* } */
-
-/* TODO remove? */
-/* div.ipycode { */
-/*   color: blue; */
-/* } */
-
-/* TODO remove? */
-/* div.ipyoutput { */
-/*   color: red; */
-/* } */
-
-/* TODO remove? */
-/* ol.bibliography { */
-/*   list-style-type: none; */
-/*   padding: 0; */
-/*   margin: 0; */
-/* } */
-
-/* TODO remove? */
-/* object.notebook { */
-/*   /1* width: 129%; *1/ */
-/*   width: 146%; */
-/*   position: relative; */
-/*   left: -200px; */
-/* } */
-
-/* TODO remove? */
-/* html, body, div.notebook, object.notebook { */
-/*   /1* for notebook object auto height *1/ */
-/*   height: 100%; */
-/* } */
+hr {
+  border: none;
+  width: 90%;
+  height: 1px;
+  background-color: gray;
+}
