@@ -33,6 +33,11 @@ To climb mount Fuji
 more than once or not even
 is man's biggest fear.
 
+.haiku
+Universal law:
+If you hate it, kill it fast;
+If you love it too.
+
 ;; .haiku
 ;; ;
 ;; Something from nothing.
