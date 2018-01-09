@@ -18,7 +18,7 @@ Full publication list [<span class="icon far fa-file"></span> here][pubs].
 ### Active Goal Recognition
 
 <div class="alert alert-info" role="alert">
-  <strong>Uh-oh!</strong> This content is currently being updated and will be restored shortly.
+  <strong>Uh-oh!</strong> This content is currently being written or updated, and will be restored shortly.
 </div>
 
 ;; ### Policy Search in POMDPs
@@ -45,7 +45,7 @@ has to be able to take such description and decode it into a belief over the
 possible wanted geometric states.
 
 <div class="alert alert-info" role="alert">
-  <strong>Uh-oh!</strong> This content is currently being updated and will be restored shortly.
+  <strong>Uh-oh!</strong> This content is currently being written or updated, and will be restored shortly.
 </div>
 
 ### Identification of Unmodeled Objects via Relational Descriptions
