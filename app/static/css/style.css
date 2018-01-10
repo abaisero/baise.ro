@@ -94,3 +94,8 @@ hr {
   height: 1px;
   background-color: gray;
 }
+
+div.notebook img {
+  display: block;
+  margin: 0 auto;
+}

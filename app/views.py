@@ -48,7 +48,6 @@ def inject_notebook():
 
         from flask_flatpages.utils import pygmented_markdown
         return pygmented_markdown(body, posts)
-        return body
 
     return dict(notebook=notebook)
 
