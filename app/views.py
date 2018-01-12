@@ -31,7 +31,7 @@ def tagify(string, pattern, tag):
 @app.context_processor
 def inject_notebook():
     def notebook(post):
-        fpath = '{}/notebooks/{}.ipynb'.format(app.config['STATIC_DIR'], post.meta['notebook'])
+        fpath = '{}/notebooks/{}.ipynb'.format(app.static_folder, post.meta['notebook'])
         try:
             notebook = nbformat.read(fpath, 4)
         except IOError:
@@ -54,6 +54,12 @@ def inject_notebook():
 @app.context_processor
 def inject_today():
     return dict(today=datetime.datetime.utcnow())
+
+
+# TODO I think these should be handled by the webserver directly?
+@app.route('/sitemap.xml')
+def static_from_root():
+    return flask.send_from_directory(app.static_folder, flask.request.path[1:])
 
 
 @app.route('/<path:ppath>')
@@ -124,7 +130,7 @@ def _bibentry_authors(entry):
 def _bibentry_has_mp4(entry):
     """ Return link to video, if it exists """
     fpath = 'docs/pubs/{}/{}.mp4'.format(entry.key, entry.key)
-    fpath = flask.safe_join(app.config['STATIC_DIR'], fpath)
+    fpath = flask.safe_join(app.static_folder, fpath)
     return os.path.exists(fpath)
 
 @app.context_processor
@@ -160,7 +166,7 @@ def publications():
 
     page = pages.get_or_404('research/publications')
 
-    fname = '{}/docs/pubs/refs.bib'.format(app.config['STATIC_DIR'])
+    fname = '{}/docs/pubs/refs.bib'.format(app.static_folder)
     publications = bibtex.Parser().parse_file(fname)
 
     return flask.render_template('publications.html', active='research', page=page, publications=publications)

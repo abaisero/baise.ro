@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>http://a.baise.ro/</loc>
+  <lastmod>2018-01-12T19:49:53+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/research</loc>
+  <lastmod>2018-01-12T19:49:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/teaching</loc>
+  <lastmod>2018-01-12T19:49:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/code</loc>
+  <lastmod>2018-01-12T19:49:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/weblog</loc>
+  <lastmod>2018-01-12T19:49:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/about</loc>
+  <lastmod>2018-01-12T19:49:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/haiku</loc>
+  <lastmod>2018-01-12T19:49:53+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/research/publications</loc>
+  <lastmod>2018-01-12T19:49:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/research/publications/2017_baisero_identification.pdf</loc>
+  <lastmod>2017-12-26T23:18:15+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/research/publications/2015_baisero_temporal.pdf</loc>
+  <lastmod>2017-12-26T23:18:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/research/publications/2015_mollard_robot.pdf</loc>
+  <lastmod>2017-12-26T23:18:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/research/publications/2012_baisero_encoding.pdf</loc>
+  <lastmod>2017-12-26T23:18:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/research/publications/2013_baisero_path.pdf</loc>
+  <lastmod>2017-12-26T23:18:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/research/publications/2015_baisero_family.pdf</loc>
+  <lastmod>2017-12-26T23:18:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/research/publications/2015_baisero_path.pdf</loc>
+  <lastmod>2017-12-26T23:18:14+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>http://a.baise.ro/weblog/20170127_generalized_linear_gaussian_posterior</loc>
+  <lastmod>2018-01-12T19:49:53+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
