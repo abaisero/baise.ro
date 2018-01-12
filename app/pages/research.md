@@ -33,6 +33,7 @@ Full publication list [<span class="icon far fa-file"></span> here][pubs].
 ### Decoding the Geometry out of Relational Descriptions
 
 <img src="/static/img/rfdm.png"
+  alt="application of relational feature density model to a room domain"
   class="pull-right"
   style="width:66%"/>
 
@@ -66,6 +67,7 @@ could be the object of identification could have measurable features relative
 to its color, shape, or position.
 
 <img src="/static/img/iden.png"
+  alt="tabletop identification scenario with multiple blocks and the respective identification probabilities"
   style="width:100%"/>
 
 To address the description problem, we propose a logistic-regression-like
@@ -99,6 +101,7 @@ make the referent object distinguishible from the rest of the environment.
 ### Temporal Segmentation of Concurrent Asynchronous Manipulations
 
 <img src="/static/img/tseg.png"
+  alt="extracted instruction set for the assembly of a tool box"
   class="pull-right"
   style="width:26em"/>
 
@@ -154,11 +157,14 @@ assembly tasks.
 
 <div class="pull-right" style="width:26em">
 <img src="/static/img/pathkernel_stretches.png"
+  alt="stretches corresponding to selected paths"
   style="width:26em;padding:.5em;"/>
 <img src="/static/img/pathkernel_intuition.png"
+  alt="binary path matrix denoting similarity at character level"
   class="pull-left"
   style="width:13em;padding:.5em;"/>
 <img src="/static/img/pathkernel.png"
+  alt="selected paths overlapped on the path matrix"
   class="pull-right"
   style="width:13em;padding:.5em;"/>
 </div>
