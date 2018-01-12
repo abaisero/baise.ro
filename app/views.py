@@ -57,6 +57,7 @@ def inject_today():
 
 
 # TODO I think these should be handled by the webserver directly?
+@app.route('/robots.txt')
 @app.route('/sitemap.xml')
 def static_from_root():
     return flask.send_from_directory(app.static_folder, flask.request.path[1:])
