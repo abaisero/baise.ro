@@ -1,5 +1,9 @@
-$(document).ready(function() {
-  $('#content .before_table + table').addClass('table table-striped table-hover');
+var tables = document.querySelectorAll('#content .before_table + table');
+tables.forEach(function(table) {
+  table.classList.add('table', 'table-striped', 'table-hover');
+});
 
-  $('#content .before_lu + ul').addClass('fa-ul');
+var lists = document.querySelectorAll('#content .before_lu + ul');
+lists.forEach(function(list) {
+  list.classList.add('fa-ul');
 });

@@ -54,14 +54,27 @@
     src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script type="text/javascript"
     src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script>
+
+  <script src="https://d3js.org/d3.v4.min.js"></script>
   <script type="text/javascript"
-    src="{{url_for('static', filename='js/util.js')}}"></script>
-  <script type="text/javascript"
-    src="{{url_for('static', filename='js/before.js')}}"></script>
-  <script type="text/javascript"
-    src="{{url_for('static', filename='js/notebook.js')}}"></script>
+    src="{{url_for('static', filename='js/background.js')}}"></script>
 </head>
 <body>
+
+  <!-- <div id="background"> -->
+  <!--   <svg width="100%" height="100%"> -->
+  <!--   <defs> -->
+  <!--     <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse"> -->
+  <!--       <path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="0.5"/> -->
+  <!--     </pattern> -->
+  <!--     <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"> -->
+  <!--       <rect width="100" height="100" fill="url(#smallGrid)"/> -->
+  <!--       <path d="M 100 0 L 0 0 0 100" fill="none" stroke="gray" stroke-width="1"/> -->
+  <!--     </pattern> -->
+  <!--   </defs> -->
+  <!--   <rect width="100%" height="100%" fill="url(#grid)" /> -->
+  <!-- </svg> -->
+  <!-- </div> -->
 
   <div id="container" class="container">
     <!-- debug -->
@@ -125,6 +138,9 @@
   <div id="haikusecret" class="showonhover">
     <a href="{{url_for('page', ppath='haiku')}}"><span class="fas fa-leaf fa-lg"></span></a>
   </div>
+
+  <script type="text/javascript"
+    src="{{url_for('static', filename='js/before.js')}}"></script>
 
 </body>
 </html>

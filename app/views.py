@@ -47,6 +47,9 @@ def inject_notebook():
             body = re.sub(png, new_png, body)
 
         from flask_flatpages.utils import pygmented_markdown
+        body = re.sub('#\s.*', '', body, count=1)
+        print(body[:100])
+
         return pygmented_markdown(body, posts)
 
     return dict(notebook=notebook)
