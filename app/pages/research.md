@@ -30,7 +30,7 @@ Full publication list [<span class="icon far fa-file"></span> here][pubs].
 ;; As a research assistant at the Machine Learning and Robotics (MLR) group,
 ;; I worked on the following topics:
 
-### Decoding the Geometry out of Relational Descriptions
+### Decoding the Geometry out of Relational Descriptions of the Environment
 
 <img src="/static/img/rfdm.png"
   alt="application of relational feature density model to a room domain"
@@ -98,7 +98,7 @@ make the referent object distinguishible from the rest of the environment.
   </div>
 </div>
 
-### Temporal Segmentation of Concurrent Asynchronous Manipulations
+### Temporal Segmentation of Concurrent Asynchronous Demonstrations
 
 <img src="/static/img/tseg.png"
   alt="extracted instruction set for the assembly of a tool box"
@@ -153,7 +153,7 @@ assembly tasks.
 
 ## CVAP @ KTH (2012)
 
-### Kernels for Sequential Structures
+### Implicit Feature Space Embeddings for Sequential Structures
 
 <div class="pull-right" style="width:26em">
 <img src="/static/img/pathkernel_stretches.png"

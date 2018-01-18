@@ -6,11 +6,12 @@ name: code
 
 # Public Code
 
-### RL {:#rl}
+;; <article class="before_article"></article>
 
-I am developing a simple reinforcement learning library as an exercise to learn
-more on the subject and to solve some of the programming exercises from Sutton
-and Barto's RL book.
+## RL: Reinforcement Learning {#rl}
+
+A simple reinforcement learning library as an exercise to learn more on the
+subject and to solve the programming exercises from Sutton and Barto's RL book.
 
 Currently contains:  customizable state and action structures, tabular and
 parametric value functions, non-parametric policies, multi-armed bandit and
@@ -23,7 +24,9 @@ abaisero/rl][rl].
 
 [rl]: https://github.com/abaisero/rl "Reinforcement learning repository"
 
-### PyTk: Python toolkit {:#pytk}
+;; <span class="after_article">
+
+## PyTk: Python Toolkit {#pytk}
 
 A personal repository containing general purpose utilities including: context
 managers, decorators, iterators, collections, and 3D geometry classes.
@@ -34,7 +37,7 @@ fa-lg"></span> abaisero/pytk][pytk].
 
 [pytk]: https://github.com/abaisero/pytk "Python toolkit repository"
 
-### Baise.ro {:#baise.ro}
+## Baise.ro {#baise.ro}
 
 This website is developed using [Flask][flask], a minimalistic python framework
 for webapp development which uses the [Jinja][jinja] templating language to

@@ -10,7 +10,7 @@ icon: fas fa-info-circle
 
 ;; [cv]: /static/docs/cv_baisero.pdf
 
-### Awards
+## Awards
 
 <div class="before_lu"></div>
 * <span class="fa-li"><span class="far fa-check-square"></span></span>
@@ -18,7 +18,7 @@ icon: fas fa-info-circle
   <small>Yearly national award for the best Master thesis in the area of
   artificial intelligence.</small>
 
-### Education
+## Education
 
 ;; <div class="before_lu"></div>
 ;; * <span class="fa-li"><span class="far fa-check-square"></span></span>

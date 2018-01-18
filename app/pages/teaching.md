@@ -3,7 +3,7 @@ icon: fas fa-graduation-cap
 
 # Teaching
 
-### University of Stuttgart
+## University of Stuttgart
 
 <div class="before_table"></div>
 
