@@ -36,11 +36,12 @@ is man's biggest fear.
 .haiku
 Universal law:
 If you hate it, kill it fast;
-If you love it too.
+If you love it, too.
 
-;; .haiku
-;; ;
-;; Something from nothing.
+.haiku
+Something from nothing
+is not always better than
+nothing from something.
 
 ## From [<span class="fab fa-reddit-alien"></span> r/haiku][haikusub]
 
@@ -61,7 +62,22 @@ Cross a river twice
 and the river meets two men;
 and you, two rivers.
 
+;; .haiku
+;; All good things end;
+;; in gaining a lover
+;; I've lost a good friend.
+
 .haiku
-All good things end;
-in gaining a lover
-I've lost a good friend.
+All good things must end;
+in gaining a new lover
+I've lost an good friend.
+
+.haiku
+"I love you," I yell
+from the cliff to the canyon;
+"I love you," it yells.
+
+.haiku
+Strong arms hold her tight;
+She screams and fights her captor
+in the mental ward.
