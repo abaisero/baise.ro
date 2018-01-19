@@ -6,9 +6,9 @@ name: code
 
 # Public Code
 
-;; <article class="before_article"></article>
+<span class="begin_article" id="rl"></span>
 
-## RL: Reinforcement Learning {#rl}
+# RL: Reinforcement Learning
 
 A simple reinforcement learning library as an exercise to learn more on the
 subject and to solve the programming exercises from Sutton and Barto's RL book.
@@ -24,9 +24,11 @@ abaisero/rl][rl].
 
 [rl]: https://github.com/abaisero/rl "Reinforcement learning repository"
 
-;; <span class="after_article">
+<span class="end_article"></span>
 
-## PyTk: Python Toolkit {#pytk}
+<span class="begin_article" id="pytk"></span>
+
+# PyTk: Python Toolkit
 
 A personal repository containing general purpose utilities including: context
 managers, decorators, iterators, collections, and 3D geometry classes.
@@ -37,7 +39,11 @@ fa-lg"></span> abaisero/pytk][pytk].
 
 [pytk]: https://github.com/abaisero/pytk "Python toolkit repository"
 
-## Baise.ro {#baise.ro}
+<span class="end_article"></span>
+
+<span class="begin_article" id="baise.ro"></span>
+
+# Baise.ro
 
 This website is developed using [Flask][flask], a minimalistic python framework
 for webapp development which uses the [Jinja][jinja] templating language to
@@ -83,3 +89,5 @@ fa-lg"></span> github][baise.ro] page.
 ;; flexibility with which factor graphs can be defined and used.
 
 ;; [github]: https://github.com/bigblindbais/pyfgraph "PyFGraph"
+
+<span class="end_article"></span>

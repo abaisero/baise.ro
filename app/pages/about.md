@@ -1,7 +1,9 @@
 name: about
 icon: fas fa-info-circle
 
-# About Me
+# About ...
+
+;; ## About Me
 
 ;; ### Me
 
@@ -10,7 +12,9 @@ icon: fas fa-info-circle
 
 ;; [cv]: /static/docs/cv_baisero.pdf
 
-## Awards
+<span class="begin_article" id="awards"></span>
+
+# ... Awards
 
 <div class="before_lu"></div>
 * <span class="fa-li"><span class="far fa-check-square"></span></span>
@@ -18,7 +22,11 @@ icon: fas fa-info-circle
   <small>Yearly national award for the best Master thesis in the area of
   artificial intelligence.</small>
 
-## Education
+<span class="end_article"></span>
+
+<span class="begin_article" id="education"></span>
+
+# ... Education
 
 ;; <div class="before_lu"></div>
 ;; * <span class="fa-li"><span class="far fa-check-square"></span></span>
@@ -42,7 +50,11 @@ icon: fas fa-info-circle
   **BSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br/>
   <small>Polytechnic University of Turin (Turin, Italy).</small>
 
-# About the Website
+<span class="end_article"></span>
+
+<span class="begin_article" id="website"></span>
+
+# ... Website
 
 ;; Find more about this website on the corresponding section in the [<span
 ;; class="fas fa-code"></span> code][code] page.
@@ -52,3 +64,5 @@ class="fa-layers fa-fw"> <span class="fas fa-laptop"> </span> <span class="fas
 fa-code" data-fa-transform="shrink-9 up-2"></span> </span> code][code] page.
 
 [code]: /code#baise.ro
+
+<span class="end_article"></span>

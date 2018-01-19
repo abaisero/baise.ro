@@ -15,11 +15,15 @@ Full publication list [<span class="icon far fa-file"></span> here][pubs].
 ;;   <strong>Heads up!</strong> I will begin working at Northeastern Uni in the Fall of 2017.
 ;; </div>
 
-### Active Goal Recognition
+<span class="begin_article" id="agr"></span>
+
+## Active Goal Recognition
 
 <div class="alert alert-info" role="alert">
   <strong>Uh-oh!</strong> This content is currently being written or updated, and will be restored shortly.
 </div>
+
+<span class="end_article"></span>
 
 ;; ### Policy Search in POMDPs
 
@@ -30,7 +34,9 @@ Full publication list [<span class="icon far fa-file"></span> here][pubs].
 ;; As a research assistant at the Machine Learning and Robotics (MLR) group,
 ;; I worked on the following topics:
 
-### Decoding the Geometry out of Relational Descriptions of the Environment
+<span class="begin_article" id="rfdm"></span>
+
+## Decoding the Geometry out of Relational Descriptions of the Environment
 
 <img src="/static/img/rfdm.png"
   alt="application of relational feature density model to a room domain"
@@ -49,7 +55,11 @@ possible wanted geometric states.
   <strong>Uh-oh!</strong> This content is currently being written or updated, and will be restored shortly.
 </div>
 
-### Identification of Unmodeled Objects via Relational Descriptions
+<span class="end_article"></span>
+
+<span class="begin_article" id="iden"></span>
+
+## Identification of Unmodeled Objects via Relational Descriptions
 
 Successful Human-Robot Interaction (HRI) requires advanced communication
 algorithms which are able to parse instances of human language and associate
@@ -98,7 +108,11 @@ make the referent object distinguishible from the rest of the environment.
   </div>
 </div>
 
-### Temporal Segmentation of Concurrent Asynchronous Demonstrations
+<span class="end_article"></span>
+
+<span class="begin_article" id="tseg"></span>
+
+## Temporal Segmentation of Concurrent Asynchronous Demonstrations
 
 <img src="/static/img/tseg.png"
   alt="extracted instruction set for the assembly of a tool box"
@@ -149,11 +163,15 @@ assembly tasks.
   </div>
 </div>
 
+<span class="end_article"></span>
+
 ---
 
 ## CVAP @ KTH (2012)
 
-### Implicit Feature Space Embeddings for Sequential Structures
+<span class="begin_article" id="pathkernel"></span>
+
+## Implicit Feature Space Embeddings for Sequential Structures
 
 <div class="pull-right" style="width:26em">
 <img src="/static/img/pathkernel_stretches.png"
@@ -233,6 +251,7 @@ domain can be embedded.
   </div>
 </div>
 
+<span class="end_article"></span>
 
 *[CCIS]: College of Computer and Information Science
 *[MLR]: Machine Learning and Robotics

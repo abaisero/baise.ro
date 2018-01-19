@@ -12,22 +12,25 @@ body {
   color: #555;
 }
 
-#content h1 {
+#content > h1 {
   font-size: 1.7em;
   text-decoration: underline;
 }
 
-#content h2 {
+#content h2,
+#content article h1 {
   font-size: 1.35em;
   font-weight: bold;
 }
 
-#content h3 {
+#content h3,
+#content article h2 {
   font-size: 1em;
   font-weight: bold;
 }
 
-#content h4 {
+#content h4,
+#content article h3 {
   font-size: 1em;
   font-weight: bold;
 }
@@ -60,6 +63,16 @@ body {
 #content .pub-entry {
   padding-top: 1em;
   padding-bottom: 1em;
+}
+
+#content article:target {
+  padding-left: .5em;
+  padding-right: .5em;
+  border-left: 10px double lightpink;
+  border-right: 10px double lightpink;
+  border-top: 1px solid lightpink;
+  border-bottom: 1px solid lightpink;
+  border-radius: 1em;
 }
 
 #content .pub-entry:target {
