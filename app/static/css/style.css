@@ -65,21 +65,17 @@ body {
   padding-bottom: 1em;
 }
 
-#content article:target {
-  padding-left: .5em;
-  padding-right: .5em;
-  border-left: 10px double lightpink;
-  border-right: 10px double lightpink;
-  border-top: 1px solid lightpink;
-  border-bottom: 1px solid lightpink;
-  border-radius: 1em;
-}
+#content :target {
+  margin-left: -1.5em;
+  margin-right: -1.5em;
 
-#content .pub-entry:target {
-  border-left: 10px double lightpink;
-  border-right: 10px double lightpink;
-  border-top: 1px solid lightpink;
-  border-bottom: 1px solid lightpink;
+  padding-left: .75em;
+  padding-right: .75em;
+
+  border-left: .75em double lightpink;
+  border-right: .75em double lightpink;
+  border-top: .1em solid lightpink;
+  border-bottom: .1em solid lightpink;
   border-radius: 1em;
 }
 
