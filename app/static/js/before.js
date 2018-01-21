@@ -9,17 +9,24 @@ lists.forEach(function(list) {
 });
 
 
-killParent('span.begin_article');
-killParent('span.end_article');
-var begin_articles = document.querySelectorAll('span.begin_article');
-begin_articles.forEach(function(begin) {
-  var article = document.createElement('article'),
-      between = nextUntil(begin, 'span.end_article'),
-      end = between[between.length-1].nextElementSibling;
-  begin.classList.remove("begin_article");
-  copyAttributes(article, begin);
-  begin.insertAdjacentElement("afterend", article);
-  between.forEach(function(e) { article.appendChild(e); });
-  begin.remove();
-  end.remove();
-});
+function processBeginTag(tagName, kp=true) {
+  if (kp) {
+    killParent('span.begin_'+tagName);
+    killParent('span.end_'+tagName);
+  }
+  var begin_tags = document.querySelectorAll('span.begin_'+tagName);
+  begin_tags.forEach(function(begin) {
+    var tag = document.createElement(tagName),
+        between = nextUntil(begin, 'span.end_'+tagName),
+        end = between[between.length-1].nextElementSibling;
+    begin.classList.remove('begin_'+tagName);
+    copyAttributes(tag, begin);
+    begin.insertAdjacentElement('afterend', tag);
+    between.forEach(function(e) { tag.appendChild(e); });
+    begin.remove();
+    end.remove();
+  });
+}
+
+processBeginTag('article', kp=true);
+processBeginTag('div', kp=true);
