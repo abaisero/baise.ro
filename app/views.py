@@ -19,7 +19,7 @@ app.url_map.strict_slashes = False
 def clear_trailing():
     rp = flask.request.path
     if rp != '/' and rp.endswith('/'):
-        return flask.redirect(rp[:-1])
+        return flask.redirect(rp[:-1], code=301)
 
 
 import re
