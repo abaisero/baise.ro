@@ -42,6 +42,5 @@ bayesian inference, information theory, and game theory.
 * [<span class="fa-li"><span class="fas fa-flask fa-fw"></span></span> Research](/research) - Past and present research topics;
 * [<span class="fa-li"><span class="fas fa-graduation-cap fa-fw"></span></span> Teaching](/teaching) - Courses for which I have been a TA;
 * [<span class="fa-li"><span class="fa-layers fa-fw"><span class="fas fa-laptop"></span></span><span class="fas fa-code" data-fa-transform="shrink-9 up-2"></span></span></span> Code](/code) - Small repositories which I use consistently;
-* [<span class="fa-li"><span class="fas fa-book fa-fw"></span></span> Weblog](/weblog) - An almost non-existent collection of "blog" posts;
+* [<span class="fa-li"><span class="fas fa-book fa-fw"></span></span> Weblog](/weblog) - A virtually non-existent collection of "blog" posts;
 * [<span class="fa-li"><span class="fas fa-info-circle fa-fw"></span></span> About](/about) - General information about my academic background;
-
