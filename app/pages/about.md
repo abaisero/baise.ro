@@ -3,10 +3,6 @@ icon: fas fa-info-circle
 
 # About ...
 
-;; ## About Me
-
-;; ### Me
-
 ;; Find more about my academic and professional experience on my [<span
 ;; class="far fa-file-pdf fa-lg"></span> CV][cv].
 
@@ -28,11 +24,6 @@ icon: fas fa-info-circle
 
 # ... Education
 
-;; <div class="before_lu"></div>
-;; * <span class="fa-li"><span class="far fa-check-square"></span></span>
-;;   **Research Assistant in Machine Learning** <br/>
-;;   <small>University of Stuttgart (Stuttgart, Germany).</small>
-
 <div class="before_lu"></div>
 * <span class="fa-li"><span class="far fa-square"></span></span>
   **PhD in Reinforcement Learning**, <small>*ongoing*</small> <br/>
@@ -49,6 +40,17 @@ icon: fas fa-info-circle
 * <span class="fa-li"><span class="far fa-check-square"></span></span>
   **BSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br/>
   <small>Polytechnic University of Turin (Turin, Italy).</small>
+
+<span class="end_article"></span>
+
+<span class="begin_article" id="work"></span>
+
+# ... Work Experience
+
+<div class="before_lu"></div>
+* <span class="fa-li"><span class="far fa-check-square"></span></span>
+  **Research and Teaching Assistant in Machine Learning** <br/>
+  <small>University of Stuttgart (Stuttgart, Germany).</small>
 
 <span class="end_article"></span>
 

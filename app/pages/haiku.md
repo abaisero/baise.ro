@@ -77,7 +77,12 @@ I've lost an good friend.
 from the cliff to the canyon;
 "I love you," it yells.
 
+;; .haiku
+;; Strong arms hold her tight;
+;; She screams and fights her captor
+;; in the mental ward.
+
 .haiku
-Strong arms hold her tight;
-She screams and fights her captor
-in the mental ward.
+Decide who you are,
+where you stand, and what that means
+before trouble comes.

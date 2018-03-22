@@ -8,7 +8,7 @@ name: code
 
 <span class="begin_article" id="rl"></span>
 
-# RL: Reinforcement Learning
+# rl - Reinforcement Learning [§](#rl)
 
 A simple reinforcement learning library as an exercise to learn more on the
 subject and to solve the programming exercises from Sutton and Barto's RL book.
@@ -22,20 +22,59 @@ temporal difference search, with more to come.
 Available at [<span class="fab fa-github-alt fa-lg"></span>
 abaisero/rl][rl].
 
-[rl]: https://github.com/abaisero/rl "Reinforcement learning repository"
+[rl]: https://github.com/abaisero/rl "Reinforcement Learning repository"
+
+<span class="end_article"></span>
+
+<span class="begin_article" id="rl_parsers"></span>
+
+# rl_parsers - Reinforcement Learning Parsers [§](#rl_parsers)
+
+Stand-alone repository containing parsers for files related to RL.  Currently
+contains parsers for the standard .POMDP as well as custom .FSC (Finite State
+Controller) and .FSS (Finite State Structure) formats which I use for my own
+research.
+
+Available at [<span class="fab fa-github-alt fa-lg"></span>
+abaisero/rl_parsers][rl_parsers].
+
+[rl_parsers]: https://github.com/abaisero/rl_parsers "Reinforcement Learning parsers repository"
+
+<span class="end_article"></span>
+
+<span class="begin_article" id="indextools"></span>
+
+# indextools - Tools for Semantic Indexing [§](#indextools)
+
+Family of classes which represent bijections between sets of $N$ structured
+and/or semantic values/objects and a corresponding set of indices $\{0, \ldots,
+N-1\}$;  Useful to represent (and access) tables of values indexed directly by
+objects with meaningful interfaces and attributes.  
+
+The provided classes automate (via a user-friendly interface) the conversions
+between values and indices.
+
+Available at [<span class="fab fa-github-alt fa-lg"></span>
+abaisero/indextools][indextools].
+
+[indextools]: https://github.com/abaisero/indextools "Semantic indexing repository"
 
 <span class="end_article"></span>
 
 <span class="begin_article" id="pytk"></span>
 
-# PyTk: Python Toolkit
+# pytk - Python Toolkit [§](#pytk)
 
-A personal repository containing general purpose utilities including: context
-managers, decorators, iterators, collections, and 3D geometry classes.
+A personal repository of general purpose utilities including: context managers,
+decorators, iterators, collections, and 3D geometry classes.
 
-The code is in continuous fluctuation and not significantly stable but, if you
-want to check it out, can be found at [<span class="fab fa-github-alt
-fa-lg"></span> abaisero/pytk][pytk].
+Available at [<span class="fab fa-github-alt fa-lg"></span>
+abaisero/pytk][pytk] (code base in continuous fluctuation, and not
+significantly stable).
+
+;; The code is in continuous fluctuation and not significantly stable but, if you
+;; want to check it out, can be found at [<span class="fab fa-github-alt
+;; fa-lg"></span> abaisero/pytk][pytk].
 
 [pytk]: https://github.com/abaisero/pytk "Python toolkit repository"
 
@@ -43,7 +82,7 @@ fa-lg"></span> abaisero/pytk][pytk].
 
 <span class="begin_article" id="baise.ro"></span>
 
-# Baise.ro
+# baise.ro - This Website [§](#baise.ro)
 
 This website is developed using [Flask][flask], a minimalistic python framework
 for webapp development which uses the [Jinja][jinja] templating language to
@@ -52,8 +91,7 @@ style is powered by [Bootstrap][bootstrap] (an HTML/CSS/JS framework) and [Font
 Awesome][fontawesome] (an icon toolkit).  Despite not being a web developer,
 these tools allowed me to create this website with ease.
 
-The complete source code is available on its [<span class="fab fa-github-alt
-fa-lg"></span> github][baise.ro] page.
+Available at [<span class="fab fa-github-alt fa-lg"></span> abaisero/baise.ro][baise.ro].
 
 ;; KEEP THIS IN MIND
 ;; http://l-lin.github.io/font-awesome-animation/

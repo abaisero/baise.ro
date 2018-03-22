@@ -5,8 +5,9 @@ icon: fas fa-graduation-cap
 
 ## University of Stuttgart
 
-<div class="before_table"></div>
+Teaching Assistant
 
+<div class="before_table"></div>
 Semester      | Course
 ------------- | ------
 `Winter 2016` | [Mathematics for Intelligent Systems][maths16]
