@@ -8,11 +8,11 @@ icon: fas fa-home
 
 [profile]: /static/img/profile.jpg
 
-I am a PhD student at [Prof. Christopher Amato][amato]'s LPR group at
-Northeastern University, where I am working on policy search methods for
-learning problems in partially observable environments.
+I am a PhD student at [LLPR][llpr] at Northeastern University, where I am
+working on policy search methods for learning problems in partially observable
+environments.
 
-[amato]: http://www.ccs.neu.edu/home/camato/
+[llpr]: http://llpr.ccs.neu.edu/
 
 ;; My research interests focus on stochastic models for pattern recognition,
 ;; representation learning, symbol learning and logic-geometric information

@@ -27,19 +27,19 @@ icon: fas fa-info-circle
 <div class="before_lu"></div>
 * <span class="fa-li"><span class="far fa-square"></span></span>
   **PhD in Reinforcement Learning**, <small>*ongoing*</small> <br/>
-  <small>Northeastern University (Boston, USA).</small>
+  Northeastern University &mdash; <small>Boston, USA.</small>
 * <span class="fa-li"><span class="far fa-check-square"></span></span>
   **Machine Learning Summer School** <br/>
-  <small>Rejkjavik University (Rejkjavik, Iceland).</small>
+  Rejkjavik University &mdash; <small>Rejkjavik, Iceland.</small>
 * <span class="fa-li"><span class="far fa-check-square"></span></span>
   **MSc in Engineering**, <small>*double degree program*</small> <br/>
-  <small>Royal Institute of Technology (Stockholm, Sweden).</small> <br/>
+  (KTH) Royal Institute of Technology &mdash; <small>Stockholm, Sweden.</small>
 * <span class="fa-li"><span class="far fa-check-square"></span></span>
   **MSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br/>
-  <small>Polytechnic University of Turin (Turin, Italy).</small>
+  Polytechnic University of Turin &mdash; <small>Turin, Italy.</small>
 * <span class="fa-li"><span class="far fa-check-square"></span></span>
   **BSc in Computer Engineering**, <small>full marks (110/110) *cum laude*</small> <br/>
-  <small>Polytechnic University of Turin (Turin, Italy).</small>
+  Polytechnic University of Turin &mdash; <small>Turin, Italy.</small>
 
 <span class="end_article"></span>
 
@@ -48,9 +48,15 @@ icon: fas fa-info-circle
 # ... Work Experience
 
 <div class="before_lu"></div>
+* <span class="fa-li"><span class="far fa-square"></span></span>
+  **Research Assistant in Reinforcement Learning**, <small>*ongoing*</small> <br/>
+  Northeastern University &mdash; <small>Boston, USA.</small>
 * <span class="fa-li"><span class="far fa-check-square"></span></span>
   **Research and Teaching Assistant in Machine Learning** <br/>
-  <small>University of Stuttgart (Stuttgart, Germany).</small>
+  University of Stuttgart &mdash; <small>Stuttgart, Germany.</small>
+* <span class="fa-li"><span class="far fa-check-square"></span></span>
+  **Research Assistant in Machine Learning** <br/>
+  (KTH) Royal Institute of Technology &mdash; <small>Stockholm, Sweden.</small>
 
 <span class="end_article"></span>
 
