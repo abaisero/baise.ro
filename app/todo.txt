@@ -1,4 +1,0 @@
-remove jquery altogether | id:021d263c440377411bd28933fcd788ac47fd004e
-improve SEO | id:1ffe17348c38f5cc2098d6779aff13f7adc31faa
-acquire SSL certificate | id:93e7f3b8b2fba4f10217d3d5f73f9f70d90235fb
-interactive/d3 svg background thingy | id:fa3c78e51c000be0365b527ccbda5275f32f609c

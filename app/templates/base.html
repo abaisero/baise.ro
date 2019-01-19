@@ -5,38 +5,57 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta name="author" content="Andrea Baisero">
-  <meta name="description" content="Andrea Baisero's website;  access his research, teaching notes, code and posts.">
+  <meta name="description" content="Andrea Baisero's website;  access Andrea Baisero's research, teaching notes, code and posts.">
   <!-- TODO different description tag for each page? why not.. -->
 
   <!-- icons -->
-  <link rel="apple-touch-icon" sizes="180x180" href="/static/favicon/apple-touch-icon.png">
-  <link rel="icon" type="image/png" href="/static/favicon/favicon-32x32.png" sizes="32x32">
-  <link rel="icon" type="image/png" href="/static/favicon/favicon-16x16.png" sizes="16x16">
-  <link rel="manifest" href="/static/favicon/manifest.json">
-  <!-- <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg" color="#5bbad5"> -->
-  <link rel="mask-icon" href="/static/favicon/safari-pinned-tab.svg">
-  <link rel="shortcut icon" href="/static/favicon/favicon.ico">
-  <meta name="msapplication-config" content="/static/favicon/browserconfig.xml">
+  <link rel="apple-touch-icon" sizes="180x180"
+        href="{{ url_for('static', filename='favicon/apple-touch-icon.png') }}">
+  <link rel="icon" type="image/png" sizes="32x32"
+        href="{{ url_for('static', filename='favicon/favicon-32x32.png') }}">
+  <link rel="icon" type="image/png" sizes="16x16"
+        href="{{ url_for('static', filename='favicon/favicon-16x16.png') }}">
+  <link rel="manifest"
+        href="{{ url_for('static', filename='favicon/manifest.json') }}">
+  <!-- <link rel="mask-icon" color="#5bbad5"> -->
+  <!--       href="{{ url_for('static', filename='favicon/safari-pinned-tab.svg') }}"> -->
+  <link rel="mask-icon"
+        href="{{ url_for('static', filename='favicon/safari-pinned-tab.svg') }}">
+  <link rel="shortcut icon"
+        href="{{ url_for('static', filename='favicon/favicon.ico') }}">
+  <meta name="msapplication-config"
+        content="{{ url_for('static', filename='favicon/browserconfig.xml') }}">
   <meta name="theme-color" content="#ffffff">
 
   <title>Andrea Baisero - {{ active | capitalize }}</title>
 
-  <link type="text/css" rel="stylesheet"
-    href="{{url_for('static', filename='bootstrap/css/bootstrap.css')}}">
-  <link type="text/css" rel="stylesheet"
-    href="{{url_for('static', filename='css/normalize.css')}}">
+  <!-- <link type="text/css" rel="stylesheet" -->
+  <!--   href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}"> -->
+  <!-- <link type="text/css" rel="stylesheet" -->
+  <!--   href="{{ url_for('static', filename='css/normalize.css') }}"> -->
+
+  {% assets filters="cssmin", output="gen/packed.1.css",
+            "bootstrap/css/bootstrap.css", "css/normalize.css" %}
+    <link type="text/css" rel="stylesheet" href="{{ ASSET_URL }}">
+  {% endassets %}
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
   <!-- <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.min.css"> -->
 
-  <link type="text/css" rel="stylesheet"
-    href="{{url_for('static', filename='css/style.css')}}">
-  <link type="text/css" rel="stylesheet"
-    href="{{url_for('static', filename='css/haiku.css')}}">
-  <link type="text/css" rel="stylesheet"
-    href="{{url_for('static', filename='css/util.css')}}">
-  <link type="text/css" rel="stylesheet"
-    href="{{url_for('static', filename='css/pygments.css')}}">
+  <!-- <link type="text/css" rel="stylesheet" -->
+  <!--   href="{{ url_for('static', filename='css/style.css') }}"> -->
+  <!-- <link type="text/css" rel="stylesheet" -->
+  <!--   href="{{ url_for('static', filename='css/haiku.css') }}"> -->
+  <!-- <link type="text/css" rel="stylesheet" -->
+  <!--   href="{{ url_for('static', filename='css/utils.css') }}"> -->
+  <!-- <link type="text/css" rel="stylesheet" -->
+  <!--   href="{{ url_for('static', filename='css/pygments.css') }}"> -->
+
+  {% assets filters="cssmin", output="gen/packed.2.css",
+            "css/style.css", "css/haiku.css", "css/utils.css",
+            "css/pygments.css" %}
+    <link type="text/css" rel="stylesheet" href="{{ ASSET_URL }}">
+  {% endassets %}
 
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
@@ -51,14 +70,22 @@
       });
   </script>
 
-  <!-- <script type="text/javascript" -->
-  <!--   src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script> -->
-  <!-- <script type="text/javascript" -->
-  <!--   src="{{url_for('static', filename='bootstrap/js/bootstrap.min.js')}}"></script> -->
+  <script
+    type="text/javascript"
+    src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+  </script>
 
-  <script src="https://d3js.org/d3.v4.min.js"></script>
-  <script type="text/javascript"
-    src="{{url_for('static', filename='js/background.js')}}"></script>
+  <script
+    type="text/javascript"
+    src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}">
+  </script>
+
+  <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
+  <!-- <script -->
+  <!--   type="text/javascript" -->
+  <!--   src="{{ url_for('static', filename='js/background.js') }}"> -->
+  <!-- </script> -->
+
 </head>
 <body>
 
@@ -84,42 +111,7 @@
     <!-- <span class="visible-md">SIZE MD</span> -->
     <!-- <span class="visible-lg">SIZE LG</span> -->
 
-    <!-- menu -->
-    <nav id="menu" class="navbar navbar-default">
-      <button
-        type="button"
-        class="navbar-toggle collapsed"
-        data-target="#navbarMenu"
-        data-toggle="collapse">
-        <span class="fas fa-bars fa-lg"></span>
-      </button>
-      <a class="navbar-brand" href="{{url_for('page')}}">
-        <strong>Baise.ro</strong>
-      </a>
-
-      <div id="navbarMenu" class="collapse navbar-collapse">
-        <ul id="menulist" class="nav navbar-nav">
-          {% for p in menu %}
-          <li {% if p.meta.name | lower == active | lower %} class="active"{% endif %}>
-            <!-- <a href="{{url_for('page', ppath=p.path)}}"><strong><span class="fas {{p.meta.icon}} fa-fw"></span> {{p.meta.name | capitalize}}</strong></a> -->
-            <a href="{{url_for('page', ppath=p.path)}}"><strong>
-
-                <!-- hack for code.md icon -->
-                {% if p.meta.name == 'code' %}
-                  <span class="fa-layers fa-fw">
-                    <span class="fas fa-laptop"></span>
-                    <span class="fas fa-code" data-fa-transform="shrink-9 up-2"></span>
-                  </span>
-                {% else %}
-                  <span class="{{p.meta.icon}} fa-fw"></span>
-                {% endif %}
-                {{p.meta.name | capitalize}}</strong></a>
-          </li>
-          {% endfor %}
-        </ul>
-      </div> <!-- #navbarMenu -->
-
-    </nav> <!-- #menu -->
+    {% include 'nav.html' %}
 
     <main id="content">
       {% block content %} {% endblock %}
@@ -130,20 +122,27 @@
       <small><strong>
         Copyright
         <span class="far fa-copyright fa-sm"></span>
-        2015&ndash;{{today.year}} Andrea Baisero
+        2015&ndash;{{ today.year }} Andrea Baisero
       </strong></small>
     </footer>
 
   </div> <!-- #container -->
 
   <div id="haikusecret" class="showonhover">
-    <a href="{{url_for('page', ppath='haiku')}}"><span class="fas fa-leaf fa-lg"></span></a>
+    <a href="{{ url_for('main.page', name='haiku') }}">
+      <span class="fas fa-leaf fa-lg"></span>
+    </a>
   </div>
 
-  <script type="text/javascript"
-    src="{{url_for('static', filename='js/util.js')}}"></script>
-  <script type="text/javascript"
-    src="{{url_for('static', filename='js/before.js')}}"></script>
+  <!-- <script type="text/javascript" -->
+  <!--   src="{{ url_for('static', filename='js/utils.js') }}"></script> -->
+  <!-- <script type="text/javascript" -->
+  <!--   src="{{ url_for('static', filename='js/before.js') }}"></script> -->
+
+  {% assets filters="jsmin", output="gen/packed.js",
+            "js/utils.js", "js/before.js" %}
+    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
+  {% endassets %}
 
 </body>
 </html>

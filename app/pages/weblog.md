@@ -1,4 +1,4 @@
-name: weblog
+id: weblog
 icon: fas fa-book
 
 # Weblog

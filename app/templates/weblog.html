@@ -1,21 +1,21 @@
 {% extends "page.html" %}
 
 {% block content %}
-{{ super() }}
+  {{ super() }}
 
-<div class="list-group">
-  {% for post in weblogs %}
-  <a class="list-group-item" href="{{ url_for('post', pname=post.path) }}">
-    <!-- <small><strong> {{ post.meta.date }} </strong></small> -->
-    {{ post.meta.date }}
-    <span class="icon {{ post.meta.icon if post.meta.icon else "fas fa-pencil-alt" }}"></span>
-    <strong> {{ post.meta.title }} </strong>
-    <br/>
-    {% if post.meta.description %}
-      <small> {{ post.meta.description }}</small>
-    {% endif %}
-  </a>
-  {% endfor %}
-</div>
+  <div class="list-group">
+    {% for post in posts %}
+      <a class="list-group-item" href="{{ url_for('weblog.post', name=post.path) }}">
+        <!-- <small><strong> {{ post.meta.date }} </strong></small> -->
+        {{ post.meta.date }}
+        <span class="icon {{ post.meta.icon if post.meta.icon else "fas fa-pencil-alt" }}"></span>
+        <strong> {{ post.meta.title }} </strong>
+        <br/>
+        {% if post.meta.description %}
+          <small> {{ post.meta.description }}</small>
+        {% endif %}
+      </a>
+    {% endfor %}
+  </div>
 
 {% endblock %}

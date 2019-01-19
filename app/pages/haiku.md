@@ -1,7 +1,12 @@
-name: haiku
-icon: fa-leaf
+id: haiku
+icon: fas fa-leaf
 
 # Haiku
+
+;; .haiku
+;; How I long to grow.
+;; I halt, look out, and see, then
+;; the tree within grows
 
 ;; .haiku
 ;; Oh how I dearly
@@ -43,7 +48,8 @@ Something from nothing
 is not always better than
 nothing from something.
 
-## From [<span class="fab fa-reddit-alien"></span> r/haiku][haikusub]
+;; ## From [<span class="fab fa-reddit-alien"></span> r/haiku][haikusub]
+## From [r/haiku][haikusub]
 
 [haikusub]: https://www.reddit.com/r/haiku/ "r/haiku"
 
@@ -67,22 +73,30 @@ and you, two rivers.
 ;; in gaining a lover
 ;; I've lost a good friend.
 
-.haiku
-All good things must end;
-in gaining a new lover
-I've lost an good friend.
+;; .haiku
+;; All good things must end;
+;; in gaining a new lover
+;; I've lost a good friend.
 
-.haiku
-"I love you," I yell
-from the cliff to the canyon;
-"I love you," it yells.
+;; .haiku
+;; "I love you," I yell
+;; from the cliff to the canyon;
+;; "I love you," it yells.
 
 ;; .haiku
 ;; Strong arms hold her tight;
 ;; She screams and fights her captor
 ;; in the mental ward.
 
+;; .haiku
+;; Decide who you are,
+;; where you stand, and what that means
+;; before trouble comes.
+
+
+## Other
+
 .haiku
-Decide who you are,
-where you stand, and what that means
-before trouble comes.
+Grasses wilt;
+the braking locomotive
+grinds to a halt

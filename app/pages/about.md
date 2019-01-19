@@ -1,4 +1,4 @@
-name: about
+id: about
 icon: fas fa-info-circle
 
 # About ...
@@ -8,9 +8,10 @@ icon: fas fa-info-circle
 
 ;; [cv]: /static/docs/cv_baisero.pdf
 
+
 <span class="begin_article" id="awards"></span>
 
-# ... Awards
+## ... Awards
 
 <div class="before_lu"></div>
 * <span class="fa-li"><span class="far fa-check-square"></span></span>
@@ -20,9 +21,10 @@ icon: fas fa-info-circle
 
 <span class="end_article"></span>
 
+
 <span class="begin_article" id="education"></span>
 
-# ... Education
+## ... Education
 
 <div class="before_lu"></div>
 * <span class="fa-li"><span class="far fa-square"></span></span>
@@ -43,9 +45,10 @@ icon: fas fa-info-circle
 
 <span class="end_article"></span>
 
+
 <span class="begin_article" id="work"></span>
 
-# ... Work Experience
+## ... Work Experience
 
 <div class="before_lu"></div>
 * <span class="fa-li"><span class="far fa-square"></span></span>
@@ -60,9 +63,10 @@ icon: fas fa-info-circle
 
 <span class="end_article"></span>
 
+
 <span class="begin_article" id="website"></span>
 
-# ... Website
+## ... Website
 
 ;; Find more about this website on the corresponding section in the [<span
 ;; class="fas fa-code"></span> code][code] page.

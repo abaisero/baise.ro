@@ -1,0 +1,18 @@
+{% extends "page.html" %}
+
+{% block content %}
+  {{ super() }}
+
+  {% for repo in repos %}
+    <article id="{{ repo.meta.id }}">
+      {% if repo.meta.title %}
+        <h2> {{ repo.meta.title }} <a href="#{{ repo.meta.id }}">§</a></h2>
+      {% endif %}
+      {{ repo }}
+      {% if repo.meta.repo_url %}
+        Available at <a href="{{ repo.meta.repo_url }}"><span class="fab fa-github-alt fa-lg"></span> {{ repo.meta.repo_name }}</a>.
+      {% endif %}
+    </article>
+  {% endfor %}
+
+{% endblock %}

@@ -1,77 +1,77 @@
 {% extends "page.html" %}
 
 {% block content %}
-{{ super() }}
+  {{ super() }}
 
-{% for entry in publications.entries.values() %}
-<div id="{{entry.key}}" class="pub-entry row">
+  {% for entry in refs.entries.values() %}
+    <article id="{{ entry.key }}" class="pub-entry row">
 
-    <div class="col-xs-2">
-      <div class="pub-preview">
-        <a href="{{url_for('pub_pdf', key=entry.key)}}">
-        <img
-          class="pub-thumbnail img-thumbnail img-rounded"
-          src="{{url_for('static', filename='docs/pubs/{}/thumbnail.png'.format(entry.key))}}">
-      </a>
-      </div>
+      <div class="col-xs-2">
+        <div class="pub-preview">
 
-      <div class="text-center">
+          <a href="{{ url_for('static', filename='docs/pubs/{key}/{key}.pdf'.format(key=entry.key)) }}">
+          <img class="pub-thumbnail img-thumbnail img-rounded"
+               src="{{ url_for('static', filename='docs/pubs/{}/thumbnail.png'.format(entry.key)) }}">
+          </a>
+        </div>
 
-        <a role="button"
-           class="btn btn-default btn-xs"
-           href="{{url_for('pub_pdf', key=entry.key)}}">
-          <span class="fas fa-file-pdf"></span>
-        </a>
+        <div class="text-center">
+          <a role="button" class="btn btn-default btn-xs"
+             href="{{ url_for('static', filename='docs/pubs/{key}/{key}.pdf'.format(key=entry.key)) }}">
+            <span class="fas fa-file-pdf"></span>
+          </a>
 
-        {% if pub_has_mp4(entry) %}
-        <a role="button"
-           class="btn btn-default btn-xs"
-           href="{{url_for('pub_mp4', key=entry.key)}}">
-          <span class="fas fa-video"></span>
-        </a>
-        {% endif %}
+          {% if pub_has_mp4(entry) %}
+            <a role="button" class="btn btn-default btn-xs"
+               href="{{ url_for('static', filename='docs/pubs/{key}/{key}.mp4'.format(key=entry.key)) }}">
+              <span class="fas fa-video"></span>
+            </a>
+          {% endif %}
 
-        <a role="button"
-           class="btn btn-default btn-xs"
-           href="#bibtex_{{entry.key}}"
-           data-toggle="collapse">bibtex</a>
+          <a role="button" class="btn btn-default btn-xs"
+             href="#bibtex_{{ entry.key }}"
+             data-toggle="collapse">bibtex</a>
 
-      </div>
-    </div> <!-- col -->
+        </div>
+      </div> <!-- col -->
 
-    <div class="col-xs-10">
-      {{entry.fields['title']}}
-      <!-- <a href="#{{entry.key}}">¶</a> -->
-      <a href="#{{entry.key}}">§</a>
-      <br/>
+      <div class="col-xs-10">
 
-      <small>
-        {{ pub_authors(entry) | tagify('Baisero', 'strong') | safe }}.
-      </small>
-      <br/>
+        {{ entry.fields.title }}
+        <a href="#{{ entry.key }}">§</a>
+        {# 
+        <a href="#{{ entry.key }}">¶</a>
+        #}
+        <br/>
 
-      <small>
-        {{ entry.fields.get('booktitle', '') }}
-        {{ entry.fields.get('journal', '') }}
-        {% if entry.type == 'mastersthesis' %}
-          Master's Thesis &mdash;
-        {% endif %}
-        {{ entry.fields.get('school', '') }}
-        {{ entry.year }}
+        <small>
+          {{ pub_authors(entry)|tagify('strong', 'Baisero')|safe }}.
+        </small>
+        <br/>
 
-        {% if entry.note %}
-          - <strong>{{ entry.note }}</strong>
-        {% endif %}
-      </small>
+        <small>
+          {{ entry.fields.get('booktitle', '') }}
+          {{ entry.fields.get('journal', '') }}
+          {% if entry.type == 'mastersthesis' %}
+            Master's Thesis &mdash;
+          {% endif %}
+          {{ entry.fields.get('school', '') }}
+          {{ entry.year }}
 
-      <div
-        class="collapse"
-        id="bibtex_{{entry.key}}">
-        <small><pre>{{pub_bibtex(entry) | safe}}</pre></small>
-      </div>
-    </div> <!-- col -->
+          {% if entry.note %}
+            - <strong>{{ entry.note }}</strong>
+          {% endif %}
+        </small>
 
-  </div> <!-- row -->
-{% endfor %}
+        <div class="collapse" id="bibtex_{{ entry.key }}">
+          <small>
+            <pre>{{ pub_bibtex(entry)|safe }}</pre>
+          </small>
+        </div>
+
+      </div> <!-- col -->
+
+    </article> <!-- row -->
+  {% endfor %}
 
 {% endblock %}

@@ -12,25 +12,51 @@ body {
   color: #555;
 }
 
+/* div#background { */
+/*   position: absolute; */
+/*   top: 0px; */
+/*   left: 0px; */
+/*   width: 100%; */
+/*   height: 100%; */
+/* } */
+
+/* div#container:before { */
+/*   background-color: rgba(255, 255, 255, .75); */
+/*   filter: blur(10px); */
+/* } */
+
+/* div#container { */
+/*   position: relative; */
+/*   /1* background-color: rgba(255, 255, 255, .75); *1/ */
+/*   /1* background-color: white; *1/ */
+/*   /1* filter: blur(10px); *1/ */
+/* } */
+
+/* div#container:before { */
+/*   content: ''; */
+/*   position: fixed; */
+/*   left: 0; */
+/*   right: 0; */
+/*   display: block; */
+/*   filter: blur(5px); */
+/* } */
+
 #content > h1 {
   font-size: 1.7em;
   text-decoration: underline;
 }
 
-#content h2,
-#content article h1 {
+#content h2 {
   font-size: 1.35em;
   font-weight: bold;
 }
 
-#content h3,
-#content article h2 {
+#content h3 {
   font-size: 1em;
   font-weight: bold;
 }
 
-#content h4,
-#content article h3 {
+#content h4 {
   font-size: 1em;
   font-weight: bold;
 }
@@ -66,12 +92,12 @@ body {
   padding-bottom: 1em;
 }
 
-#content :target {
-  margin-left: -7px;
-  margin-right: -7px;
+#content *:not(.collapse):target {
+  /* margin-left: -7px; */
+  /* margin-right: -7px; */
 
-  padding-left: 6px;
-  padding-right: 6px;
+  /* padding-left: 6px; */
+  /* padding-right: 6px; */
 
   border: 1px solid black;
   box-shadow: 5px 5px 5px 0px gray;
@@ -90,10 +116,11 @@ body {
 }
 
 #footer {
-  margin-top: auto;
-  /* margin-bottom would be overruled by margin-top if page were high enough */
-  padding-bottom: 1em;
   text-align: center;
+  /* locates footer at bottom of page, whatever the page size */
+  margin-top: auto;  
+  padding-top: 3em;
+  padding-bottom: 1em;
 }
 
 #haikusecret {

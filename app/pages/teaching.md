@@ -1,4 +1,4 @@
-name: teaching
+id: teaching
 icon: fas fa-graduation-cap
 
 # Teaching

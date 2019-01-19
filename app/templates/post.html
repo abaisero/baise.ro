@@ -1,28 +1,29 @@
-{% extends "base.html" %}
+{% extends "page.html" %}
 
 {% block content %}
 
 <div class="page-header">
   <h1> {{ post.meta.title }} </h1>
-  <!-- <small><strong>Posted on {# post.meta.date | fmt_date #}</strong></small> -->
-  <small><strong>Posted on {{ post.meta.date }}</strong></small>
+  <!-- <small><strong>Posted on {# post.meta.date|fmt_date #}</strong></small> -->
+  <!-- <small><strong>Posted on {{ post.meta.date }}</strong></small> -->
+  <strong>Posted on {{ post.meta.date }}</strong>
 
   {% if post.meta.notebook %}
   <br/>
-  <small>
+  <!-- <small> -->
     (This weblog entry is an IPython/Jupyter Notebook;
     <a href="{{ post.meta._notebook_url }}">Download</a> or view on
     <a href="http://nbviewer.jupyter.org/url/a.baise.ro{{ post.meta._notebook_url }}">Jupyter nbviewer</a>)
-  </small>
+  <!-- </small> -->
   {% endif %}
 </div>
 
 {{ post }}
 
 {% if post.meta.notebook %}
-<div class="notebook">
-  {{ notebook(post) | safe }}
-</div>
+  <div class="notebook">
+    {{ render_notebook(post)|safe }}
+  </div>
 {% endif %}
 
 {% endblock %}

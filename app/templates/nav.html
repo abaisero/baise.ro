@@ -1,0 +1,55 @@
+{% import 'utils.jinja' as utils %}
+
+{% macro navitem(name) %}
+  {% set page = pages.get(name) %}
+  <li class="{{ 'active' if name == active }}">
+    <a href="{{ url_for('main.page', name=name) }}">
+      <strong>
+        {{ utils.icon(page) }}{{ name|capitalize }}
+      </strong>
+    </a>
+  </li>
+{% endmacro %}
+
+<!-- menu -->
+<nav id="menu" class="navbar navbar-default">
+  <button type="button"
+          class="navbar-toggle collapsed"
+          data-target="#navbarMenu"
+          data-toggle="collapse">
+    <span class="fas fa-bars fa-lg"></span>
+  </button>
+  <a class="navbar-brand" href="{{ url_for('main.page') }}">
+    <strong>Baise.ro</strong>
+  </a>
+
+  <div id="navbarMenu" class="collapse navbar-collapse">
+    <ul id="menulist" class="nav navbar-nav">
+
+      {% set names = 'home', 'research', 'teaching', 'code', 'weblog', 'about' %}
+      {% for name in names %}
+        {{ navitem(name) }}
+      {% endfor %}
+
+      {# {{ navitem('home') }} #}
+      {# {{ navitem('research') }} #}
+      {# {{ navitem('teaching') }} #}
+      {# {{ navitem('code') }} #}
+      {# {{ navitem('weblog') }} #}
+      {# {{ navitem('about') }} #}
+
+      {#
+      {% for page in menu %}
+        <li class="{{ 'active' if page.meta.name == active }}">
+        <a href="{{ url_for('main.page', name=page.path) }}">
+          <strong>
+            {{ utils.icon(page) }} {{page.meta.name|capitalize }}
+          </strong>
+        </a>
+      </li>
+      {% endfor %}
+      #}
+    </ul>
+  </div> <!-- #navbarMenu -->
+
+</nav> <!-- #menu -->

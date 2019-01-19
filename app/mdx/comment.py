@@ -9,11 +9,11 @@ class CommentPreprocessor(Preprocessor):
     regex = re.compile(';;.*')
 
     def run(self, lines):
-        '''
+        """
         Find and remove all Abbreviation references from the text.
         Each reference is set as a new AbbrPattern in the markdown instance.
 
-        '''
+        """
         return [self.regex.sub('', line) for line in lines]
 
 
