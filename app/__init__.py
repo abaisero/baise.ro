@@ -79,8 +79,8 @@ def create_app():
         return dict(pages=pages)
 
     @app.context_processor
-    def inject_today():
-        return dict(today=datetime.datetime.utcnow())
+    def inject_now():
+        return dict(now=datetime.datetime.utcnow())
 
     @app.context_processor
     def injext_pub():
