@@ -34,7 +34,6 @@ MAX_CONTENT_LENGTH = 10 * 1024 * 1024
 # FREEZER_REMOVE_EXTRA_FILES = False  # IMPORTANT: If this is True, all app files
 # # will be deleted when you run the freezer
 
-# _extensions = ['codehilite', 'abbr', 'attr_list', 'def_list', 'tables', 'app.mdx.haiku', 'app.mdx.comment']
 _extensions = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'tables', 'app.mdx.haiku', 'app.mdx.comment', 'app.mdx.mathjax']
 
 FLATPAGES_PAGES_AUTO_RELOAD = True

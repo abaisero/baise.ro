@@ -54,11 +54,6 @@ body {
   content: "# ";
 }
 
-#content img {
-  padding-left: 1em;
-  padding-right: 1em;
-}
-
 #content .pub-entry {
   padding-top: 1em;
   padding-bottom: 1em;
@@ -92,8 +87,8 @@ body {
 
 #haikusecret {
   position: fixed;
-  top: 10px;
-  left: 10px;
+  top: 1em;
+  left: 1em;
 }
 
 hr {

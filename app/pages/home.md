@@ -39,10 +39,10 @@ environments.
 ;; representation it may be) as much as possible in future tasks, i.e., to make
 ;; strong priors out of strong posteriors.
 
-Alongside reinforcement learning, my other interests include stochastic
-models, Bayesian statistics and inference, information theory, and game theory.
+Alongside reinforcement learning, my other interests include stochastic models,
+Bayesian statistics and inference, information theory, and game theory.
 
-## Other Pages
+## Sitemap
 
 <div class="before_lu"></div>
 * [<span class="fa-li"><span class="fas fa-flask fa-fw"></span></span> Research](/research) - Past and present research topics;
@@ -51,4 +51,5 @@ models, Bayesian statistics and inference, information theory, and game theory.
 * [<span class="fa-li"><span class="fas fa-book fa-fw"></span></span> Weblog](/weblog) - A virtually non-existent collection of "blog" posts;
 * [<span class="fa-li"><span class="fas fa-info-circle fa-fw"></span></span> About](/about) - General information about my academic background;
 
-*[LPR]: Learning and Planning for Robotics
+
+*[LLPR]: Lab for Learning and Planning in Robotics

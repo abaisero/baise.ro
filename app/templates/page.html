@@ -1,8 +1,9 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1"> -->
 
   <meta name="author" content="Andrea Baisero">
   <meta name="description" content="Andrea Baisero's website;  access Andrea Baisero's research, teaching notes, code and posts.">
@@ -28,11 +29,6 @@
   <meta name="theme-color" content="#ffffff">
 
   <title>Andrea Baisero - {{ active|capitalize }}</title>
-
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}"> -->
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='css/normalize.css') }}"> -->
 
   {% assets filters="cssmin", output="gen/packed.1.css",
             "bootstrap/css/bootstrap.css", "css/normalize.css" %}
@@ -73,44 +69,19 @@
     src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}">
   </script>
 
-  <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
-  <!-- <script -->
-  <!--   type="text/javascript" -->
-  <!--   src="{{ url_for('static', filename='js/background.js') }}"> -->
-  <!-- </script> -->
-
 </head>
 <body>
 
-  <!-- <div id="background"> -->
-  <!--   <svg width="100%" height="100%"> -->
-  <!--   <defs> -->
-  <!--     <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse"> -->
-  <!--       <path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="0.5"/> -->
-  <!--     </pattern> -->
-  <!--     <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"> -->
-  <!--       <rect width="100" height="100" fill="url(#smallGrid)"/> -->
-  <!--       <path d="M 100 0 L 0 0 0 100" fill="none" stroke="gray" stroke-width="1"/> -->
-  <!--     </pattern> -->
-  <!--   </defs> -->
-  <!--   <rect width="100%" height="100%" fill="url(#grid)" /> -->
-  <!-- </svg> -->
-  <!-- </div> -->
-
   <div id="container" class="container">
-    <!-- debug -->
-    <!-- <span class="visible-xs">SIZE XS</span> -->
-    <!-- <span class="visible-sm">SIZE SM</span> -->
-    <!-- <span class="visible-md">SIZE MD</span> -->
-    <!-- <span class="visible-lg">SIZE LG</span> -->
 
     <header id="header">
-      {# {{ nav('home', 'research', 'teaching', 'code', 'weblog', 'about') }} #}
       {% include 'nav.html' %}
-    </header>
+    </header> <!-- #content -->
 
     <main id="content">
-      {% block content %} {{ page }} {% endblock %}
+      {% block content %}
+        {{ page }}
+      {% endblock %}
     </main> <!-- #content -->
 
     <footer id="footer">
@@ -120,7 +91,7 @@
         <span class="far fa-copyright fa-sm"></span>
         2015&ndash;{{ now.year }} Andrea Baisero
       </strong></small>
-    </footer>
+    </footer> <!-- #footer -->
 
   </div> <!-- #container -->
 
@@ -129,11 +100,6 @@
       <span class="fas fa-leaf fa-lg"></span>
     </a>
   </div>
-
-  <!-- <script type="text/javascript" -->
-  <!--   src="{{ url_for('static', filename='js/utils.js') }}"></script> -->
-  <!-- <script type="text/javascript" -->
-  <!--   src="{{ url_for('static', filename='js/before.js') }}"></script> -->
 
   {% assets filters="jsmin", output="gen/packed.js",
             "js/utils.js", "js/before.js" %}
