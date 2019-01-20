@@ -6,7 +6,10 @@
   {% for group in groups.itertuples() %}
     <section id="{{ group.name }}">
       <h2>{{ group.title|safe }}
-        <a href="#{{ group.name }}">§</a>
+        <a class="showonhover"
+           href="#{{ group.name }}">
+          {{ anchor|safe }}
+        </a>
       </h2>
       {% for article in articles[group.name] %}
         <article id="{{ article.meta.id }}">
@@ -14,7 +17,10 @@
           {% if article.meta.title %}
             <header>
               <h3> {{ article.meta.title }}
-                <a href="#{{ article.meta.id }}">§</a>
+                <a class="showonhover"
+                   href="#{{ article.meta.id }}">
+                  {{ anchor|safe }}
+                </a>
               </h3>
             </header>
           {% endif %}
@@ -36,10 +42,6 @@
 
 {% endblock %}
 
-
-{#
-{% import 'utils.jinja' as utils %}
-#}
 
 {% macro publications_panel(keys) %}
   <div class="panel panel-default">
@@ -66,15 +68,14 @@
             <a class="btn btn-link btn-xs {{ 'disabled' if not has_mp4 }}"
                href="{{ url_for('static', filename='docs/pubs/{key}/{key}.mp4'.format(key=key)) }}">
 
-              {#
-              {% call utils.ifcall(not has_mp4, utils.surround, 'del') %}
+              {% if has_mp4 %}
                 <span class="icon fas fa-video"></span> mp4
-              {% endcall %}
-              #}
+              {% else %}
+                <del>
+                <span class="icon fas fa-video"></span> mp4
+                </del>
+              {% endif %}
 
-              {% if not has_mp4 %}<del>{% endif %}
-                <span class="icon fas fa-video"></span> mp4
-              {% if not has_mp4 %}</del>{% endif %}
             </a>
 
             &mdash; {{ entry.fields.title }}
@@ -84,48 +85,4 @@
     </div>
   </div>
 
-{#
-      <li>
-        <a class="btn btn-link btn-xs" href="/research/publications#2012_baisero_encoding">
-          <span class="icon fas fa-link"></span> link</a>
-        <a class="btn btn-link btn-xs" href="/research/publications/2012_baisero_encoding.pdf">
-          <span class="icon far fa-file-pdf"></span> pdf</a>
-        <a class="btn btn-link btn-xs disabled" href="#">
-          <del><span class="icon fas fa-video"></span> mp4</del></a>
-        &mdash;
-        Encoding Sequential Structures using Kernels
-      </li>
-      <li>
-        <a class="btn btn-link btn-xs" href="/research/publications#2013_baisero_path">
-          <span class="icon fas fa-link"></span> link</a>
-        <a class="btn btn-link btn-xs" href="/research/publications/2013_baisero_path.pdf">
-          <span class="icon far fa-file-pdf"></span> pdf</a>
-        <a class="btn btn-link btn-xs disabled" href="#">
-          <del><span class="icon fas fa-video"></span> mp4</del></a>
-        &mdash;
-        The Path Kernel
-      </li>
-      <li>
-        <a class="btn btn-link btn-xs" href="/research/publications#2015_baisero_family">
-          <span class="icon fas fa-link"></span> link</a>
-        <a class="btn btn-link btn-xs" href="/research/publications/2015_baisero_family.pdf">
-          <span class="icon far fa-file-pdf"></span> pdf</a>
-        <a class="btn btn-link btn-xs disabled" href="#">
-          <del><span class="icon fas fa-video"></span> mp4</del></a>
-        &mdash;
-        On a Family of Decomposable Kernels on Sequences
-      </li>
-      <li>
-        <a class="btn btn-link btn-xs" href="/research/publications#2015_baisero_path">
-          <span class="icon fas fa-link"></span> link</a>
-        <a class="btn btn-link btn-xs" href="/research/publications/2015_baisero_path.pdf"><span class="icon far fa-file-pdf"></span> pdf</a>
-        <a class="btn btn-link btn-xs disabled" href="#">
-          <del><span class="icon fas fa-video"></span> mp4</del></a>
-        &mdash;
-        The Path Kernel:  A Novel Kernel for Sequential Data
-      </li>
-    </ul>
-  </div>
-</div>
-#}
 {% endmacro %}

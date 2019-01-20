@@ -37,31 +37,29 @@
 
       <div class="col-xs-10">
 
-        {{ entry.fields.title }}
-        <a href="#{{ entry.key }}">§</a>
-        {# 
-        <a href="#{{ entry.key }}">¶</a>
-        #}
+        <h2>
+          {{ entry.fields.title }}
+          <a class="showonhover" href="#{{ entry.key }}">
+            {{ anchor|safe }}
+          </a>
+        </h2>
+
+        {{ pub_authors(entry)|replace('A Baisero', '<strong>A Baisero</strong>')|safe }}.
+        {#{{ pub_authors(entry)|tagify('strong', 'A Baisero')|safe }}.#}
+
         <br/>
 
-        <small>
-          {{ pub_authors(entry)|tagify('strong', 'Baisero')|safe }}.
-        </small>
-        <br/>
+        {{ entry.fields.get('booktitle', '') }}
+        {{ entry.fields.get('journal', '') }}
+        {% if entry.type == 'mastersthesis' %}
+          Master's Thesis &mdash;
+        {% endif %}
+        {{ entry.fields.get('school', '') }}
+        {{ entry.year }}
 
-        <small>
-          {{ entry.fields.get('booktitle', '') }}
-          {{ entry.fields.get('journal', '') }}
-          {% if entry.type == 'mastersthesis' %}
-            Master's Thesis &mdash;
-          {% endif %}
-          {{ entry.fields.get('school', '') }}
-          {{ entry.year }}
-
-          {% if entry.note %}
-            - <strong>{{ entry.note }}</strong>
-          {% endif %}
-        </small>
+        {% if entry.note %}
+          - <strong>{{ entry.note }}</strong>
+        {% endif %}
 
         <div class="collapse" id="bibtex_{{ entry.key }}">
           <small>

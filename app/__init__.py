@@ -50,12 +50,6 @@ def create_app():
         if rp != '/' and rp.endswith('/'):
             return flask.redirect(rp[:-1], code=301)
 
-    # @app.route('/robots.txt')
-    # # @app.route('/sitemap.xml')
-    # def static_from_root():
-    #     path = flask.request.path[1:]
-    #     return flask.send_from_directory(app.static_folder, path)
-
     # TODO make better 404 template
     @app.errorhandler(404)
     def page_not_found(e):
@@ -67,12 +61,11 @@ def create_app():
         repl = f'<{tag}>{pattern}</{tag}>'
         return re.sub(pattern, repl, string)
 
-    # @app.context_processor
-    # def inject_menu():
-    #     names = ['home', 'research', 'teaching', 'code', 'weblog', 'about']
-    #     menu = [pages.get(name) for name in names]
-    #     menu = list(map(pages.get, names))
-    #     return dict(menu=menu)
+    @app.context_processor
+    def inject_anchor():
+        return dict(anchor='<span class="fas fa-anchor"></span>')
+        return dict(anchor='§')
+        return dict(anchor='¶')
 
     @app.context_processor
     def inject_pages():
@@ -101,8 +94,15 @@ def bibentry_bibtex(entry):
 
 def bibentry_authors(entry):
     """ Return the list of authors as nicely formated string.  """
-    authors = [author.last_names[0] for author in entry.persons['author']]
-    return ', '.join(authors)
+
+    def format(author):
+        names = []
+        names.extend(name[0] for name in author.first_names)
+        names.extend(name[0] for name in author.middle_names)
+        names.extend(name for name in author.last_names)
+        return ' '.join(names)
+
+    return ', '.join(map(format, entry.persons['author']))
 
 
 def bibentry_has_mp4(entry):
