@@ -29,31 +29,15 @@
 
   <title>Andrea Baisero - {{ active | capitalize }}</title>
 
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='bootstrap/css/bootstrap.css') }}"> -->
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='css/normalize.css') }}"> -->
-
-  {% assets filters="cssmin", output="gen/packed.1.css",
-            "bootstrap/css/bootstrap.css", "css/normalize.css" %}
-    <link type="text/css" rel="stylesheet" href="{{ ASSET_URL }}">
-  {% endassets %}
+  <link type="text/css" rel="stylesheet"
+    href="{{ url_for('static', filename='bootstrap/css/bootstrap.min.css') }}">
 
   <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
   <!-- <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.min.css"> -->
 
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='css/style.css') }}"> -->
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='css/haiku.css') }}"> -->
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='css/utils.css') }}"> -->
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='css/pygments.css') }}"> -->
-
   {% assets filters="cssmin", output="gen/packed.2.css",
-            "css/style.css", "css/haiku.css", "css/utils.css",
-            "css/pygments.css" %}
+            "css/normalize.css", "css/style.css", "css/haiku.css",
+            "css/utils.css", "css/pygments.css", "css/background.css" %}
     <link type="text/css" rel="stylesheet" href="{{ ASSET_URL }}">
   {% endassets %}
 
@@ -80,37 +64,10 @@
     src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}">
   </script>
 
-  <!-- <script src="https://d3js.org/d3.v4.min.js"></script> -->
-  <!-- <script -->
-  <!--   type="text/javascript" -->
-  <!--   src="{{ url_for('static', filename='js/background.js') }}"> -->
-  <!-- </script> -->
-
 </head>
 <body>
 
-  <!-- <div id="background"> -->
-  <!--   <svg width="100%" height="100%"> -->
-  <!--   <defs> -->
-  <!--     <pattern id="smallGrid" width="10" height="10" patternUnits="userSpaceOnUse"> -->
-  <!--       <path d="M 10 0 L 0 0 0 10" fill="none" stroke="gray" stroke-width="0.5"/> -->
-  <!--     </pattern> -->
-  <!--     <pattern id="grid" width="100" height="100" patternUnits="userSpaceOnUse"> -->
-  <!--       <rect width="100" height="100" fill="url(#smallGrid)"/> -->
-  <!--       <path d="M 100 0 L 0 0 0 100" fill="none" stroke="gray" stroke-width="1"/> -->
-  <!--     </pattern> -->
-  <!--   </defs> -->
-  <!--   <rect width="100%" height="100%" fill="url(#grid)" /> -->
-  <!-- </svg> -->
-  <!-- </div> -->
-
   <div id="container" class="container">
-    <!-- debug -->
-    <!-- <span class="visible-xs">SIZE XS</span> -->
-    <!-- <span class="visible-sm">SIZE SM</span> -->
-    <!-- <span class="visible-md">SIZE MD</span> -->
-    <!-- <span class="visible-lg">SIZE LG</span> -->
-
     {% include 'nav.html' %}
 
     <main id="content">
@@ -133,11 +90,6 @@
       <span class="fas fa-leaf fa-lg"></span>
     </a>
   </div>
-
-  <!-- <script type="text/javascript" -->
-  <!--   src="{{ url_for('static', filename='js/utils.js') }}"></script> -->
-  <!-- <script type="text/javascript" -->
-  <!--   src="{{ url_for('static', filename='js/before.js') }}"></script> -->
 
   {% assets filters="jsmin", output="gen/packed.js",
             "js/utils.js", "js/before.js" %}

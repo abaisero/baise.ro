@@ -42,20 +42,13 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.2/js/all.js"></script>
   <!-- <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.3.0/font-mfizz.min.css"> -->
 
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='css/style.css') }}"> -->
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='css/haiku.css') }}"> -->
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='css/utils.css') }}"> -->
-  <!-- <link type="text/css" rel="stylesheet" -->
-  <!--   href="{{ url_for('static', filename='css/pygments.css') }}"> -->
-
   {% assets filters="cssmin", output="gen/packed.2.css",
             "css/style.css", "css/haiku.css", "css/utils.css",
             "css/pygments.css" %}
     <link type="text/css" rel="stylesheet" href="{{ ASSET_URL }}">
   {% endassets %}
+
+  <link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='css/background.css') }}">
 
   <script type="text/javascript"
     src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">

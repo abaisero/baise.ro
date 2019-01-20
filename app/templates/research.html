@@ -5,9 +5,11 @@
 
   {% for group in groups.itertuples() %}
     <section id="{{ group.name }}">
-      <h2>{{ group.title|safe }}</h2>
+      <h2>{{ group.title|safe }}
+        <a href="#{{ group.name }}">§</a>
+      </h2>
       {% for article in articles[group.name] %}
-        <article id="{{ article.meta.name }}">
+        <article id="{{ article.meta.id }}">
 
           {% if article.meta.title %}
             <header>

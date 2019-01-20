@@ -25,30 +25,12 @@
 
   <div id="navbarMenu" class="collapse navbar-collapse">
     <ul id="menulist" class="nav navbar-nav">
-
-      {% set names = 'home', 'research', 'teaching', 'code', 'weblog', 'about' %}
-      {% for name in names %}
-        {{ navitem(name) }}
-      {% endfor %}
-
-      {# {{ navitem('home') }} #}
-      {# {{ navitem('research') }} #}
-      {# {{ navitem('teaching') }} #}
-      {# {{ navitem('code') }} #}
-      {# {{ navitem('weblog') }} #}
-      {# {{ navitem('about') }} #}
-
-      {#
-      {% for page in menu %}
-        <li class="{{ 'active' if page.meta.name == active }}">
-        <a href="{{ url_for('main.page', name=page.path) }}">
-          <strong>
-            {{ utils.icon(page) }} {{page.meta.name|capitalize }}
-          </strong>
-        </a>
-      </li>
-      {% endfor %}
-      #}
+      {{ navitem('home') }}
+      {{ navitem('research') }}
+      {{ navitem('teaching') }}
+      {{ navitem('code') }}
+      {{ navitem('weblog') }}
+      {{ navitem('about') }}
     </ul>
   </div> <!-- #navbarMenu -->
 
