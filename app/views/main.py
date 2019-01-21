@@ -27,7 +27,9 @@ def page(name):
 def research():
     flask.current_app.logger.info('Serving RESEARCH')
     page = pages.get_or_404('research')
-    articles = mitt.bucket(topics, key=lambda a: a.meta['group'])
+
+    articles = mitt.bucket(sorted(topics, key=lambda t: t.path),
+                           key=lambda a: a.meta['group'])
     refs = get_refs()
 
     return flask.render_template('research.html', active='research',
