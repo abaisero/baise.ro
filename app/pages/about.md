@@ -75,6 +75,6 @@ Find more about this website on the corresponding section in the [<span
 class="fa-layers fa-fw"> <span class="fas fa-laptop"> </span> <span class="fas
 fa-code" data-fa-transform="shrink-9 up-2"></span> </span> code][code] page.
 
-[code]: /code#baise.ro
-
 <span class="end_article"></span>
+
+[code]: {{ url_for('main.page', name='code', _anchor='baise.ro') }}

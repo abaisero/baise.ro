@@ -11,24 +11,24 @@
           {{ anchor|safe }}
         </a>
       </h2>
-      {% for article in articles[group.name] %}
-        <article id="{{ article.meta.id }}">
+      {% for topic in topic_groups[group.name] %}
+        <article id="{{ topic.meta.id }}">
 
-          {% if article.meta.title %}
+          {% if topic.meta.title %}
             <header>
-              <h3> {{ article.meta.title }}
+              <h3> {{ topic.meta.title }}
                 <a class="showonhover"
-                   href="#{{ article.meta.id }}">
+                   href="#{{ topic.meta.id }}">
                   {{ anchor|safe }}
                 </a>
               </h3>
             </header>
           {% endif %}
 
-          {{ article }}
+          {{ topic }}
 
-          {% if article.meta.pubkeys %}
-            {{ publications_panel(article.meta.pubkeys.split(';')) }}
+          {% if topic.meta.pubkeys %}
+            {{ publications_panel(topic.meta.pubkeys.split(';')) }}
           {% endif %}
 
         </article>
@@ -63,20 +63,19 @@
             </a>
 
             {% set entry = refs.entries[key] %}
-            {% set has_mp4 = pub_has_mp4(entry) %}
 
-            <a class="btn btn-link btn-xs {{ 'disabled' if not has_mp4 }}"
-               href="{{ url_for('static', filename='docs/pubs/{key}/{key}.mp4'.format(key=key)) }}">
-
-              {% if has_mp4 %}
+            {% if pub_has_mp4(entry) %}
+              <a class="btn btn-link btn-xs"
+                 href="{{ url_for('static', filename='docs/pubs/{key}/{key}.mp4'.format(key=key)) }}">
                 <span class="icon fas fa-video"></span> mp4
-              {% else %}
+              </a>
+            {% else %}
+              <a class="btn btn-link btn-xs disabled" href="">
                 <del>
-                <span class="icon fas fa-video"></span> mp4
+                  <span class="icon fas fa-video"></span> mp4
                 </del>
-              {% endif %}
-
-            </a>
+              </a>
+            {% endif %}
 
             &mdash; {{ entry.fields.title }}
           </li>

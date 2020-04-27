@@ -1,20 +1,19 @@
 import flask
+import more_itertools as mitt
 
-from ..extensions import pages, get_refs
+from ..extensions import get_refs, groups, pages, topics
 
 blueprint = flask.Blueprint('research', __name__)
 
 
-@blueprint.route('/publications')
+@blueprint.route('/')
 def publications():
     flask.current_app.logger.info('Serving PUBLICATIONS')
     page = pages.get_or_404('research/publications')
-    refs = get_refs()
 
-    return flask.render_template('publications.html',
-                                 active='research',
-                                 page=page,
-                                 refs=refs)
+    return flask.render_template(
+        'publications.html', active='research', page=page, refs=get_refs()
+    )
 
 
 # # TODO don't even create these... use the static url directly

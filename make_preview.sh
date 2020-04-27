@@ -3,11 +3,10 @@
 # create png previews of all pdfs
 echo "Creating PNG previews of all PDFs"
 
-FILES=app/static/docs/pubs/*.pdf
-for pdf in $FILES
+for pdf in app/static/docs/pubs/*/*.pdf
 do
   echo - $pdf
-  png="${pdf%.*}.png"
+  png="$(dirname $pdf)/thumbnail.png"
   # convert $f[0] -crop 100%x70%+0+0 $filename.png
 
   tmp=$(tempfile)

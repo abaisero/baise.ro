@@ -28,10 +28,11 @@
         content="{{ url_for('static', filename='favicon/browserconfig.xml') }}">
   <meta name="theme-color" content="#ffffff">
 
+  {% set active=active if active else page.meta.id %}
   <title>Andrea Baisero - {{ active|capitalize }}</title>
 
   {% assets filters="cssmin", output="gen/packed.1.css",
-            "bootstrap/css/bootstrap.css", "css/normalize.css" %}
+            "bootstrap-3.3.7-dist/css/bootstrap.css", "css/normalize.css" %}
     <link type="text/css" rel="stylesheet" href="{{ ASSET_URL }}">
   {% endassets %}
 
@@ -66,7 +67,7 @@
 
   <script
     type="text/javascript"
-    src="{{ url_for('static', filename='bootstrap/js/bootstrap.min.js') }}">
+    src="{{ url_for('static', filename='bootstrap-3.3.7-dist/js/bootstrap.min.js') }}">
   </script>
 
 </head>

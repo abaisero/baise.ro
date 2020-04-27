@@ -1,0 +1,13 @@
+cssmin>=0.2.0
+Flask>=1.0.2
+Flask-Assets>=0.12
+Flask-FlatPages>=0.7.0
+Flask-Sitemap>=0.3.0
+Flask-SQLAlchemy>=2.3.2
+Frozen-Flask>=0.15
+jsmin>=2.2.2
+more-itertools>=5.0.0
+nbconvert>=5.2.1
+nbformat>=4.3.0
+numpy>=1.15.4
+pandas>=0.23.4

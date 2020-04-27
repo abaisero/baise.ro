@@ -1,69 +1,76 @@
 import flask
-
 import more_itertools as mitt
 
-from ..extensions import pages, topics, repos, posts
-from ..extensions import groups
-from ..extensions import get_refs
-
+from ..extensions import get_refs, groups, pages, posts, repos, topics
 
 blueprint = flask.Blueprint('main', __name__)
 
 
-def show_filter(page):
-    return (page.meta.get('show', True) and not page.meta.get('noshow', False))
-
-
 @blueprint.route('/', defaults={'name': 'home'})
-@blueprint.route('/<name>')
+@blueprint.route('/<name>/')
 def page(name):
     flask.current_app.logger.info(f'Serving PAGE {name}')
     page = pages.get_or_404(name)
-    active = page.meta['id']
-    return flask.render_template('page.html', active=active, page=page)
+
+    return flask.render_template('page.html', page=page)
 
 
-@blueprint.route('/research')
+@blueprint.route('/research/')
 def research():
     flask.current_app.logger.info('Serving RESEARCH')
     page = pages.get_or_404('research')
 
-    articles = mitt.bucket(sorted(topics, key=lambda t: t.path),
-                           key=lambda a: a.meta['group'])
-    refs = get_refs()
+    topic_ids = [
+        'llpr.gsr',
+        'llpr.istate',
+        'llpr.agr',
+        'mlr.rfdm',
+        'mlr.iden',
+        'mlr.tseg',
+        'cvap.pathkernel',
+    ]
+    topics_ = [topics.get(topic_id) for topic_id in topic_ids]
+    topic_groups = mitt.bucket(topics_, key=lambda topic: topic.meta['group'])
 
-    return flask.render_template('research.html', active='research',
-                                 page=page,
-                                 groups=groups,
-                                 articles=articles,
-                                 refs=refs)
+    return flask.render_template(
+        'research.html',
+        page=page,
+        groups=groups,
+        topic_groups=topic_groups,
+        refs=get_refs(),
+    )
 
 
-@blueprint.route('/code')
+@blueprint.route('/code/')
 def code():
     flask.current_app.logger.info('Serving CODE')
     page = pages.get_or_404('code')
-    active = page.meta['id']
 
-    repos_shown = flask.current_app.extensions['flatpages']['repos']
-    repos_shown = sorted(filter(show_filter, repos_shown),
-                         key=lambda repo: repo.path)
+    repo_ids = [
+        'beamerthemeNU',
+        'rlpo18',
+        # 'rl',
+        'gym_pomdps',
+        'rl_parsers',
+        'indextools',
+        'pytk',
+        'baise.ro',
+        # 'pyfgraph',
+    ]
+    repos_ = [repos.get(repo_id) for repo_id in repo_ids]
 
-    return flask.render_template('code.html', active=active, page=page,
-                                 repos=repos_shown)
+    return flask.render_template('code.html', page=page, repos=repos_)
 
 
-@blueprint.route('/weblog')
+@blueprint.route('/weblog/')
 def weblog():
     flask.current_app.logger.info('Serving WEBLOG')
     page = pages.get_or_404('weblog')
-    active = page.meta['id']
 
-    posts_shown = sorted(filter(show_filter, posts),
-                         key=lambda post: post.meta['date'], reverse=True)
+    posts_ = filter(lambda post: not post.meta.get('hide', False), posts)
+    posts_ = sorted(posts_, key=lambda post: post.meta['date'], reverse=True)
 
-    return flask.render_template('weblog.html',
-                                 active=active, page=page, posts=posts_shown)
+    return flask.render_template('weblog.html', page=page, posts=posts_)
 
 
 # @blueprint.route('/sitemap')

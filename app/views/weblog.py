@@ -1,19 +1,16 @@
-import flask
-# from flask_flatpages.utils import pygmented_markdown
-# from flask_flatpages.utils import pygmented_markdown
-import flask_flatpages
-
-import nbformat
-import nbconvert
 import re
 
-from ..extensions import pages, posts
+import flask
+import flask_flatpages
+import nbconvert
+import nbformat
 
+from ..extensions import pages, posts
 
 blueprint = flask.Blueprint('weblog', __name__)
 
 
-@blueprint.route('/<name>')
+@blueprint.route('/<name>/')
 def post(name):
     flask.current_app.logger.info(f'Serving WEBLOG {name}')
     page = pages.get_or_404('research')
@@ -33,11 +30,14 @@ def post(name):
         post.meta['_notebook_url'] = flask.url_for(
             'static', filename=f'notebooks/{notebook}'
         )
-        post.meta['_notebook_md_url'] = flask.url_for(
-            'static', filename=f'notebooks/{notebook_md}'
-        )
+        # breaks freezing, and I'm not using it anyway
+        # post.meta['_notebook_md_url'] = flask.url_for(
+        #     'static', filename=f'notebooks/{notebook_md}'
+        # )
 
-    return flask.render_template('post.html', active='weblog', page=page, post=post)
+    return flask.render_template(
+        'post.html', active='weblog', page=page, post=post
+    )
 
 
 @blueprint.context_processor

@@ -1,4 +1,14 @@
-_extensions = ['codehilite', 'fenced_code', 'abbr', 'attr_list', 'def_list', 'tables', 'app.mdx.haiku', 'app.mdx.comment', 'app.mdx.mathjax']
+_extensions = [
+    'codehilite',
+    'fenced_code',
+    'abbr',
+    'attr_list',
+    'def_list',
+    'tables',
+    'app.mdx.haiku',
+    'app.mdx.comment',
+    'app.mdx.mathjax',
+]
 
 FLATPAGES_PAGES_AUTO_RELOAD = True
 FLATPAGES_PAGES_ROOT = 'pages'
@@ -19,6 +29,10 @@ FLATPAGES_TOPICS_AUTO_RELOAD = True
 FLATPAGES_TOPICS_ROOT = 'topics'
 FLATPAGES_TOPICS_EXTENSION = '.md'
 FLATPAGES_TOPICS_MARKDOWN_EXTENSIONS = _extensions
+
+FREEZER_BASE_URL = 'https://www.ccs.neu.edu/home/abaisero/'
+FREEZER_REMOVE_EXTRA_FILES = True
+FREEZER_DESTINATION = '../build'
 
 
 # TODO update!

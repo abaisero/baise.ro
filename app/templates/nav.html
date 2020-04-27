@@ -1,11 +1,10 @@
 {% import 'utils.jinja' as utils %}
 
 {% macro navitem(name) %}
-  {% set page = pages.get(name) %}
   <li class="{{ 'active' if name == active }}">
     <a href="{{ url_for('main.page', name=name) }}">
       <strong>
-        {{ utils.icon(page) }}{{ name|capitalize }}
+        {{ utils.icon(pages.get(name)) }}{{ name|capitalize }}
       </strong>
     </a>
   </li>
@@ -20,7 +19,7 @@
     <span class="fas fa-bars fa-lg"></span>
   </button>
   <a class="navbar-brand" href="{{ url_for('main.page') }}">
-    <strong>Baise.ro</strong>
+    <strong>ABaisero</strong>
   </a>
 
   <div id="navbarMenu" class="collapse navbar-collapse">

@@ -1,13 +1,9 @@
-import flask
-import flask_flatpages
-import flask_sitemap
 import flask_assets
 import flask_debugtoolbar
-
+import flask_flatpages
+import flask_sitemap
 import pandas as pd
-
 from pybtex.database.input import bibtex
-
 
 # pages
 
@@ -18,6 +14,7 @@ topics = flask_flatpages.FlatPages(name='topics')
 
 
 # research groups
+
 
 def title(g):
     if g.ongoing:
@@ -30,10 +27,14 @@ def title(g):
     return f'{g["name"].upper()} @ {g["university"]} ({years})'
 
 
-groups = pd.read_csv('app/groups.csv',
-                     parse_dates=['from', 'to'],
-                     date_parser=lambda x: pd.datetime.strptime(x, '%Y'),
-                     sep='\s*;\s*', engine='python')
+# TODO move to a resources page
+groups = pd.read_csv(
+    'app/groups.csv',
+    parse_dates=['from', 'to'],
+    date_parser=lambda x: pd.datetime.strptime(x, '%Y'),
+    sep=r'\s*;\s*',
+    engine='python',
+)
 groups['ongoing'] = groups['to'].isnull()
 groups['title'] = groups.apply(title, axis=1)
 
@@ -44,7 +45,7 @@ refs = None
 
 
 def init_refs(app):
-    global refs
+    global refs  # pylint: disable=global-statement
 
     # TODO the problem is that I need the static_folder...
     path = f'{app.static_folder}/docs/pubs/refs.bib'
