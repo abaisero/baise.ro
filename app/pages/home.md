@@ -10,7 +10,7 @@ working on partially observable reinforcement learning, focusing on the
 subjects of learning history-state representations with model-free methods, and
 predictive state representations.
 
-[profile]: /static/img/profile.jpg
+[profile]: {{ url_for('static', filename='img/profile.jpg') }}
 [LLPR]: http://llpr.ccs.neu.edu/
 
 Other interests include stochastic models, causality, Bayesian statistics and
