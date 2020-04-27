@@ -2,7 +2,6 @@
 
 This repository contains my website, developed in the Flask webapp framework.
 
-Click [here][url] to visit my home page.  Learn more about it [here][about].
+Click [here][url] to visit my home page.
 
-[url]: http://a.baise.ro
-[about]: http://a.baise.ro/about
+[url]: https://www.khoury.northeastern.edu/home/abaisero/
