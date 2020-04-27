@@ -65,10 +65,10 @@ def create_app():
     #         return flask.redirect(rp[:-1], code=301)
 
     # TODO make better 404 template
-    @app.errorhandler(404)
-    def page_not_found(e):  # pylint: disable=unused-variable,unused-argument
-        app.logger.info('DEBUGGING')
-        return flask.render_template('404.html'), 404
+    # @app.errorhandler(404)
+    # def page_not_found(e):  # pylint: disable=unused-variable,unused-argument
+    #     app.logger.info('DEBUGGING')
+    #     return flask.render_template('404.html'), 404
 
     @app.template_filter()
     def tagify(string, tag, pattern):  # pylint: disable=unused-variable
