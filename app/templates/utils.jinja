@@ -1,27 +1,5 @@
-{% macro ifcall(condition, m) %}
-  {% set caller_ = caller %}
-  {% if condition %}
-    {% call m(*varargs, **kwargs) %}
-      {{ caller_() }}
-    {% endcall %}
-  {% else %}
-      {{ caller_() }}
-  {% endif %}
-{% endmacro %}
-
-
-{% macro surround(tag) %}
-  <{{ tag }}
-  {% for key, value in kwargs.items() %}
-    {{ key }}="{{ value }}"
-  {% endfor %}>
-    {{ caller() }}
-  </{{ tag }}>
-{% endmacro %}
-
-
 {% macro icon(page) %}
-  <!-- hack for code.md icon -->
+  {# hack for code.md icon #}
   {% if page.meta.id == 'code' %}
     <span class="fa-layers fa-fw">
       <span class="fas fa-laptop"></span>
