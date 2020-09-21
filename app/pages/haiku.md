@@ -92,11 +92,3 @@ and you, two rivers.
 ;; Decide who you are,
 ;; where you stand, and what that means
 ;; before trouble comes.
-
-
-## Other
-
-.haiku
-Grasses wilt;
-the braking locomotive
-grinds to a halt
